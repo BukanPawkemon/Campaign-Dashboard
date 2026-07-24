@@ -243,6 +243,7 @@
     <div class="brand">Campaign Dashboard</div>
     <div class="brand-sub">User Guide</div>
     <ol>
+      <li><a href="#whats-new">What's new</a></li>
       <li><a href="#getting-started">1. Getting started</a></li>
       <li><a href="#finding-your-way-around">2. Finding your way around</a></li>
       <li><a href="#prepping-a-campaign">3. Prepping a campaign</a></li>
@@ -277,6 +278,25 @@
     <p class="note">Want to try it yourself first? A downloadable demo build is available near the bottom of this page, in <a href="#download">section 11</a>.</p>
 
     <p class="note">Screenshots below are from a throwaway demo campaign (Guild Founding), not real campaign content.</p>
+
+    <section id="whats-new">
+      <h2>What's new</h2>
+
+      <h3>v0.7.1</h3>
+      <ul>
+        <li>NPCs can now have a portrait, with a live preview on the NPC sheet and a thumbnail on the NPC table, matching Players and Locations. It shows up on that NPC's token on the map too.</li>
+        <li>Monsters, Spells, Equipment, and Magic Items tables now have pagination (10/15/30/100 rows per page).</li>
+        <li>Starting turn order now warns if anyone's still missing an initiative roll instead of starting the fight silently.</li>
+        <li>Editing a Player, Location, or NPC's portrait/image URL now shows a live preview right next to the field, and editing an SRD monster's portrait no longer opens a separate popup, it expands inline in the stat block instead.</li>
+      </ul>
+
+      <h3>v0.7.0</h3>
+      <ul>
+        <li>Added a homebrew compendium: your own Monsters, Magic Items, and Equipment, shown alongside the official rules content and usable anywhere a monster can be, see <a href="#compendium">section 8</a>.</li>
+        <li>Homebrew content now travels with exported Campaigns and Adventures, and can also be exported/imported on its own.</li>
+        <li>Compendium gained a sortable table view, source filters (official vs. homebrew), and a portrait field for SRD monsters.</li>
+      </ul>
+    </section>
 
     <section id="getting-started">
       <h2>1. Getting started</h2>
@@ -349,14 +369,14 @@
       </figure>
 
       <h3 id="npc">NPC</h3>
-      <p>A sortable table (Name, Role, Attitude, Location), with search and filter dropdowns. Click a row to open the full NPC sheet: personality, goal or secret, mannerisms, attitude toward the party, and which location they're tied to.</p>
+      <p>A sortable table (Name, Role, Attitude, Location), with search and filter dropdowns. Click a row to open the full NPC sheet: personality, goal or secret, mannerisms, attitude toward the party, and which location they're tied to. Each NPC can also have a portrait, paste an image URL into the Portrait URL field and a live preview shows up right next to it, and a thumbnail shows on the table too. The same portrait shows up on that NPC's token wherever they're added to a map.</p>
       <figure>
-        <img src="screenshots/13-npc-table.png" alt="NPC table, sortable and filterable" />
+        <img src="screenshots/13-npc-table.png" alt="NPC table, sortable and filterable, with portrait thumbnails" />
         <figcaption>The NPC roster, sortable by column, filterable by location or attitude.</figcaption>
       </figure>
       <figure>
-        <img src="screenshots/14-npc-detail.png" alt="NPC detail sheet, personality, goal or secret, mannerism" />
-        <figcaption>An NPC's full sheet: personality, goal or secret, and mannerism.</figcaption>
+        <img src="screenshots/14-npc-detail.png" alt="NPC detail sheet, personality, goal or secret, mannerism, portrait preview" />
+        <figcaption>An NPC's full sheet: personality, goal or secret, mannerism, and portrait.</figcaption>
       </figure>
 
       <h3 id="job-board">Job Board / Quest</h3>
@@ -470,11 +490,54 @@
 
     <section id="compendium">
       <h2>8. Compendium</h2>
-      <p>A built-in D&amp;D 5e SRD reference, shared across all your campaigns rather than being campaign-specific. Browse by category (monsters, spells, conditions, equipment, magic items, plus rules and glossary sections), or search across everything at once.</p>
+      <p>A built-in D&amp;D 5e SRD reference, shared across all your campaigns rather than being campaign-specific. Browse by category (monsters, spells, conditions, equipment, magic items, plus rules and glossary sections), or search across everything at once. On top of the official reference, you can add your own homebrew content that lives alongside it.</p>
+      <p>Monsters, Spells, Equipment, and Magic Items open in a sortable table by default, with a rows-per-page control (10/15/30/100, defaults to 15) at the bottom once a category has more entries than fit on one page.</p>
       <figure>
         <img src="screenshots/17-compendium.png" alt="Compendium, browsing the Spells category" />
         <figcaption>Browsing the Spells category.</figcaption>
       </figure>
+
+      <h3 id="compendium-homebrew">Official content vs. homebrew</h3>
+      <p><strong>Official content (SRD)</strong> is the built-in rules reference, the same Goblins, Fireballs, and Longswords in every install. You can browse it and search it, but you can't edit or delete it, it's meant to stay accurate to the real rules.</p>
+      <p><strong>Homebrew content</strong> is what you create yourself: your own custom monsters, magic items, and equipment. It shows up mixed in with the official entries in the same lists, with a small "HB" tag next to the name so you can tell it apart at a glance. Unlike official content, you can edit or delete your homebrew entries any time.</p>
+      <p>Only three categories support homebrew right now: <strong>Monsters, Magic Items, and Equipment</strong>. Spells, Conditions, Rules, and the rest of the reference categories are official-content-only for now.</p>
+
+      <h3 id="compendium-homebrew-shared">Homebrew is shared across all your campaigns</h3>
+      <p>This is the part worth understanding clearly: <strong>your homebrew library isn't tied to one campaign.</strong> Create a homebrew monster while working on Campaign A, and it's already there, ready to use, when you switch to Campaign B. You never have to recreate the same custom monster twice.</p>
+      <p>Because it's shared, editing or deleting a homebrew entry affects it everywhere, not just the campaign you happen to have open. If you tweak a homebrew monster's hit points, that change applies wherever you use it. If you delete one, it's gone from every campaign, not archived.</p>
+      <p><strong>One thing to watch for</strong>: if you've already added a homebrew monster to a Planned Encounter or a Live Run, and you later delete that monster from the Compendium, the encounter keeps the token but loses its connection to the stat block, HP won't auto-fill and its full stat block won't show anymore. Editing a homebrew monster is always safe. Deleting one you're actively using somewhere is the thing to be careful with.</p>
+
+      <h3 id="compendium-homebrew-create">Creating a homebrew entry</h3>
+      <ol>
+        <li>Open the Compendium tab and pick Monsters, Magic Items, or Equipment.</li>
+        <li>Click <strong>+ New Homebrew [Category]</strong> above the list.</li>
+        <li>Fill in whatever fields apply, name is the only one required.</li>
+        <li>Save. It appears in the list right away, tagged "HB".</li>
+      </ol>
+      <p>Click any homebrew entry to view it, then use the <strong>Edit</strong> or <strong>Delete</strong> buttons on its detail page. Official entries never show those buttons, that's how you can tell at a glance whether something is yours to change.</p>
+
+      <h3 id="compendium-portraits">Portraits</h3>
+      <p>Homebrew Monsters can have a portrait image (just paste in an image link). It shows up on the Compendium entry and on that monster's token whenever it's placed on a battle map, the same way NPC and Player portraits already work.</p>
+      <p>You can also add a portrait to an <strong>official</strong> SRD monster without making a homebrew copy of it, open the monster's page and use <strong>Edit Portrait</strong>, the field expands inline right there in the stat block. Since SRD content is shared across every campaign, that portrait shows up everywhere too, not just your current campaign.</p>
+      <p>Magic Items and Equipment don't have portraits, they never appear as tokens on a map, so there's nothing to show a picture for.</p>
+
+      <h3 id="compendium-homebrew-combat">Using a homebrew monster in a fight</h3>
+      <p>Homebrew Monsters work exactly like official monsters everywhere combat happens:</p>
+      <ul>
+        <li><strong>Campaign Prep &rarr; an Encounter &rarr; Combatants</strong>, there's a Homebrew tab alongside Players/Monsters/NPCs, search and add your monster the same way.</li>
+        <li><strong>Active Campaign &rarr; Add Combatant</strong> during a live run works the same way.</li>
+      </ul>
+      <p>Once added, it gets a token with the right size, portrait if you set one, and hit points pulled from what you entered in the Compendium.</p>
+
+      <h3 id="compendium-homebrew-share">Sharing homebrew with another install</h3>
+      <p>When you export a Campaign or Adventure to a file (My Campaigns &rarr; Campaign Settings &rarr; Export), your whole homebrew library goes along with it automatically. Whoever imports that file gets their own copy of every homebrew Monster, Magic Item, and Equipment entry you'd made, added to their own library, so any Encounter in the file that uses your homebrew monster still works correctly for them.</p>
+      <p>A couple of things worth knowing about how that works:</p>
+      <ul>
+        <li>It's your <strong>entire</strong> homebrew library that travels with the file, not just the entries that particular Campaign or Adventure actually uses. If you've built up a big personal bestiary, all of it goes along, even the parts unrelated to what you're sharing.</li>
+        <li>Each import creates fresh copies. If you export and import the same file twice, or import from two different people who both had your homebrew monster, you'll end up with duplicate entries in your library, they won't merge or recognize each other as the same thing. Worth a quick tidy-up pass in the Compendium after importing if that happens.</li>
+      </ul>
+
+      <h3 id="compendium-search">Quick search</h3>
       <p>Press <kbd>Ctrl</kbd>+<kbd>K</kbd> (or <kbd>Cmd</kbd>+<kbd>K</kbd> on Mac) from anywhere in the app to pull up a quick search without leaving what you're doing.</p>
       <figure>
         <img src="screenshots/18-compendium-search.png" alt="Compendium quick search, results and a stat block preview in one window" />
