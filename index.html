@@ -15,7 +15,7 @@
 <title>Dalang - Campaign Dashboard, D&D Campaign Prep &amp; Session Manager</title>
 <meta name="description" content="A walkthrough of Dalang, formerly Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
 <link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23171310%22/><polygon points=%2250,6 90,28 90,72 50,94 10,72 10,28%22 fill=%22none%22 stroke=%22%23c9a227%22 stroke-width=%227%22/></svg>" />
+<link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dalang - Campaign Dashboard" />
@@ -194,6 +194,11 @@
     font-size: 2.1rem;
     margin: 0 0 4px;
   }
+  h1.title img {
+    display: block;
+    width: min(340px, 100%);
+    height: auto;
+  }
   .subtitle {
     font-family: 'IBM Plex Mono', monospace;
     color: var(--color-parchment-dim);
@@ -312,8 +317,8 @@
   </nav>
 
   <main>
-    <h1 class="title">Dalang</h1>
-    <p class="subtitle">Campaign Dashboard, User Guide</p>
+    <h1 class="title"><img src="images/dalang-logo.png" alt="Dalang - Campaign Dashboard" /></h1>
+    <p class="subtitle">User Guide</p>
 
     <p class="lede">Dalang, formerly Campaign Dashboard, is a desktop app for prepping and running a D&amp;D campaign: writing the world and house rules, prepping locations and NPCs and jobs, running the actual session with a live battle map, and keeping a permanent record of what happened afterward.</p>
     <p class="lede">Everything is stored in a local file on your machine, not in the cloud, so your notes and any NPC secrets stay private. It works for async play / Play by Post just as well as sitting at a real table or on a call, the live-session tools like the battle map and the Player Window are built specifically for that in-person side.</p>
