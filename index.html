@@ -13,14 +13,14 @@
   gtag('config', 'G-TVGS5WWJT5');
 </script>
 <title>Dalang - Campaign Dashboard, D&D Campaign Prep &amp; Session Manager</title>
-<meta name="description" content="A walkthrough of Dalang, formerly Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
+<meta name="description" content="A walkthrough of Dalang - Campaign Dashboard, formerly just Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
 <link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/" />
 <link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dalang - Campaign Dashboard" />
 <meta property="og:title" content="Dalang - Campaign Dashboard" />
-<meta property="og:description" content="A walkthrough of Dalang, formerly Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
+<meta property="og:description" content="A walkthrough of Dalang - Campaign Dashboard, formerly just Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
 <meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/" />
 <meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
 <meta property="og:image:width" content="1920" />
@@ -28,7 +28,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Dalang - Campaign Dashboard" />
-<meta name="twitter:description" content="A walkthrough of Dalang, formerly Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
+<meta name="twitter:description" content="A walkthrough of Dalang - Campaign Dashboard, formerly just Campaign Dashboard, a D&D campaign management app: prepping a campaign, running a live session, and everything in between." />
 <meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
 
 <script type="application/ld+json">
@@ -51,594 +51,164 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --color-bg: #171310;
-    --color-panel: #221b15;
-    --color-panel-raised: #2b2219;
-    --color-parchment: #ece0c6;
-    --color-parchment-dim: #a99a7d;
-    --color-brass: #c9a227;
-    --color-brass-dim: #8a712a;
-    --color-teal: #3e7c6b;
-    --color-rust: #a3492f;
-    --color-hairline: #3a3025;
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--color-bg);
-    color: var(--color-parchment);
-    font-family: 'Spectral', Georgia, serif;
-    font-size: 16px;
-    line-height: 1.65;
-  }
-
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-hairline) var(--color-bg);
-  }
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color-bg);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-hairline);
-    border-radius: 5px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-brass-dim);
-  }
-  a { color: var(--color-brass); }
-  a:hover { color: #e0bb3e; }
-
-  h1, h2, h3 {
-    font-family: 'Cinzel', Georgia, serif;
-    color: var(--color-brass);
-    letter-spacing: 0.01em;
-    font-weight: 600;
-    line-height: 1.25;
-  }
-
-  code, kbd {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.85em;
-    background: var(--color-panel-raised);
-    border: 1px solid var(--color-hairline);
-    border-radius: 3px;
-    padding: 0.1em 0.4em;
-  }
-
-  .layout {
-    display: flex;
-    min-height: 100vh;
-    max-width: 1240px;
-    margin: 0 auto;
-  }
-
-  nav.toc {
-    flex: 0 0 250px;
-    padding: 32px 20px;
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
-    height: 100vh;
-    overflow-y: auto;
-    border-right: 1px solid var(--color-hairline);
-  }
-
-  nav.toc .brand {
-    font-family: 'Cinzel', Georgia, serif;
-    font-weight: 700;
-    color: var(--color-brass);
-    font-size: 1.15rem;
-    margin-bottom: 4px;
-  }
-  nav.toc .brand-sub {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    color: var(--color-parchment-dim);
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-
-  nav.toc ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav.toc li { margin: 0; }
-  nav.toc a {
-    display: block;
-    padding: 7px 10px;
-    margin: 1px 0;
-    border-radius: 3px;
-    text-decoration: none;
-    color: var(--color-parchment-dim);
-    font-size: 0.92rem;
-    border-left: 2px solid transparent;
-  }
-  nav.toc a:hover {
-    color: var(--color-parchment);
-    background: var(--color-panel-raised);
-  }
-  nav.toc a.sub {
-    font-size: 0.84rem;
-    padding-left: 22px;
-    color: var(--color-parchment-dim);
-    opacity: 0.85;
-  }
-
-  main {
-    flex: 1 1 auto;
-    padding: 48px 56px 120px;
-    min-width: 0;
-  }
-
-  main > p:first-of-type {
-    font-size: 1.08rem;
-  }
-
-  .lede {
-    border-left: 3px solid var(--color-brass-dim);
-    padding-left: 18px;
-    color: var(--color-parchment);
-  }
-
-  h1.title {
-    font-size: 2.1rem;
-    margin: 0 0 4px;
-  }
-  h1.title img {
-    display: block;
-    width: min(340px, 100%);
-    height: auto;
-  }
-  .subtitle {
-    font-family: 'IBM Plex Mono', monospace;
-    color: var(--color-parchment-dim);
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin: 0 0 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-hairline);
-  }
-
-  section { margin-top: 56px; scroll-margin-top: 24px; }
-  section h2 {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--color-hairline);
-    margin-bottom: 18px;
-  }
-  section h3 {
-    font-size: 1.15rem;
-    color: var(--color-teal);
-    margin-top: 32px;
-    scroll-margin-top: 24px;
-  }
-
-  strong { color: var(--color-parchment); }
-
-  ul, ol { padding-left: 1.4em; }
-  li { margin: 6px 0; }
-
-  figure {
-    margin: 22px 0;
-    padding: 10px;
-    background: var(--color-panel);
-    border: 1px solid var(--color-hairline);
-    border-radius: 6px;
-  }
-  figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 3px;
-    border: 1px solid var(--color-hairline);
-  }
-  figcaption {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--color-parchment-dim);
-    padding: 10px 4px 2px;
-  }
-
-  .note {
-    background: var(--color-panel);
-    border: 1px solid var(--color-hairline);
-    border-left: 3px solid var(--color-teal);
-    border-radius: 4px;
-    padding: 12px 16px;
-    font-size: 0.94rem;
-    color: var(--color-parchment-dim);
-  }
-
-  footer {
-    margin-top: 80px;
-    padding-top: 24px;
-    border-top: 1px solid var(--color-hairline);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--color-parchment-dim);
-  }
-
-  .menu-toggle { display: none; }
-
-  @media (max-width: 880px) {
-    .layout { flex-direction: column; }
-    nav.toc {
-      position: relative;
-      height: auto;
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid var(--color-hairline);
-      padding: 20px;
-    }
-    main { padding: 32px 22px 80px; }
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <div class="layout">
-  <nav class="toc" aria-label="Table of contents">
-    <div class="brand">Dalang</div>
-    <div class="brand-sub">Campaign Dashboard, User Guide</div>
-    <ol>
-      <li><a href="#whats-new">What's new</a></li>
-      <li><a href="#getting-started">1. Getting started</a></li>
-      <li><a href="#finding-your-way-around">2. Finding your way around</a></li>
-      <li><a href="#prepping-a-campaign">3. Prepping a campaign</a></li>
-      <li><a class="sub" href="#story">Story</a></li>
-      <li><a class="sub" href="#gameplay">Gameplay</a></li>
-      <li><a class="sub" href="#campaign-prep">Campaign Prep</a></li>
-      <li><a class="sub" href="#npc">NPC</a></li>
-      <li><a class="sub" href="#job-board">Job Board / Quest</a></li>
-      <li><a class="sub" href="#players">Players</a></li>
-      <li><a href="#setting-up-a-map">4. Setting up a map</a></li>
-      <li><a href="#running-a-live-session">5. Running a live session</a></li>
-      <li><a class="sub" href="#starting-a-run">Starting a run</a></li>
-      <li><a class="sub" href="#during-combat">During combat</a></li>
-      <li><a class="sub" href="#map-tools">Map tools during a run</a></li>
-      <li><a class="sub" href="#ending-a-run">Ending a run</a></li>
-      <li><a href="#player-window">6. The Player Window</a></li>
-      <li><a href="#event-log">7. After the session, the Event Log</a></li>
-      <li><a href="#compendium">8. Compendium</a></li>
-      <li><a href="#campaign-settings">9. Campaign Settings</a></li>
-      <li><a href="#library">10. Library and sharing adventures</a></li>
-      <li><a href="#download">11. Download the demo build</a></li>
-    </ol>
-  </nav>
+  <site-nav current="home"></site-nav>
 
   <main>
     <h1 class="title"><img src="images/dalang-logo.png" alt="Dalang - Campaign Dashboard" /></h1>
-    <p class="subtitle">User Guide</p>
 
-    <p class="lede">Dalang, formerly Campaign Dashboard, is a desktop app for prepping and running a D&amp;D campaign: writing the world and house rules, prepping locations and NPCs and jobs, running the actual session with a live battle map, and keeping a permanent record of what happened afterward.</p>
+    <p class="lede">Dalang - Campaign Dashboard, formerly just Campaign Dashboard, is a desktop app for prepping and running a D&amp;D campaign: writing the world and house rules, prepping locations and NPCs and jobs, running the actual session with a live battle map, and keeping a permanent record of what happened afterward.</p>
     <p class="lede">Everything is stored in a local file on your machine, not in the cloud, so your notes and any NPC secrets stay private. It works for async play / Play by Post just as well as sitting at a real table or on a call, the live-session tools like the battle map and the Player Window are built specifically for that in-person side.</p>
 
-    <p class="note">Want to try it yourself first? A downloadable demo build is available near the bottom of this page, in <a href="#download">section 11</a>.</p>
+    <p class="note">Want to try it yourself first? A downloadable demo build is on the <a href="download.html">Download page</a>.</p>
 
-    <p class="note">Screenshots below are from a throwaway demo campaign (Guild Founding), not real campaign content.</p>
+    <p class="note">Screenshots throughout this guide are from a throwaway demo campaign (Guild Founding), not real campaign content.</p>
+
+    <div class="hero-grid">
+      <figure>
+        <img src="screenshots/01-my-campaigns.png" width="1920" height="1009" alt="My Campaigns screen with a couple of campaign cards" />
+        <figcaption>My Campaigns, the screen you land on every time you open the app.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/07-active-campaign-encounters.png" width="1920" height="1009" alt="Active Campaign hub with the Encounters card and Start button" />
+        <figcaption>The Active Campaign hub, ready to start a prepared encounter.</figcaption>
+      </figure>
+    </div>
 
     <section id="whats-new">
       <h2>What's new</h2>
 
-      <h3>v0.7.2</h3>
+      <h3>v1.0.0</h3>
       <ul>
-        <li>The Story tab now supports your own custom sections, for anything beyond the built-in Campaign Pitch, World Lore, and Factions/Villains fields. Give it a title, an optional subtitle, and write as much as you need, it expands and collapses like the built-in sections and remembers its state.</li>
+        <li>Renamed to <strong>Dalang - Campaign Dashboard</strong>, formerly just Campaign Dashboard.</li>
+        <li>A turn order panel, showing whose turn it is, now appears on both Focus Mode and the <a href="player-window.html">Player Window</a>.</li>
+        <li>NPCs can now be linked to a Compendium monster for real combat stats, see <a href="npc.html">NPC</a>.</li>
+        <li>Added a way to import a character straight from a D&amp;D Beyond character URL, see <a href="players.html">Players</a>.</li>
+        <li>A global <strong>dice roller</strong>, reachable from any tab, see the <a href="dice-roller.html">Dice Roller page</a>.</li>
+        <li>DM Settings has a new <strong>Background Image</strong> field, shown behind My Campaigns and the Library, see <a href="getting-started.html">Getting Started</a>.</li>
+        <li>A built-in <strong>Legal &amp; Sources</strong> page, reachable from the My Campaigns footer, see the <a href="legal.html">Legal &amp; Sources page</a>.</li>
+        <li>The Active Campaign view and the Player Window's idle screen now fall back to the campaign's own background image instead of going blank.</li>
       </ul>
 
-      <h3>v0.7.1</h3>
-      <ul>
-        <li>NPCs can now have a portrait, with a live preview on the NPC sheet and a thumbnail on the NPC table, matching Players and Locations. It shows up on that NPC's token on the map too.</li>
-        <li>Monsters, Spells, Equipment, and Magic Items tables now have pagination (10/15/30/100 rows per page).</li>
-        <li>Starting turn order now warns if anyone's still missing an initiative roll instead of starting the fight silently.</li>
-        <li>Editing a Player, Location, or NPC's portrait/image URL now shows a live preview right next to the field, and editing an SRD monster's portrait no longer opens a separate popup, it expands inline in the stat block instead.</li>
-      </ul>
-
-      <h3>v0.7.0</h3>
-      <ul>
-        <li>Added a homebrew compendium: your own Monsters, Magic Items, and Equipment, shown alongside the official rules content and usable anywhere a monster can be, see <a href="#compendium">section 8</a>.</li>
-        <li>Homebrew content now travels with exported Campaigns and Adventures, and can also be exported/imported on its own.</li>
-        <li>Compendium gained a sortable table view, source filters (official vs. homebrew), and a portrait field for SRD monsters.</li>
-      </ul>
+      <p><a href="download.html">See the full version history &rarr;</a></p>
     </section>
 
-    <section id="getting-started">
-      <h2>1. Getting started</h2>
-      <p>The app opens on the <strong>My Campaigns</strong> screen every time, it doesn't auto-resume whatever you were last playing.</p>
-      <p>The very first time you launch it, you'll get a popup asking for your DM name before anything else unlocks. This name is attached to every campaign you create and travels with anything you export or share later, so use something you're fine having a friend see if you ever hand off an adventure.</p>
-      <p>From My Campaigns you can:</p>
-      <ul>
-        <li>See a grid of your existing campaigns, most recently played first, each showing NPC/location/quest counts and how long ago you last opened it.</li>
-        <li>Click <strong>+ New Campaign</strong> to start one. You'll name it, then choose either <strong>Fresh Adventure</strong> (start blank) or <strong>From Your Library</strong> (build off something you saved earlier, see section 10).</li>
-        <li>Click any campaign card to open it.</li>
-        <li>Switch to the <strong>Library</strong> tab in the top nav to manage saved adventures, or import one from a file.</li>
-      </ul>
-      <figure>
-        <img src="screenshots/01-my-campaigns.png" width="1920" height="1009" alt="My Campaigns screen with a couple of campaign cards" />
-        <figcaption>The screen you land on every time you open the app.</figcaption>
-      </figure>
+    <section id="guide">
+      <h2>Guide</h2>
+      <p>Pick a page below, or use the sidebar to jump straight to a specific feature.</p>
+
+      <h3>Getting Started</h3>
+      <div class="page-grid">
+        <a class="card" href="getting-started.html">
+          <div class="card-title">Getting Started</div>
+          <div class="card-desc">First launch, the My Campaigns screen, and finding your way around the sidebar.</div>
+        </a>
+      </div>
+
+      <h3>About</h3>
+      <div class="page-grid">
+        <a class="card" href="philosophy.html">
+          <div class="card-title">Philosophy</div>
+          <div class="card-desc">The meaning behind the name Dalang and the Antaboga mark.</div>
+        </a>
+        <a class="card" href="background.html">
+          <div class="card-title">Background</div>
+          <div class="card-desc">Why it's built this way: local-first, DM-owned, built for the table.</div>
+        </a>
+        <a class="card" href="legal.html">
+          <div class="card-title">Legal &amp; Sources</div>
+          <div class="card-desc">Ownership, licensing, SRD attribution, privacy, and no-warranty terms.</div>
+        </a>
+      </div>
+
+      <h3>Preparation</h3>
+      <div class="page-grid">
+        <a class="card" href="story.html">
+          <div class="card-title">Story</div>
+          <div class="card-desc">Campaign Pitch, World Lore, Factions/Villains, and your own custom sections.</div>
+        </a>
+        <a class="card" href="gameplay.html">
+          <div class="card-title">Gameplay</div>
+          <div class="card-desc">Table logistics, character creation rules, and the Share Gameplay handout.</div>
+        </a>
+        <a class="card" href="campaign-prep.html">
+          <div class="card-title">Campaign Prep</div>
+          <div class="card-desc">Locations, the backbone the rest of the app hangs off of.</div>
+        </a>
+        <a class="card" href="maps.html">
+          <div class="card-title">Setting Up a Map</div>
+          <div class="card-desc">Grid calibration and Fog of War, before you're at the table.</div>
+        </a>
+        <a class="card" href="npc.html">
+          <div class="card-title">NPC</div>
+          <div class="card-desc">The NPC roster, portraits, and linking a Compendium monster for combat stats.</div>
+        </a>
+        <a class="card" href="job-board.html">
+          <div class="card-title">Job Board / Quest</div>
+          <div class="card-desc">Quests as a card grid, tagged to locations and quest givers.</div>
+        </a>
+        <a class="card" href="players.html">
+          <div class="card-title">Players</div>
+          <div class="card-desc">The party roster, and importing a character from D&amp;D Beyond.</div>
+        </a>
+      </div>
+
+      <h3>Running a Session</h3>
+      <div class="page-grid">
+        <a class="card" href="running-a-session.html">
+          <div class="card-title">Running a Live Session</div>
+          <div class="card-desc">Starting a run, combat, map tools, Focus Mode, and ending a run.</div>
+        </a>
+        <a class="card" href="player-window.html">
+          <div class="card-title">The Player Window</div>
+          <div class="card-desc">A second window for players, with a live turn order panel.</div>
+        </a>
+        <a class="card" href="event-log.html">
+          <div class="card-title">Event Log</div>
+          <div class="card-desc">The permanent record of what happened, filterable by location.</div>
+        </a>
+      </div>
+
+      <h3>Reference</h3>
+      <div class="page-grid">
+        <a class="card" href="compendium.html">
+          <div class="card-title">Compendium</div>
+          <div class="card-desc">The built-in SRD reference, plus your own homebrew content.</div>
+        </a>
+        <a class="card" href="dice-roller.html">
+          <div class="card-title">Dice Roller</div>
+          <div class="card-desc">A global dice tray: pool, formula, Advantage/Disadvantage, Player Window broadcast.</div>
+        </a>
+      </div>
+
+      <h3>Settings</h3>
+      <div class="page-grid">
+        <a class="card" href="campaign-settings.html">
+          <div class="card-title">Campaign Settings</div>
+          <div class="card-desc">Rename, export, save to Library, and delete a campaign.</div>
+        </a>
+        <a class="card" href="library.html">
+          <div class="card-title">Library</div>
+          <div class="card-desc">Reusable adventures, your own or imported from another DM.</div>
+        </a>
+      </div>
+
+      <h3>Get the App</h3>
+      <div class="page-grid">
+        <a class="card" href="download.html">
+          <div class="card-title">Download</div>
+          <div class="card-desc">Grab the demo build, and the full version history.</div>
+        </a>
+      </div>
     </section>
 
-    <section id="finding-your-way-around">
-      <h2>2. Finding your way around</h2>
-      <p>Once inside a campaign, the sidebar is grouped into four sections:</p>
-      <p><strong>Preparation</strong>: Story, Gameplay, Campaign Prep, NPC, Job Board / Quest, Players</p>
-      <p><strong>Active Campaign</strong>: Active Campaign, Event Log</p>
-      <p><strong>Reference</strong>: Compendium</p>
-      <p><strong>Settings</strong>: Campaign Settings</p>
-      <p>The Active Campaign tab gets a small dot next to it whenever a session is actually running, so you can tell from the sidebar alone whether something's live. Clicking a tab you're already on resets it back to its list view, handy if you drilled into a detail screen and want to back out fast.</p>
-      <p>At the bottom of the sidebar, <strong>Back to My Campaigns</strong> takes you out to the campaign picker.</p>
-      <figure>
-        <img src="screenshots/02-sidebar.png" width="1920" height="1009" alt="Sidebar with the four groups: Preparation, Active Campaign, Reference, Settings" />
-        <figcaption>The sidebar, grouped into Preparation, Active Campaign, Reference, and Settings.</figcaption>
-      </figure>
-    </section>
-
-    <section id="prepping-a-campaign">
-      <h2>3. Prepping a campaign</h2>
-      <p>Do this before your session, or gradually over time as the campaign develops.</p>
-
-      <h3 id="story">Story</h3>
-      <p>Three built-in sections: Campaign Pitch, World Lore, Factions/Villains, plus you can add your own custom sections for anything else, each with a title, an optional subtitle, and free text. Expand or collapse each as needed, collapsed sections stay collapsed even after you switch tabs or restart the app. This is where the big picture lives, the stuff a player would read if you handed them a one-pager about the world.</p>
-      <figure>
-        <img src="screenshots/20-story-custom-section.jpg" width="1174" height="938" alt="Story tab with a custom section being added, showing Title, Subtitle, and Detail fields" />
-        <figcaption>Adding a custom section to the Story tab.</figcaption>
-      </figure>
-
-      <h3 id="gameplay">Gameplay</h3>
-      <p>Covers table logistics and character creation rules: game system, session rhythm, starting level and gold, how leveling works (milestone or XP), house rules, and so on.</p>
-      <p>There's a <strong>Share Gameplay</strong> button that bundles Table Setup, Character Rules, and House Rules into one editable, copyable handout. Use this when you're onboarding a new player and want to hand them everything at once instead of re-explaining house rules from memory.</p>
-      <figure>
-        <img src="screenshots/03-gameplay-share.png" width="1920" height="1009" alt="Gameplay tab with the Share Gameplay button" />
-        <figcaption>The Gameplay tab, with the Share Gameplay button top left.</figcaption>
-      </figure>
-
-      <h3 id="campaign-prep">Campaign Prep</h3>
-      <p>This is where locations live, and it's the backbone the rest of the app hangs off of.</p>
-      <p>Locations can be nested one level deep (for example, Phandalin as a top-level location, with the Stonehill Inn underneath it). The list view shows each location with counts for encounters, treasure found, NPCs, and quests tied to it.</p>
-      <figure>
-        <img src="screenshots/16-campaign-prep-list.png" width="1920" height="1009" alt="Campaign Prep location list, with nested sub-locations" />
-        <figcaption>Locations, with sub-locations nested underneath (Blackroot Woods &rarr; Old Mill Ruins).</figcaption>
-      </figure>
-      <p>Click <strong>+ Add location prep</strong> to create one. Click into a location to get its full detail view:</p>
-      <ul>
-        <li><strong>Description</strong>: read-aloud text, plus a background image URL. That image shows up in three places: behind the location row, on the Active Campaign tab when it's your current location, and as the idle screen on the Player Window when nothing's running.</li>
-        <li><strong>Maps</strong>: add and open maps here, this is where you calibrate a map's grid before it can be used in a session (see section 4).</li>
-        <li><strong>Music Links</strong></li>
-        <li><strong>NPCs available here</strong>: tag NPCs to this location with a search box.</li>
-        <li><strong>Planned Encounters</strong>: pre-build fights or scenes ahead of time, including where tokens should start.</li>
-        <li><strong>Treasure</strong>: a checklist you tick off as items get found.</li>
-        <li><strong>DM Notes</strong></li>
-        <li><strong>Related Quests</strong>: a read-only list, populated automatically from tags you set on the Job Board tab.</li>
-      </ul>
-      <figure>
-        <img src="screenshots/04-location-detail.png" width="1920" height="1009" alt="Location detail view showing description, maps, and the rest of the card layout" />
-        <figcaption>A location's full detail view in Campaign Prep, Old Mill Ruins here.</figcaption>
-      </figure>
-
-      <h3 id="npc">NPC</h3>
-      <p>A sortable table (Name, Role, Attitude, Location), with search and filter dropdowns. Click a row to open the full NPC sheet: personality, goal or secret, mannerisms, attitude toward the party, and which location they're tied to. Each NPC can also have a portrait, paste an image URL into the Portrait URL field and a live preview shows up right next to it, and a thumbnail shows on the table too. The same portrait shows up on that NPC's token wherever they're added to a map.</p>
-      <figure>
-        <img src="screenshots/13-npc-table.png" width="1920" height="1009" alt="NPC table, sortable and filterable, with portrait thumbnails" />
-        <figcaption>The NPC roster, sortable by column, filterable by location or attitude.</figcaption>
-      </figure>
-      <figure>
-        <img src="screenshots/14-npc-detail.png" width="1920" height="1009" alt="NPC detail sheet, personality, goal or secret, mannerism, portrait preview" />
-        <figcaption>An NPC's full sheet: personality, goal or secret, mannerism, and portrait.</figcaption>
-      </figure>
-
-      <h3 id="job-board">Job Board / Quest</h3>
-      <p>This one's a card grid, not a table, styled like pinned notices on a board. Filter by status, quest giver, or location. Click <strong>+ Add Quest</strong> to create one, click any card to edit it.</p>
-      <p>Each quest can be tagged to one or more locations (this is what feeds the "Related Quests" list back on Campaign Prep), and can be tied to an NPC as the giver, or just given free text if you don't want to formally assign one.</p>
-      <figure>
-        <img src="screenshots/06-job-board.png" width="1920" height="1009" alt="Job Board card grid with a couple of quest cards" />
-        <figcaption>The Job Board, quests as cards instead of a table.</figcaption>
-      </figure>
-
-      <h3 id="players">Players</h3>
-      <p>A roster of character cards, toggle each Active or Inactive. Only Active characters show up on the Active Campaign tab. Click into a card for the full character sheet: race, class, level, quick stats (AC, HP, passive perception, etc.), ability modifiers, description, and a couple of DM-only fields like player nickname and personal notes.</p>
-      <figure>
-        <img src="screenshots/15-players.png" width="1920" height="1009" alt="Players roster, tarot-card style" />
-        <figcaption>The party roster, tarot-card style.</figcaption>
-      </figure>
-    </section>
-
-    <section id="setting-up-a-map">
-      <h2>4. Setting up a map</h2>
-      <p>Do this before a session so you're not fumbling with grid calibration while people are waiting.</p>
-      <ol>
-        <li>On a location's Campaign Prep page, add a map by pasting an image URL and clicking <strong>Load</strong>.</li>
-        <li>This opens the map popup with three modes: <strong>Pan &amp; View</strong>, <strong>Calibrate Grid</strong>, and <strong>Fog of War</strong>.</li>
-        <li>In Calibrate mode, drag the two handles onto adjacent grid intersections on the image. The app uses that spacing to work out real distances later (for the ruler tool, spell radius labels, and so on). You can also select a handle and nudge it with arrow keys for precision.</li>
-        <li>In Fog of War mode, click or drag to mark which cells are hidden by default when a session starts. This sets the baseline, not what's revealed live during play, that gets edited separately once a run is underway.</li>
-        <li>Click <strong>Save &amp; Close</strong> when you're done.</li>
-      </ol>
-      <figure>
-        <img src="screenshots/05-map-calibration.png" width="1920" height="1009" alt="Map calibration mode with the brass and teal handles placed, plus Grid Style controls" />
-        <figcaption>Calibrating a map's grid: drag the brass and teal handles onto adjacent intersections.</figcaption>
-      </figure>
-      <p>If you want to place tokens ahead of time (an ambush, a set encounter), open the encounter from Campaign Prep and use its <strong>Map Setup</strong> section. It uses the same placement grid as the live battle map, so tokens you place here are exactly where they'll be when you hit Start.</p>
-    </section>
-
-    <section id="running-a-live-session">
-      <h2>5. Running a live session</h2>
-      <p>Open the <strong>Active Campaign</strong> tab. If nothing's running, you'll see the hub screen: current location, party present, prepared encounters for this location, maps, NPCs present, active quests, and a quick "Log This Moment" box for jotting things down as they happen without leaving the tab.</p>
-
-      <h3 id="starting-a-run">Starting a run</h3>
-      <p>Two ways to begin:</p>
-      <ul>
-        <li><strong>Start</strong> on a prepared (or ad-hoc) encounter. This snapshots the party and monster placements, rolls initiative automatically for monsters and NPCs, and resets that map's fog to whatever you set as the baseline.</li>
-        <li><strong>Explore</strong> on a map, for scenes without combat. No initiative, no HP tracking. If the party already explored this map before, it resumes wherever they left off, positions carry over between sessions.</li>
-      </ul>
-      <p>You can start an encounter mid-exploration too, the app will ask you to confirm and logs the interruption automatically.</p>
-      <figure>
-        <img src="screenshots/07-active-campaign-encounters.png" width="1920" height="1009" alt="Active Campaign hub with the Encounters card and Start button" />
-        <figcaption>The hub screen, with a prepared encounter ready to start.</figcaption>
-      </figure>
-
-      <h3 id="during-combat">During combat</h3>
-      <p>The live run screen adds:</p>
-      <ul>
-        <li><strong>Add Combatant</strong>: pull in players, monsters, NPCs, or homebrew stat blocks mid-fight.</li>
-        <li><strong>Combatants / Initiative Tracker</strong>: roll initiative with one click (auto-rolled for monsters and NPCs, left blank for players so you can enter what they report), then use <strong>Next Turn</strong> to step through the round.</li>
-        <li><strong>Battle Map</strong>: the shared placement grid, now with live tools bolted onto it. Drag tokens to move them, they snap to the grid.</li>
-        <li><strong>Combat Log</strong>: a private scratchpad, separate from the permanent Event Log, that auto-notes HP and condition changes plus anything you type in manually. This resets when the fight ends and doesn't pollute the permanent record.</li>
-      </ul>
-      <p>Click any token to get a small popup with quick actions (nudge HP, hide from players, lock its position) and a button into the full Quick-Info view (HP, conditions, concentration toggle, stat block for SRD monsters).</p>
-      <figure>
-        <img src="screenshots/08-combat-token-popup.png" width="1920" height="1009" alt="Live battle map mid-combat with a token's quick-action popup open" />
-        <figcaption>Mid-fight on the battle map, a token's quick-action popup open.</figcaption>
-      </figure>
-
-      <h3 id="map-tools">Map tools during a run</h3>
-      <p>A small toolbar sits directly on the map:</p>
-      <ul>
-        <li><strong>Edit Fog</strong>: reveal or hide cells live as the party explores.</li>
-        <li><strong>Ruler</strong>: click and drag to measure real distance in feet, fades a few seconds after you let go.</li>
-        <li><strong>Ping</strong>: click to pulse a spot for everyone watching, including the Player Window.</li>
-        <li><strong>Draw</strong>: pen, line, rectangle, circle, or cone, useful for marking spell areas or sketching a rough plan. Unlike ruler and ping, drawings stick around until you clear them.</li>
-        <li><strong>Focus Mode</strong>: expands the map to fill nearly the whole window, fading out the sidebar and other cards. Good for when you just want the map big during a tense moment. Click again to exit, it restores your exact scroll position and zoom.</li>
-        <li><strong>HP Visibility</strong>: choose whether player, NPC, or monster HP numbers are visible on the Player Window. Off by default.</li>
-      </ul>
-      <figure>
-        <img src="screenshots/09-map-toolbar.png" width="1920" height="1009" alt="Map toolbar with the Draw tool active, showing shape and color options" />
-        <figcaption>The map toolbar with the Draw tool active.</figcaption>
-      </figure>
-
-      <h3 id="ending-a-run">Ending a run</h3>
-      <p><strong>Finish Encounter</strong> (or <strong>End Exploration</strong>) writes one entry to the permanent Event Log. You can add a summary, or leave it blank for an auto-generated note. If you just want to bail without any record at all, there's a separate, quieter <strong>Abandon Run</strong> link.</p>
-    </section>
-
-    <section id="player-window">
-      <h2>6. The Player Window</h2>
-      <p>This is a second window meant to be dragged to another monitor or shared on a call, so players see the map without seeing your DM-only notes and controls.</p>
-      <p>Open it from the <strong>Player Window</strong> card on the Active Campaign hub, click <strong>Open Player Window</strong>. It stays open across runs, clicking the button again just brings the same window forward instead of opening a new one, and it closes automatically when you close the main app.</p>
-      <figure>
-        <img src="screenshots/10-player-window.png" width="984" height="661" alt="Player Window showing the live battle map with the LIVE badge" />
-        <figcaption>The Player Window, mirroring the fight live on a second screen.</figcaption>
-      </figure>
-      <p>What it shows:</p>
-      <ul>
-        <li><strong>When idle</strong>: the current location's background image with the location name overlaid. If no image is set, it just shows a plain "no session in progress" message.</li>
-        <li><strong>When a run is live</strong>: it mirrors your map, fog-gated so hidden areas stay hidden, along with tokens, the ruler, pings, and drawings, following your camera automatically.</li>
-      </ul>
-      <p>There's a <strong>Pause</strong> button in the map toolbar if you need to rework the map without the players watching mid-edit, it freezes the second window entirely until you hit Resume.</p>
-      <p>If you'd rather just post a snapshot somewhere (Telegram, for instance) instead of a live feed, use <strong>Export Player View</strong> from the map toolbar, it captures exactly what's currently revealed and lets you save or copy it as an image.</p>
-    </section>
-
-    <section id="event-log">
-      <h2>7. After the session, the Event Log</h2>
-      <p>Everything that gets written to the permanent record shows up here: quick notes you logged during play, and the summaries from finished encounters or explorations. It's a straight timeline, filterable by location.</p>
-      <p>You can edit or delete entries here, but new ones only ever get created from the Active Campaign tab, this tab is for cleanup and review, not for adding fresh entries.</p>
-      <figure>
-        <img src="screenshots/11-event-log.png" width="1920" height="1009" alt="Event Log timeline with a few entries" />
-        <figcaption>The Event Log, the permanent record of what happened.</figcaption>
-      </figure>
-    </section>
-
-    <section id="compendium">
-      <h2>8. Compendium</h2>
-      <p>A built-in D&amp;D 5e SRD reference, shared across all your campaigns rather than being campaign-specific. Browse by category (monsters, spells, conditions, equipment, magic items, plus rules and glossary sections), or search across everything at once. On top of the official reference, you can add your own homebrew content that lives alongside it.</p>
-      <p>Monsters, Spells, Equipment, and Magic Items open in a sortable table by default, with a rows-per-page control (10/15/30/100, defaults to 15) at the bottom once a category has more entries than fit on one page.</p>
-      <figure>
-        <img src="screenshots/17-compendium.png" width="1920" height="1009" alt="Compendium, Monsters table view with pagination" />
-        <figcaption>Monsters in table view, with sorting, source filters, and pagination.</figcaption>
-      </figure>
-
-      <h3 id="compendium-homebrew">Official content vs. homebrew</h3>
-      <p><strong>Official content (SRD)</strong> is the built-in rules reference, the same Goblins, Fireballs, and Longswords in every install. You can browse it and search it, but you can't edit or delete it, it's meant to stay accurate to the real rules.</p>
-      <p><strong>Homebrew content</strong> is what you create yourself: your own custom monsters, magic items, and equipment. It shows up mixed in with the official entries in the same lists, with a small "HB" tag next to the name so you can tell it apart at a glance. Unlike official content, you can edit or delete your homebrew entries any time.</p>
-      <p>Only three categories support homebrew right now: <strong>Monsters, Magic Items, and Equipment</strong>. Spells, Conditions, Rules, and the rest of the reference categories are official-content-only for now.</p>
-
-      <h3 id="compendium-homebrew-shared">Homebrew is shared across all your campaigns</h3>
-      <p>This is the part worth understanding clearly: <strong>your homebrew library isn't tied to one campaign.</strong> Create a homebrew monster while working on Campaign A, and it's already there, ready to use, when you switch to Campaign B. You never have to recreate the same custom monster twice.</p>
-      <p>Because it's shared, editing or deleting a homebrew entry affects it everywhere, not just the campaign you happen to have open. If you tweak a homebrew monster's hit points, that change applies wherever you use it. If you delete one, it's gone from every campaign, not archived.</p>
-      <p><strong>One thing to watch for</strong>: if you've already added a homebrew monster to a Planned Encounter or a Live Run, and you later delete that monster from the Compendium, the encounter keeps the token but loses its connection to the stat block, HP won't auto-fill and its full stat block won't show anymore. Editing a homebrew monster is always safe. Deleting one you're actively using somewhere is the thing to be careful with.</p>
-
-      <h3 id="compendium-homebrew-create">Creating a homebrew entry</h3>
-      <ol>
-        <li>Open the Compendium tab and pick Monsters, Magic Items, or Equipment.</li>
-        <li>Click <strong>+ New Homebrew [Category]</strong> above the list.</li>
-        <li>Fill in whatever fields apply, name is the only one required.</li>
-        <li>Save. It appears in the list right away, tagged "HB".</li>
-      </ol>
-      <figure>
-        <img src="screenshots/19-homebrew-monster-form.png" width="1920" height="1009" alt="New Homebrew Monster form, name, size, alignment, type, portrait" />
-        <figcaption>The New Homebrew Monster form.</figcaption>
-      </figure>
-      <p>Click any homebrew entry to view it, then use the <strong>Edit</strong> or <strong>Delete</strong> buttons on its detail page. Official entries never show those buttons, that's how you can tell at a glance whether something is yours to change.</p>
-
-      <h3 id="compendium-portraits">Portraits</h3>
-      <p>Homebrew Monsters can have a portrait image (just paste in an image link). It shows up on the Compendium entry and on that monster's token whenever it's placed on a battle map, the same way NPC and Player portraits already work.</p>
-      <p>You can also add a portrait to an <strong>official</strong> SRD monster without making a homebrew copy of it, open the monster's page and use <strong>Edit Portrait</strong>, the field expands inline right there in the stat block. Since SRD content is shared across every campaign, that portrait shows up everywhere too, not just your current campaign.</p>
-      <p>Magic Items and Equipment don't have portraits, they never appear as tokens on a map, so there's nothing to show a picture for.</p>
-
-      <h3 id="compendium-homebrew-combat">Using a homebrew monster in a fight</h3>
-      <p>Homebrew Monsters work exactly like official monsters everywhere combat happens:</p>
-      <ul>
-        <li><strong>Campaign Prep &rarr; an Encounter &rarr; Combatants</strong>, there's a Homebrew tab alongside Players/Monsters/NPCs, search and add your monster the same way.</li>
-        <li><strong>Active Campaign &rarr; Add Combatant</strong> during a live run works the same way.</li>
-      </ul>
-      <p>Once added, it gets a token with the right size, portrait if you set one, and hit points pulled from what you entered in the Compendium.</p>
-
-      <h3 id="compendium-homebrew-share">Sharing homebrew with another install</h3>
-      <p>When you export a Campaign or Adventure to a file (My Campaigns &rarr; Campaign Settings &rarr; Export), your whole homebrew library goes along with it automatically. Whoever imports that file gets their own copy of every homebrew Monster, Magic Item, and Equipment entry you'd made, added to their own library, so any Encounter in the file that uses your homebrew monster still works correctly for them.</p>
-      <p>A couple of things worth knowing about how that works:</p>
-      <ul>
-        <li>It's your <strong>entire</strong> homebrew library that travels with the file, not just the entries that particular Campaign or Adventure actually uses. If you've built up a big personal bestiary, all of it goes along, even the parts unrelated to what you're sharing.</li>
-        <li>Each import creates fresh copies. If you export and import the same file twice, or import from two different people who both had your homebrew monster, you'll end up with duplicate entries in your library, they won't merge or recognize each other as the same thing. Worth a quick tidy-up pass in the Compendium after importing if that happens.</li>
-      </ul>
-
-      <h3 id="compendium-search">Quick search</h3>
-      <p>Press <kbd>Ctrl</kbd>+<kbd>K</kbd> (or <kbd>Cmd</kbd>+<kbd>K</kbd> on Mac) from anywhere in the app to pull up a quick search without leaving what you're doing.</p>
-      <figure>
-        <img src="screenshots/18-compendium-search.png" width="1920" height="1009" alt="Compendium quick search, results and a stat block preview in one window" />
-        <figcaption>Quick search, results and a full stat block preview in one window.</figcaption>
-      </figure>
-    </section>
-
-    <section id="campaign-settings">
-      <h2>9. Campaign Settings</h2>
-      <p>Rename the campaign or its adventure title, set a campaign image, and manage a few campaign-wide things:</p>
-      <ul>
-        <li><strong>Export</strong>: choose <strong>Adventure only</strong> (world content, for sharing with another DM, leaves out your session history and players) or <strong>Full campaign</strong> (everything, for moving to another device).</li>
-        <li><strong>Save Adventure to Library</strong>: keeps a reusable copy you can spin up new campaigns from later.</li>
-        <li><strong>Delete Campaign</strong>: in the danger zone at the bottom, requires typing a confirmation phrase. There's no undo, so make sure you've exported anything worth keeping first.</li>
-      </ul>
-    </section>
-
-    <section id="library">
-      <h2>10. Library and sharing adventures</h2>
-      <p>The Library (top nav, next to My Campaigns) holds adventures you've saved for reuse, either your own or ones imported from another DM.</p>
-      <ul>
-        <li><strong>Import adventure</strong>: pulls in a file someone else exported, shows you a preview of what's inside before finalizing.</li>
-        <li>Rename or delete saved adventures with the pencil and trash icons on each entry. Deleting a library entry doesn't touch campaigns you already created from it.</li>
-      </ul>
-      <figure>
-        <img src="screenshots/12-library.png" width="1920" height="1009" alt="Library screen with a couple of saved adventures" />
-        <figcaption>The Library, reusable adventures saved for later.</figcaption>
-      </figure>
-    </section>
-
-    <section id="download">
-      <h2>11. Download the demo build</h2>
-      <p>Want to try the app itself instead of just reading about it? Grab the demo installer here:</p>
-      <p><a href="https://github.com/BukanPokemon/Campaign-Dashboard/releases/download/v0.7.2/Campaign.Dashboard.Setup.0.7.2.DEMO.exe">GitHub, demo build v0.7.2</a></p>
-      <p><a href="https://drive.google.com/file/d/1_vXgEq7rnU8yBg5lVI-M3Kvwe_IdHy3X/view?usp=sharing">Google Drive, demo build v0.7.1</a></p>
-      <p><a href="https://drive.google.com/file/d/1wNhTH-49QbDy8cBOkK0VE18P-Qra275Z/view">Google Drive, demo build v0.6.4</a></p>
-    </section>
-
-    <footer>Dalang, Campaign Dashboard User Guide</footer>
+    <site-footer></site-footer>
   </main>
 </div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
 </body>
 </html>

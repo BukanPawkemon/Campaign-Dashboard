@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>The Player Window - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="A second window for players, with a live turn order panel, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/player-window.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="The Player Window - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="A second window for players, with a live turn order panel, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/player-window.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Player Window - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="A second window for players, with a live turn order panel, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="player-window"></site-nav>
+
+  <main>
+    <h1 class="title">The Player Window</h1>
+    <p class="subtitle">Running a Session &middot; The Player Window</p>
+
+    <p>This is a second window meant to be dragged to another monitor or shared on a call, so players see the map without seeing your DM-only notes and controls.</p>
+    <p>Open it from the <strong>Open Player Window</strong> button in the shared header, next to Compendium search, reachable from any tab, not just Active Campaign. It stays open across runs, clicking the button again just brings the same window forward instead of opening a new one, and it closes automatically when you close the main app.</p>
+    <figure>
+      <img src="screenshots/10-player-window.png" width="984" height="661" alt="Player Window showing the live battle map with the LIVE badge" />
+      <figcaption>The Player Window, mirroring the fight live on a second screen.</figcaption>
+    </figure>
+    <p>What it shows:</p>
+    <ul>
+      <li><strong>When idle</strong>: the currently-selected location's background image with the location name overlaid, or the campaign's own background image if that location has none set. If neither is available, it shows the campaign's own name as a simple title card instead of a blank screen.</li>
+      <li><strong>When a run is live</strong>: it mirrors your map, fog-gated so hidden areas stay hidden, along with tokens, the ruler, pings, and drawings, following your camera automatically.</li>
+    </ul>
+
+    <section id="turn-order">
+      <h2>Turn order panel</h2>
+      <p>Once an Encounter's turn order has actually started, a titled "Turn Order &middot; Round N" panel appears for players: portraits, the current turn highlighted with a glowing ring, and anyone who's already acted this round dimmed and set off by a divider. Long names truncate instead of overflowing the panel. If the DM starts an Encounter but hasn't rolled turn order yet, it shows a plain "Waiting for battle to start" message instead of nothing, so players know a fight is coming.</p>
+      <p>A combatant hidden from players (via the map token popup or the Combatants list row) never appears in this panel either, same rule as everywhere else fog and visibility apply.</p>
+      <figure>
+        <img src="screenshots/33-player-window-turn-order.png" width="984" height="661" alt="Turn Order panel showing Round 1 with the current turn highlighted" />
+        <figcaption>Turn order active, current turn highlighted with a glowing ring.</figcaption>
+      </figure>
+      <p class="note">The hero screenshot at the top of this page shows the other state, "Waiting for battle to start," before the DM has rolled turn order.</p>
+    </section>
+
+    <p>There's a <strong>Pause</strong> button in the map toolbar if you need to rework the map without the players watching mid-edit, it freezes the second window entirely until you hit Resume.</p>
+    <p>If you'd rather just post a snapshot somewhere (Telegram, for instance) instead of a live feed, use <strong>Export Player View</strong> from the map toolbar, it captures exactly what's currently revealed and lets you save or copy it as an image.</p>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

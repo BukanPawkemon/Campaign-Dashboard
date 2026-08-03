@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Running a Live Session - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/running-a-session.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Running a Live Session - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/running-a-session.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Running a Live Session - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="running-a-session"></site-nav>
+
+  <main>
+    <h1 class="title">Running a Live Session</h1>
+    <p class="subtitle">Running a Session &middot; Running a Live Session</p>
+
+    <p class="page-jump"><span class="label">On this page</span>
+      <a href="#starting-a-run">Starting a run</a>
+      <a href="#during-combat">During combat</a>
+      <a href="#map-tools">Map tools</a>
+      <a href="#focus-mode">Focus Mode</a>
+      <a href="#ending-a-run">Ending a run</a>
+    </p>
+
+    <p>Open the <strong>Active Campaign</strong> tab. If nothing's running, you'll see the hub screen: current location, party present, prepared encounters for this location, maps, NPCs present, active quests, and a quick "Log This Moment" box for jotting things down as they happen without leaving the tab. If the current location has no background image of its own, the hub falls back to the campaign's own background image (set in <a href="campaign-settings.html">Campaign Settings</a>) instead of going flat.</p>
+
+    <section id="starting-a-run">
+      <h2>Starting a run</h2>
+      <p>Two ways to begin:</p>
+      <ul>
+        <li><strong>Start</strong> on a prepared (or ad-hoc) encounter. This snapshots the party and monster placements, rolls initiative automatically for monsters and NPCs, and resets that map's fog to whatever you set as the baseline.</li>
+        <li><strong>Explore</strong> on a map, for scenes without combat. No initiative, no HP tracking. If the party already explored this map before, it resumes wherever they left off, positions carry over between sessions.</li>
+      </ul>
+      <p>You can start an encounter mid-exploration too, the app will ask you to confirm and logs the interruption automatically.</p>
+      <figure>
+        <img src="screenshots/07-active-campaign-encounters.png" width="1920" height="1009" alt="Active Campaign hub with the Encounters card and Start button" />
+        <figcaption>The hub screen, with a prepared encounter ready to start.</figcaption>
+      </figure>
+    </section>
+
+    <section id="during-combat">
+      <h2>During combat</h2>
+      <p>The live run screen adds:</p>
+      <ul>
+        <li><strong>Add Combatant</strong>: pull in players, monsters, NPCs (including any NPC linked to a Compendium monster, see <a href="npc.html">NPC</a>), or homebrew stat blocks mid-fight.</li>
+        <li><strong>Combatants / Initiative Tracker</strong>: roll initiative with one click (auto-rolled for monsters and NPCs, left blank for players so you can enter what they report), then use <strong>Next Turn</strong> to step through the round.</li>
+        <li><strong>Battle Map</strong>: the shared placement grid, now with live tools bolted onto it. Drag tokens to move them, they snap to the grid.</li>
+        <li><strong>Combat Log</strong>: a private scratchpad, separate from the permanent Event Log, that auto-notes HP and condition changes plus anything you type in manually. This resets when the fight ends and doesn't pollute the permanent record.</li>
+      </ul>
+      <p>Each row in the Combatants list also has its own quick controls now: a small "+" opens a condition search right there, applied conditions get a small &times; to remove, and a hide-from-players eye icon sits right on the row too, no need to open the full token popup just to toggle those.</p>
+      <p>Click any token to get a small popup with quick actions (nudge HP, hide from players, lock its position) and a button into the full Quick-Info view (HP, conditions, concentration toggle, stat block for SRD and homebrew monsters, and for any NPC linked to one).</p>
+      <figure>
+        <img src="screenshots/08-combat-token-popup.png" width="1150" height="685" alt="Live battle map mid-combat with a token's quick-action popup open" />
+        <figcaption>Mid-fight on the battle map, a token's quick-action popup open.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/32-combatant-row-quick-actions.png" width="1150" height="770" alt="Combatants list with inline condition and hide-from-players controls on each row" />
+        <figcaption>The Combatants list, quick controls right on each row.</figcaption>
+      </figure>
+    </section>
+
+    <section id="map-tools">
+      <h2>Map tools during a run</h2>
+      <p>A small toolbar sits directly on the map:</p>
+      <ul>
+        <li><strong>Edit Fog</strong>: reveal or hide cells live as the party explores.</li>
+        <li><strong>Ruler</strong>: click and drag to measure real distance in feet, fades a few seconds after you let go.</li>
+        <li><strong>Ping</strong>: click to pulse a spot for everyone watching, including the Player Window.</li>
+        <li><strong>Draw</strong>: pen, line, rectangle, circle, or cone, useful for marking spell areas or sketching a rough plan. Unlike ruler and ping, drawings stick around until you clear them.</li>
+        <li><strong>Roll dice</strong>: opens the same global dice tray reachable everywhere else, see <a href="dice-roller.html">Dice Roller</a>. It has its own icon here because Focus Mode covers the header's Roll button.</li>
+        <li><strong>Focus Mode</strong>: see below.</li>
+        <li><strong>HP Visibility</strong>: choose whether player, NPC, or monster HP numbers are visible on the Player Window. Off by default.</li>
+      </ul>
+      <figure>
+        <img src="screenshots/09-map-toolbar.png" width="1150" height="415" alt="Map toolbar with the Draw tool active, showing shape and color options" />
+        <figcaption>The map toolbar with the Draw tool active.</figcaption>
+      </figure>
+    </section>
+
+    <section id="focus-mode">
+      <h2>Focus Mode</h2>
+      <p>Expands the map to fill nearly the whole window, fading out the sidebar and other cards. Good for when you just want the map big during a tense moment. Click again to exit, it restores your exact scroll position and zoom.</p>
+      <p>Focus Mode has its own turn controls now, so you don't have to leave it just to run the fight. A fixed-width order list sits in the bottom-left corner: portraits, long names truncated instead of overflowing, the current turn highlighted, and anyone who's already acted this round dimmed and set off by a divider line. You can toggle hide-from-players right on each row there too. <strong>Round</strong>, <strong>Roll Initiative</strong>, and <strong>Next Turn</strong> sit alongside it, labeled with text rather than just an icon.</p>
+      <p><strong>Finish</strong> and <strong>Abandon</strong> live in the top-right toolbar while in Focus Mode, Abandon on the left, Finish on the right in solid teal, matching the same layout the normal header already uses. HP Visibility moved into the top-left tool pill alongside Edit Fog, Ruler, Ping, and Draw, so the top-right toolbar is just session controls.</p>
+      <figure>
+        <img src="screenshots/31-focus-mode-turn-order.png" width="1450" height="960" alt="Focus Mode with the compact turn-order list in the bottom-left corner" />
+        <figcaption>Focus Mode, turn order controls in the corner instead of the full Combatants list.</figcaption>
+      </figure>
+      <p class="see-also">See also: <a href="player-window.html">The Player Window</a>, which shows its own turn order panel to players at the same time.</p>
+    </section>
+
+    <section id="ending-a-run">
+      <h2>Ending a run</h2>
+      <p><strong>Finish Encounter</strong> (or <strong>End Exploration</strong>) writes one entry to the permanent Event Log. You can add a summary, or leave it blank for an auto-generated note. If you just want to bail without any record at all, there's a separate, quieter <strong>Abandon Run</strong> link.</p>
+    </section>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

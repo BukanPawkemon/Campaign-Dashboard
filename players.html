@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Players - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="The party roster, and importing a character straight from a D&amp;D Beyond URL, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/players.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Players - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="The party roster, and importing a character straight from a D&amp;D Beyond URL, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/players.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Players - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="The party roster, and importing a character straight from a D&amp;D Beyond URL, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="players"></site-nav>
+
+  <main>
+    <h1 class="title">Players</h1>
+    <p class="subtitle">Preparation &middot; Players</p>
+
+    <p class="page-jump"><span class="label">On this page</span>
+      <a href="#roster">The roster</a>
+      <a href="#dndbeyond">Importing from D&amp;D Beyond</a>
+    </p>
+
+    <section id="roster">
+      <h2>The roster</h2>
+      <p>A roster of character cards, toggle each Active or Inactive. Only Active characters show up on the Active Campaign tab. Click into a card for the full character sheet: race, class, subclass, level, quick stats (AC, HP, passive perception, etc.), ability modifiers, description, and a couple of DM-only fields like player nickname and personal notes. Portrait URL and Character Sheet Link sit at the top of the sheet, above Race/Class/Subclass/Level.</p>
+      <figure>
+        <img src="screenshots/15-players.png" width="1920" height="1009" alt="Players roster, tarot-card style" />
+        <figcaption>The party roster, tarot-card style.</figcaption>
+      </figure>
+      <p>AC now shows up wherever it matters mid-session too: the token popup you get from clicking a combatant during a fight, and the Party Present popup on Active Campaign, which also shows Subclass and passive Investigation/Insight alongside passive Perception. Picking a player to add to a fight shows their class and level in the picker, the same as monster and NPC rows already did.</p>
+    </section>
+
+    <section id="dndbeyond">
+      <h2>Importing from D&amp;D Beyond</h2>
+      <p>If a player already built their character on D&amp;D Beyond, you don't have to retype everything by hand. Paste their character URL in and the app fills in as much as it reliably can.</p>
+      <p class="note">The character's D&amp;D Beyond visibility needs to be set to <strong>Public</strong> first, a private sheet can't be read. This is a setting on D&amp;D Beyond's own site, not something Dalang controls.</p>
+      <ol>
+        <li>Open the player's card and paste their D&amp;D Beyond character URL into the <strong>Character sheet link</strong> field.</li>
+        <li>Click the download icon next to the field to import.</li>
+      </ol>
+      <figure>
+        <img src="screenshots/24-dndbeyond-import-entry.png" width="1920" height="1009" alt="Character sheet link field with a D&amp;D Beyond URL pasted in, import button ready" />
+        <figcaption>The Character sheet link field, ready to import.</figcaption>
+      </figure>
+      <p>What gets filled in:</p>
+      <ul>
+        <li>Race, Class, Subclass, Level, Background</li>
+        <li>AC and HP (current and max, including the Constitution contribution)</li>
+        <li>Passive Perception, Investigation, and Insight</li>
+        <li>Ability modifiers and initiative</li>
+        <li>Walking speed</li>
+        <li>Portrait</li>
+        <li>Personality traits, ideals, bonds, and flaws, appended to Narrative Hooks rather than replacing it, so anything you already wrote by hand survives a re-import</li>
+      </ul>
+      <figure>
+        <img src="screenshots/26-dndbeyond-import-success.png" width="1920" height="1009" alt="Populated Player record after a successful D&amp;D Beyond import, with an Imported confirmation message" />
+        <figcaption>A successful import, fields filled in and confirmed.</figcaption>
+      </figure>
+      <p>A few things it deliberately doesn't try to cover: unusual AC sources like racial natural armor, Draconic Resilience, dual-wielding fighting style bonuses, or a custom AC formula are left blank rather than risking a wrong number for something that matters in combat. Feats and items that modify movement speed beyond the base walking speed aren't accounted for either.</p>
+      <p class="note">If the character can't be reached (private sheet, D&amp;D Beyond is slow to respond, or the URL doesn't look like a real character link), you'll get a clear error instead of the import hanging indefinitely.</p>
+      <figure>
+        <img src="screenshots/27-dndbeyond-import-error.png" width="1920" height="1009" alt="Import error message shown inline under the Character sheet link field" />
+        <figcaption>A failed import shows a clear error, not a silent hang.</figcaption>
+      </figure>
+    </section>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

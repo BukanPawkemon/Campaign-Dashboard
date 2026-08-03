@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>NPC - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="The NPC roster, portraits, and linking a Compendium monster for real combat stats, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/npc.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="NPC - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="The NPC roster, portraits, and linking a Compendium monster for real combat stats, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/npc.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NPC - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="The NPC roster, portraits, and linking a Compendium monster for real combat stats, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="npc"></site-nav>
+
+  <main>
+    <h1 class="title">NPC</h1>
+    <p class="subtitle">Preparation &middot; NPC</p>
+
+    <p class="page-jump"><span class="label">On this page</span>
+      <a href="#roster">The roster</a>
+      <a href="#monster-link">Linking a monster for combat stats</a>
+    </p>
+
+    <section id="roster">
+      <h2>The roster</h2>
+      <p>A sortable table (Name, Role, Attitude, Location), with search and filter dropdowns. Click a row to open the full NPC sheet: personality, goal or secret, mannerisms, attitude toward the party, and which location they're tied to. Each NPC can also have a portrait, paste an image URL into the Portrait URL field and a live preview shows up right next to it, and a thumbnail shows on the table too. The same portrait shows up on that NPC's token wherever they're added to a map.</p>
+      <figure>
+        <img src="screenshots/13-npc-table.png" width="1920" height="1009" alt="NPC table, sortable and filterable, with portrait thumbnails" />
+        <figcaption>The NPC roster, sortable by column, filterable by location or attitude.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/14-npc-detail.png" width="1920" height="1009" alt="NPC detail sheet, personality, goal or secret, mannerism, portrait preview" />
+        <figcaption>An NPC's full sheet: personality, goal or secret, mannerism, and portrait.</figcaption>
+      </figure>
+    </section>
+
+    <section id="monster-link">
+      <h2>Linking a monster for combat stats</h2>
+      <p>An NPC on its own has no combat stats, no hit points, no initiative modifier, nothing. That's fine for an NPC who never fights, but the moment you want to drop one into an encounter (a guard captain who turns hostile, a rival adventurer who ambushes the party), you need real numbers behind them.</p>
+      <p>Rather than duplicating an NPC as a separate monster, you can link the NPC directly to a Compendium entry, official SRD or your own homebrew, and the NPC borrows that entry's full stat block from then on.</p>
+      <ol>
+        <li>Open the NPC's detail sheet and find the <strong>Stat Block</strong> section.</li>
+        <li>If nothing's linked yet, you'll see a dashed <strong>Link a monster</strong> button. Click it.</li>
+        <li>Search across one combined, alphabetical list of every SRD and homebrew monster, official and homebrew results are tagged so you can tell them apart, then pick one.</li>
+      </ol>
+      <figure>
+        <img src="screenshots/29-npc-statblock-link.png" width="1920" height="1009" alt="NPC detail view with a linked Knight stat block, the NPC's portrait also fell back to the monster's portrait" />
+        <figcaption>Corin Vale linked to the SRD Knight, stat block embedded right on the sheet.</figcaption>
+      </figure>
+      <p>Once linked:</p>
+      <ul>
+        <li>The NPC roster table gets a new <strong>Species</strong> column, showing the linked monster's name (or a plain dash if there's nothing set).</li>
+        <li>The Stat Block section shows the full embedded stat block, with buttons to change the link or unlink it.</li>
+        <li>If the NPC has no portrait of its own, it falls back to the linked monster's portrait, same idea as every other portrait fallback in the app.</li>
+        <li>Add the NPC to a fight and it now gets real hit points, a real initiative roll from the linked monster's Dex modifier, and the full stat block in the combat token popup, exactly like adding an SRD or homebrew monster directly.</li>
+      </ul>
+      <figure>
+        <img src="screenshots/28-npc-species-column.png" width="1920" height="1009" alt="NPC roster table with the new Species column, showing Knight for one linked NPC" />
+        <figcaption>The roster's new Species column, only Corin Vale has a link here.</figcaption>
+      </figure>
+      <p class="note">If you later delete the linked monster from the Compendium, the NPC doesn't lose its identity, it keeps a snapshot of the monster's name and shows a small "no longer in the Compendium" note instead of the live stat block. Nothing crashes, you just won't get real combat stats from it anymore until you link a replacement.</p>
+      <p class="see-also">See also: <a href="compendium.html">Compendium</a> for how SRD and homebrew monsters work, and <a href="running-a-session.html">Running a Live Session</a> for how a linked NPC behaves once it's actually in a fight.</p>
+    </section>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

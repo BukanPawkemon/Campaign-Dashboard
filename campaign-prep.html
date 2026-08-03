@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Campaign Prep - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="Locations, the backbone of a campaign: description, maps, music, NPCs, planned encounters, treasure, and DM notes, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/campaign-prep.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Campaign Prep - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="Locations, the backbone of a campaign: description, maps, music, NPCs, planned encounters, treasure, and DM notes, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/campaign-prep.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Campaign Prep - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="Locations, the backbone of a campaign: description, maps, music, NPCs, planned encounters, treasure, and DM notes, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="campaign-prep"></site-nav>
+
+  <main>
+    <h1 class="title">Campaign Prep</h1>
+    <p class="subtitle">Preparation &middot; Campaign Prep</p>
+
+    <p>This is where locations live, and it's the backbone the rest of the app hangs off of.</p>
+    <p>Locations can be nested one level deep (for example, Phandalin as a top-level location, with the Stonehill Inn underneath it). The list view shows each location with counts for encounters, treasure found, NPCs, and quests tied to it.</p>
+    <figure>
+      <img src="screenshots/16-campaign-prep-list.png" width="1920" height="1009" alt="Campaign Prep location list, with nested sub-locations" />
+      <figcaption>Locations, with sub-locations nested underneath (Blackroot Woods &rarr; Old Mill Ruins).</figcaption>
+    </figure>
+    <p>Click <strong>+ Add location prep</strong> to create one. Click into a location to get its full detail view:</p>
+    <ul>
+      <li><strong>Description</strong>: read-aloud text, plus a background image URL. That image shows up in three places: behind the location row, on the Active Campaign tab when it's your current location, and as the idle screen on the Player Window when nothing's running.</li>
+      <li><strong>Maps</strong>: add and open maps here, this is where you calibrate a map's grid before it can be used in a session, see <a href="maps.html">Setting Up a Map</a>.</li>
+      <li><strong>Music Links</strong></li>
+      <li><strong>NPCs available here</strong>: tag NPCs to this location with a search box.</li>
+      <li><strong>Planned Encounters</strong>: pre-build fights or scenes ahead of time, including where tokens should start.</li>
+      <li><strong>Treasure</strong>: a checklist you tick off as items get found.</li>
+      <li><strong>DM Notes</strong></li>
+      <li><strong>Related Quests</strong>: a read-only list, populated automatically from tags you set on the <a href="job-board.html">Job Board</a> tab.</li>
+    </ul>
+    <figure>
+      <img src="screenshots/04-location-detail.png" width="1920" height="1009" alt="Location detail view showing description, maps, and the rest of the card layout" />
+      <figcaption>A location's full detail view in Campaign Prep, Old Mill Ruins here.</figcaption>
+    </figure>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

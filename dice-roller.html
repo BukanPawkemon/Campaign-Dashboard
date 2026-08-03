@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Dice Roller - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="A global dice tray: pool builder, formula input, Advantage/Disadvantage, and Player Window broadcast, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/dice-roller.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Dice Roller - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="A global dice tray: pool builder, formula input, Advantage/Disadvantage, and Player Window broadcast, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/dice-roller.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/21-dice-tray.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dice Roller - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="A global dice tray: pool builder, formula input, Advantage/Disadvantage, and Player Window broadcast, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/21-dice-tray.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="dice-roller"></site-nav>
+
+  <main>
+    <h1 class="title">Dice Roller</h1>
+    <p class="subtitle">Reference &middot; Dice Roller</p>
+
+    <p>Press <kbd>Ctrl</kbd>+<kbd>D</kbd> from anywhere in the app, or click the <strong>Roll</strong> button next to Compendium search in the header, to open the dice tray. It stays open across tab switches and clicks elsewhere in the app, so you can keep it up while checking other screens, only the X button or Escape actually close it.</p>
+    <ul>
+      <li><strong>Rolls: DM only / visible to players</strong>, at the top, tap to flip. Stays as you set it for as long as the tray is open, so you can roll several visible things in a row (initiative for the whole party, say) without re-flipping each time, but always resets back to DM only the moment you close the tray, so it can't stay "on" into a later session and leak a roll you meant to keep secret.</li>
+      <li><strong>Click a die</strong> (d4 through d100) to add it to your pool, click again for more of the same type. Each queued type also gets a small chip below with its own -/+ and a remove-all button.</li>
+      <li><strong>d20 mode</strong> shows up once there's a d20 in the pool: Disadvantage, Normal, or Advantage. Only takes effect with exactly one d20 queued, add a second and it grays out, since rolling two d20s on purpose is just two d20s, not Advantage stacked on Advantage.</li>
+      <li><strong>Modifier</strong>: a flat +/- added to the pool roll.</li>
+      <li>A <strong>Rolling: ...</strong> preview line shows exactly what you're about to roll before you commit.</li>
+      <li><strong>Roll</strong>: one button, rolls everything currently queued, including the d20 mode if set.</li>
+      <li><strong>+ Custom formula</strong>: collapsed by default, click to expand a text box for anything the pool buttons don't cover, e.g. <code>2d6+3</code> or <code>1d8-1+1d4</code>.</li>
+      <li>Each die tumbles briefly before landing on its real result, and a natural 20 or 1 on a d20 gets highlighted.</li>
+      <li><strong>History</strong> builds up below as you roll, newest first, the latest roll gets a gold LATEST tag and a small eye-off icon if it was DM only. <strong>Clear pool</strong> and <strong>Clear history</strong> are separate, clearing one doesn't touch the other.</li>
+      <li>Drag the tray by its title bar to move it out of the way.</li>
+    </ul>
+    <p>Roll history resets whenever you switch campaigns or restart the app, it's a scratchpad, not part of the permanent record.</p>
+    <p>During a live encounter's Focus Mode, the header button is covered by the maximized map, use <kbd>Ctrl</kbd>+<kbd>D</kbd> or the matching dice icon on the map's own toolbar instead, see <a href="running-a-session.html">Running a Live Session</a>.</p>
+    <figure>
+      <img src="screenshots/21-dice-tray.png" width="1920" height="1009" alt="Dice tray with an Advantage pool roll in history and a rolled formula as the latest result" />
+      <figcaption>The dice tray, with a pool roll and a formula result in history.</figcaption>
+    </figure>
+    <p class="note">Flipping "visible to players" on broadcasts that roll to the <a href="player-window.html">Player Window</a>, it shows up there for a few seconds and fades on its own, no manual clearing needed.</p>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

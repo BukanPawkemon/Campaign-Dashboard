@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Setting Up a Map - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="Grid calibration and Fog of War setup, before you're at the table, in Dalang - Campaign Dashboard." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/maps.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Setting Up a Map - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="Grid calibration and Fog of War setup, before you're at the table, in Dalang - Campaign Dashboard." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/maps.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1009" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Setting Up a Map - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="Grid calibration and Fog of War setup, before you're at the table, in Dalang - Campaign Dashboard." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/01-my-campaigns.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="maps"></site-nav>
+
+  <main>
+    <h1 class="title">Setting Up a Map</h1>
+    <p class="subtitle">Preparation &middot; Setting Up a Map</p>
+
+    <p>Do this before a session so you're not fumbling with grid calibration while people are waiting.</p>
+    <ol>
+      <li>On a location's <a href="campaign-prep.html">Campaign Prep</a> page, add a map by pasting an image URL and clicking <strong>Load</strong>.</li>
+      <li>This opens the map popup with three modes: <strong>Pan &amp; View</strong>, <strong>Calibrate Grid</strong>, and <strong>Fog of War</strong>.</li>
+      <li>In Calibrate mode, drag the two handles onto adjacent grid intersections on the image. The app uses that spacing to work out real distances later (for the ruler tool, spell radius labels, and so on). You can also select a handle and nudge it with arrow keys for precision.</li>
+      <li>In Fog of War mode, click or drag to mark which cells are hidden by default when a session starts. This sets the baseline, not what's revealed live during play, that gets edited separately once a run is underway.</li>
+      <li>Click <strong>Save &amp; Close</strong> when you're done.</li>
+    </ol>
+    <figure>
+      <img src="screenshots/05-map-calibration.png" width="960" height="730" alt="Map calibration mode with the brass and teal handles placed, plus Grid Style controls" />
+      <figcaption>Calibrating a map's grid: drag the brass and teal handles onto adjacent intersections.</figcaption>
+    </figure>
+    <p>If you want to place tokens ahead of time (an ambush, a set encounter), open the encounter from Campaign Prep and use its <strong>Map Setup</strong> section. It uses the same placement grid as the live battle map, so tokens you place here are exactly where they'll be when you hit Start, see <a href="running-a-session.html">Running a Live Session</a>.</p>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>
