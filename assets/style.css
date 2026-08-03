@@ -325,6 +325,16 @@ footer a { margin: 0 2px; }
 }
 .hero-grid figure { margin: 0; }
 
+.discord-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: -2px;
+}
+.discord-icon {
+  flex-shrink: 0;
+}
+
 /* Small brand-mark/wordmark illustrations, distinct from the full-bleed
    screenshot figure treatment, no panel background since these are
    transparent PNGs meant to sit directly on the page. */
