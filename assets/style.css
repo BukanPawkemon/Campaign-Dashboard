@@ -169,6 +169,13 @@ h1.title img {
   width: min(220px, 100%);
   height: auto;
 }
+h1.title.home-hero {
+  text-align: center;
+}
+h1.title.home-hero img {
+  width: min(480px, 100%);
+  margin: 0 auto;
+}
 .subtitle {
   font-family: 'IBM Plex Mono', monospace;
   color: var(--color-parchment-dim);
@@ -325,7 +332,7 @@ footer a { margin: 0 2px; }
   display: block;
   width: 150px;
   height: auto;
-  margin: 4px 0 20px;
+  margin: 4px auto 20px;
 }
 
 /* Click-to-zoom lightbox (assets/lightbox.js). Only screenshots inside a
