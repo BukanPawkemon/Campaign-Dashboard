@@ -159,10 +159,10 @@ main > p:first-of-type {
 }
 .itch-cta {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
+  gap: 8px;
   margin: 20px 0 28px;
   text-align: center;
 }
@@ -170,8 +170,8 @@ main > p:first-of-type {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #fa5c5c;
-  color: #fff;
+  background: #ffeef0;
+  color: #c1272d;
   font-family: 'Cinzel', Georgia, serif;
   font-weight: 600;
   font-size: 0.95rem;
@@ -181,7 +181,7 @@ main > p:first-of-type {
   transition: background 0.15s ease;
 }
 .itch-button:hover {
-  background: #e14747;
+  background: #ffd9dc;
 }
 .itch-button img {
   display: block;
