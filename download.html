@@ -62,6 +62,18 @@
     <section id="whats-new">
       <h2>Version history</h2>
 
+      <h3>v1.1.0</h3>
+      <ul>
+        <li>Every image field in the app, NPC portrait, Player portrait, Location image, Campaign card image, DM-level background, SRD and Homebrew monster portraits, can now <strong>Browse</strong> to a file on your own computer instead of only pasting a hosted URL, with a live preview next to the field either way. See <a href="campaign-prep.html">Campaign Prep</a>.</li>
+        <li>Monster portraits can now be added or changed directly from the <strong>Battle Map</strong>, click a token, Edit Portrait, right above its stat block. No more leaving a live encounter for Compendium just to fix a picture for a monster pulled off a random table mid-session. Works for SRD and homebrew monsters alike. See <a href="running-a-session.html">Running a Live Session</a>.</li>
+        <li>Fixed the Player Window's dice roll banner never animating on a broadcast roll, a fresh roll and one still sitting on screen from before looked identical. It now tumbles once per new roll.</li>
+        <li>Fixed the Player Window's dice roll card blending into busy map backgrounds, it now sits on a solid backing like the other overlays on that screen.</li>
+        <li>The Player Window now has its own distinct title ("Dalang - Player Window"), separate from the main window, fixing tools like OBS's Window Capture picker listing two identical, indistinguishable entries.</li>
+        <li>Fixed the sidebar's tab list clipping on a short window, tabs past the visible height (like Settings) were unreachable. Only the tab list scrolls now, the campaign header and "Back to My Campaigns" footer stay fixed in place.</li>
+        <li>Every native file dialog (image Browse, plus every export/import picker) now shows the Dalang icon in its title bar instead of the generic Electron one.</li>
+        <li>Fixed the installer and taskbar icon looking blurry at large sizes (Windows Explorer's Extra Large icons view on a high-DPI screen), it only had image data up to 256px, a proper 512px version is included now.</li>
+      </ul>
+
       <h3>v1.0.0</h3>
       <ul>
         <li>Renamed to <strong>Dalang - Campaign Dashboard</strong>, formerly just Campaign Dashboard.</li>
