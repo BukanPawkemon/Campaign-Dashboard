@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Player Guide - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="Export a standalone HTML or PDF guide players can browse themselves, with exactly the Story, Locations, NPCs, and Quests content you choose." />
+<link rel="canonical" href="https://bukanpokemon.github.io/Campaign-Dashboard/player-guide.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Player Guide - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="Export a standalone HTML or PDF guide players can browse themselves, with exactly the Story, Locations, NPCs, and Quests content you choose." />
+<meta property="og:url" content="https://bukanpokemon.github.io/Campaign-Dashboard/player-guide.html" />
+<meta property="og:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/36-player-guide-hero.png" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="950" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Player Guide - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="Export a standalone HTML or PDF guide players can browse themselves, with exactly the Story, Locations, NPCs, and Quests content you choose." />
+<meta name="twitter:image" content="https://bukanpokemon.github.io/Campaign-Dashboard/screenshots/36-player-guide-hero.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="player-guide"></site-nav>
+
+  <main>
+    <h1 class="title">Player Guide</h1>
+    <p class="subtitle">Settings &middot; Player Guide</p>
+
+    <p>A standalone file your players can browse themselves, no app install needed. You pick exactly what goes in: which Story sections, which Locations, which NPCs, which Quests. Nothing else is ever included, DM Notes, Encounters, Treasure, Maps, and an NPC's Goal/Secret aren't gated behind a toggle, this export simply doesn't know those fields exist.</p>
+
+    <p>Open <a href="campaign-settings.html">Campaign Settings</a> and click <strong>Build Player Guide</strong>. The checklist on the left controls what's included, the preview on the right updates live as you check things off.</p>
+
+    <figure>
+      <img src="screenshots/36-player-guide-hero.png" width="1600" height="950" alt="Player Guide modal with the export checklist on the left and a live preview of the cover page on the right" />
+      <figcaption>Export Settings, plus a live preview of the exported guide's cover.</figcaption>
+    </figure>
+
+    <h2>Choosing what's included</h2>
+    <p>Every chapter, Story, Gameplay, Locations, NPCs, Quests, works the same way: a set of per-field toggles at the top (so you can leave out an NPC's Voice notes but keep their Portrait, for instance), then a list of every Location/NPC/Quest in the campaign. Check one to include it, and use the small up/down arrows to reorder it within the exported guide. Included items float to the top of the list so you're not hunting for them.</p>
+
+    <figure>
+      <img src="screenshots/37-player-guide-npc-fields.png" width="1600" height="950" alt="NPCs chapter expanded, showing per-field toggles and a checked, reorderable NPC list" />
+      <figcaption>Per-field toggles above, the reorderable NPC list below. Same pattern for Locations and Quests.</figcaption>
+    </figure>
+
+    <p>Each chapter's accordion remembers whether it was open or closed the next time you open Player Guide, so if you're only ever touching NPCs and Quests, Story and Gameplay can stay tucked away.</p>
+
+    <h2>Layout: Long Scroll or Tabbed</h2>
+    <p><strong>Long Scroll</strong> puts everything on one continuous page, players scroll through it top to bottom. <strong>Tabbed</strong> adds a small nav bar so players click between Story, Locations, NPCs, and so on without scrolling through sections they don't need right now. Both are one file either way, this only changes how it reads.</p>
+
+    <h2>Format: HTML or PDF</h2>
+    <p>The preview always shows the HTML layout, since that's what a DM is actively shaping. PDF export builds from the same content but adapts it for print:</p>
+    <ul>
+      <li>A real, clickable <strong>Table of Contents</strong> page replaces the on-screen nav, which doesn't survive pagination.</li>
+      <li>Every chapter always starts on its own printed page, regardless of the Layout choice above, so nothing runs together mid-page.</li>
+      <li>Anything collapsible on screen, a monster's Stat Block, a Tabbed panel, prints fully expanded. A printout can't be clicked open.</li>
+      <li>Cross-reference links (an NPC's "Found at," a Quest's "Given by") always stay real, clickable links in the PDF, even where Tabbed layout would otherwise show them as plain text on screen.</li>
+    </ul>
+    <p>There's also a <strong>Print-friendly</strong> checkbox, PDF only: swaps the app's dark theme for a light, white-background palette that costs less ink on a real printer. Everything else about the layout stays the same, it's a recolor, not a redesign.</p>
+
+    <figure>
+      <img src="screenshots/38-player-guide-pdf-toc.png" width="935" height="1210" alt="The PDF's Table of Contents page, listing Story, Gameplay, Locations, NPCs, Quests, and About as clickable links" />
+      <figcaption>The PDF's Table of Contents, every entry is a real clickable link.</figcaption>
+    </figure>
+
+    <p class="note">Want to see a real one before building your own? <a href="samples/player-guide-sample.pdf">Download a sample Player Guide PDF</a>, exported straight from the app's own built-in starter adventure.</p>
+
+    <h2>Exporting</h2>
+    <p>Click the Export button (it reads "Export HTML..." or "Export PDF...", matching whichever Format is selected) and choose where to save. That's it, one file, ready to send to your players however you'd normally share things with them, Discord, email, a shared drive, whatever your table already uses.</p>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

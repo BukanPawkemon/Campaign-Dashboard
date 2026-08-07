@@ -62,6 +62,24 @@
     <section id="whats-new">
       <h2>Version history</h2>
 
+      <h3>v1.2.0</h3>
+
+      <h4>New features</h4>
+      <ul>
+        <li>Added a <strong>Player Guide</strong> export (Campaign Settings &rarr; Build Player Guide): pick which Story sections, Locations, NPCs, and Quests players can see, preview the result live, then export it as one standalone file, HTML (opens in any browser, no app needed) or PDF. Layout choice of Long Scroll or Tabbed, per-field toggles for what shows on each card, an optional Author/DM name byline, and an option to include an NPC's linked monster Stat Block. DM Notes, Encounters, Treasure, Maps, and NPC Goal/Secret are never included, not gated by a toggle, this export simply doesn't read those fields. PDF export adds a clickable Table of Contents, always keeps cross-reference links working regardless of Layout, fully expands stat blocks and tab panels, always starts each chapter on its own printed page, and has an optional Print-friendly (white background) palette. See <a href="player-guide.html">Player Guide</a>.</li>
+        <li>Maps can now be printed at true physical scale. A fourth Print mode in the map popup (alongside Pan &amp; View/Calibrate Grid/Fog of War): position a page overlay, pick a paper size (Letter/A4/Legal/Tabloid/A3) and orientation, choose whether to include the map art, grid lines, and a separate fog overlay sheet, then export a multi-page PDF at exactly 1 grid square = 1 physical inch, derived from the map's own calibration. See <a href="maps.html">Setting Up a Map</a>.</li>
+      </ul>
+      <figure>
+        <img src="screenshots/36-player-guide-hero.png" width="1600" height="950" alt="Player Guide modal with the export checklist and a live preview" />
+        <figcaption>Building a Player Guide: pick what's included, preview it live, export one file.</figcaption>
+      </figure>
+
+      <h4>Improvements &amp; fixes</h4>
+      <ul>
+        <li>Fixed popups closing if a drag started inside them (like selecting text in a textarea) and released outside, any popup in the app, not just one.</li>
+        <li>The main window can no longer be resized smaller than 1000&times;650, keeps the layout from breaking at very small window sizes.</li>
+      </ul>
+
       <h3>v1.1.0</h3>
 
       <h4>New features</h4>

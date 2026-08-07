@@ -34,6 +34,7 @@
     ] },
     { group: "Settings", items: [
       { key: "campaign-settings", href: "campaign-settings.html", label: "Campaign Settings" },
+      { key: "player-guide", href: "player-guide.html", label: "Player Guide" },
       { key: "library", href: "library.html", label: "Library" },
     ] },
     { group: "Get the App", items: [
