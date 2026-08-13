@@ -81,7 +81,7 @@
       this.innerHTML = 'Dalang, Campaign Dashboard User Guide &middot; '
         + '<a href="index.html">Home</a> &middot; '
         + '<a href="download.html">Download</a> &middot; '
-        + '<a href="https://github.com/BukanPokemon/Campaign-Dashboard">GitHub</a> &middot; '
+        + '<a href="https://github.com/BukanPawkemon/Campaign-Dashboard">GitHub</a> &middot; '
         + '<a href="https://discord.gg/Q7CKz9Sbw" class="discord-link">' + DISCORD_ICON + ' Discord</a>';
     }
   }

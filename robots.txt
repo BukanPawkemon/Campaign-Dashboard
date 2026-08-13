@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bukanpokemon.github.io/Campaign-Dashboard/sitemap.xml
+Sitemap: https://bukanpawkemon.github.io/Campaign-Dashboard/sitemap.xml
