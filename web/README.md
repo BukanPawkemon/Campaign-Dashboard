@@ -2,12 +2,12 @@
 
 `web/index.html` is the marketing landing page for Dalang Web (BACKLOG 200).
 
-- **`dalang.page/`** serves this page (the `web/` folder)
+- **`dalang.page/`** serves this page (the `web/` folder, a Cloudflare
+  Pages project)
 - **`app.dalang.page/`** serves the SPA (Cloudflare Pages building
   `npm run build:web` from the main repo)
-- The existing user guide stays at
-  `bukanpawkemon.github.io/Campaign-Dashboard/` for now, linked from here,
-  and moves under `dalang.page` later
+- **`guide.dalang.page/`** serves the user guide (the rest of this repo,
+  on GitHub Pages via a `CNAME` custom domain), linked from here
 
 The real domain (`dalang.page` / `https://app.dalang.page`) is already
 wired into `index.html`.

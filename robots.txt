@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bukanpawkemon.github.io/Campaign-Dashboard/sitemap.xml
+Sitemap: https://guide.dalang.page/sitemap.xml
