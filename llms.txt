@@ -1,0 +1,46 @@
+# Dalang, Campaign Dashboard
+
+> Dalang is a tool for Dungeon Masters to prep and run a Dungeons & Dragons
+> campaign: writing the world and house rules, prepping locations, NPCs, and
+> a job board, running the session with a live battle map and fog of war,
+> handing players a read-only live view of the current scene, and keeping a
+> permanent event log. It comes as a free Windows desktop app (local file,
+> no account) and as a browser app at https://dalang.page (account, synced,
+> free during the beta). A campaign file moves between the two in either
+> direction.
+
+This site (guide.dalang.page) is the user guide. The app itself is at
+https://app.dalang.page and the landing page is at https://dalang.page.
+
+## Guide
+
+- [Home](https://guide.dalang.page/): what Dalang is and an index of every guide page
+- [Getting Started](https://guide.dalang.page/getting-started.html): first launch, the My Campaigns screen, the sidebar
+- [Using Dalang Web](https://guide.dalang.page/dalang-web.html): signing in, the player link, the free plan limits, exporting, how the web app differs from desktop
+- [Story](https://guide.dalang.page/story.html): campaign pitch, world lore, factions
+- [Gameplay](https://guide.dalang.page/gameplay.html): table logistics, character creation rules, the shareable handout
+- [Campaign Prep](https://guide.dalang.page/campaign-prep.html): the location hierarchy that the rest of the app references
+- [Setting Up a Map](https://guide.dalang.page/maps.html): grid calibration, fog of war, printing a map at true 1 inch scale
+- [NPC](https://guide.dalang.page/npc.html): the NPC roster, portraits, linking a compendium monster for stats
+- [Job Board / Quest](https://guide.dalang.page/job-board.html): quests tagged to locations and quest givers
+- [Players](https://guide.dalang.page/players.html): the party roster, importing a character from D&D Beyond
+- [Running a Live Session](https://guide.dalang.page/running-a-session.html): starting a run, combat, map tools, Focus Mode
+- [The Player Window](https://guide.dalang.page/player-window.html): a second window or link for players, with a live turn order
+- [Event Log](https://guide.dalang.page/event-log.html): the permanent record of what happened
+- [Compendium](https://guide.dalang.page/compendium.html): the built-in SRD 5.1 and 5.2 reference plus your own homebrew
+- [Dice Roller](https://guide.dalang.page/dice-roller.html): a global dice tray with advantage, formulas, and a player broadcast
+- [Campaign Settings](https://guide.dalang.page/campaign-settings.html): rename, export, save to Library, delete
+- [Player Guide](https://guide.dalang.page/player-guide.html): export a standalone HTML or PDF guide for your players, DM curated
+- [Library](https://guide.dalang.page/library.html): reusable adventures, your own or imported from another DM
+- [Philosophy](https://guide.dalang.page/philosophy.html): the meaning of the name Dalang and the Antaboga mark
+- [Background](https://guide.dalang.page/background.html): why it is built local first, DM owned, for the table
+- [Legal & Sources](https://guide.dalang.page/legal.html): ownership, licensing, SRD attribution, privacy
+- [Download](https://guide.dalang.page/download.html): free, pay what you want, plus the full version history
+
+## Key facts
+
+- License to use: free. Desktop is pay what you want on itch.io. Web is free during the public beta.
+- Rules content: the D&D System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases. Homebrew monsters, magic items, and equipment are supported.
+- The player view never shows DM notes, secrets, encounters, or treasure.
+- Desktop stores everything in one local file and makes no network calls. Web stores campaigns on your account.
+- Not a full virtual tabletop: it has a live battle map for combat, but the focus is prepping and running the whole campaign.

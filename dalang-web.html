@@ -20,15 +20,63 @@
 <meta property="og:title" content="Using Dalang Web - Dalang, Campaign Dashboard" />
 <meta property="og:description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
 <meta property="og:url" content="https://guide.dalang.page/dalang-web.html" />
+<meta property="og:image" content="https://guide.dalang.page/images/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Using Dalang Web - Dalang, Campaign Dashboard" />
+<meta name="twitter:description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
+<meta name="twitter:image" content="https://guide.dalang.page/images/og-image.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Using Dalang Web",
+  "description": "Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app.",
+  "image": "https://guide.dalang.page/images/og-image.png",
+  "url": "https://guide.dalang.page/dalang-web.html",
+  "inLanguage": "en",
+  "dateModified": "2026-08-31",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Dalang Campaign Dashboard User Guide",
+    "url": "https://guide.dalang.page/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Dalang",
+    "url": "https://dalang.page/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dalang",
+    "url": "https://dalang.page/"
+  }
+}
+</script>
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <div class="layout">
-  <site-nav current="dalang-web"></site-nav>
+  <site-nav current="dalang-web">
+    <!-- fallback-nav-start: static fallback for non-JS crawlers; assets/nav.js replaces this on load -->
+    <a class="brand-link" href="index.html" aria-label="Dalang - Campaign Dashboard, home"><div class="brand"><img src="images/dalang-logo.png" alt="Dalang - Campaign Dashboard" /></div></a>
+    <div class="brand-sub">User Guide</div>
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="index.html#guide">All guide pages</a></li>
+      <li><a href="dalang-web.html">Using Dalang Web</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="https://dalang.page/">dalang.page</a></li>
+      <li><a href="https://app.dalang.page/">Sign in to Dalang Web</a></li>
+    </ol>
+  </site-nav>
 
   <main>
     <h1 class="title">Using Dalang Web</h1>
@@ -102,7 +150,20 @@
       <p>Everything else, Story, Gameplay, Campaign Prep, NPCs, the Job Board, Players, the live battle map, the Event Log, the Compendium, and Campaign Settings, works the same in both.</p>
     </section>
 
-    <site-footer></site-footer>
+    <site-footer>
+      <!-- fallback-nav-start: static fallback for non-JS crawlers; assets/nav.js replaces this on load -->
+      <div class="footer-cta">
+        <div><strong>Dalang Web</strong> runs all of this from a browser, free during the beta, with a live read-only link for your players.</div>
+        <a class="footer-cta-btn" href="https://app.dalang.page/">Create a free account</a>
+      </div>
+      <div class="footer-links">Dalang, Campaign Dashboard User Guide &middot;
+        <a href="index.html">Home</a> &middot;
+        <a href="getting-started.html">Getting Started</a> &middot;
+        <a href="download.html">Download</a> &middot;
+        <a href="https://dalang.page/">dalang.page</a> &middot;
+        <a href="https://github.com/BukanPawkemon/Campaign-Dashboard">GitHub</a> &middot;
+        <a href="https://discord.gg/Q7CKz9Sbw">Discord</a></div>
+    </site-footer>
   </main>
 </div>
 <script src="assets/nav.js" defer></script>

@@ -1,0 +1,8 @@
+# Dalang Web landing page (dalang.page)
+# Everything here is public. Search crawlers and AI/answer-engine
+# crawlers are all welcome.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://dalang.page/sitemap.xml

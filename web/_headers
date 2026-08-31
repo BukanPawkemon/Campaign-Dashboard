@@ -2,13 +2,27 @@
 # Deploy this folder (web/) as the Pages project root, so this file sits
 # at the deploy root.
 #
-# The landing page is static HTML with an inline <style> and Google Fonts.
-# No scripts at all.
+# The landing page is static HTML with an inline <style> and self-hosted
+# fonts (web/fonts/), so every request stays on this origin. The only
+# scripts are two <script type="application/ld+json"> metadata blocks (not
+# executable, not covered by script-src) and the Cloudflare analytics
+# beacon.
 
 /*
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Images change rarely and are not content-hashed, so a day of browser
+# cache is safe and helps repeat visits and the Core Web Vitals score.
+/*.png
+  Cache-Control: public, max-age=86400
+/screenshots/*
+  Cache-Control: public, max-age=86400
+
+# Fonts never change under the same name.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

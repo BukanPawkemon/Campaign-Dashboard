@@ -6,20 +6,142 @@
 
 <title>Dalang Web, run your D&D campaign from a browser</title>
 <meta name="description" content="Dalang Web is the browser version of Dalang: prep your world, NPCs, and jobs, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
+<meta name="theme-color" content="#171310" />
 <link rel="canonical" href="https://dalang.page/" />
 <link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dalang Web" />
 <meta property="og:title" content="Dalang Web, run your D&D campaign from a browser" />
-<meta property="og:description" content="Prep, run, and share a tabletop campaign from any browser, with a live read-only view for your players. Free during the beta." />
+<meta property="og:description" content="Dalang Web is the browser version of Dalang: prep your world, NPCs, and jobs, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
 <meta property="og:url" content="https://dalang.page/" />
+<meta property="og:image" content="https://dalang.page/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Dalang, a D&D campaign dashboard" />
+<meta property="og:locale" content="en_US" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dalang Web, run your D&D campaign from a browser" />
+<meta name="twitter:description" content="Prep your world, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
+<meta name="twitter:image" content="https://dalang.page/og-image.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dalang Web",
+  "alternateName": "Dalang - Campaign Dashboard",
+  "url": "https://dalang.page/",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires a modern web browser with JavaScript enabled",
+  "description": "The browser version of Dalang, a tool for Dungeon Masters: prep the world, house rules, locations, NPCs, and jobs, run the session with a live battle map and fog of war, and hand players a live read-only link to the current scene. Free during the beta.",
+  "image": "https://dalang.page/og-image.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free during the public beta"
+  },
+  "featureList": [
+    "Campaign prep: story, house rules, linked locations, NPCs, and job board",
+    "Live battle map with tokens, initiative, and fog of war",
+    "Read-only live player view, no sign-in for players",
+    "Homebrew monsters, magic items, and equipment",
+    "SRD 5.1 and 5.2 compendium",
+    "Campaign export and import with Dalang Desktop",
+    "Campaigns synced to your account across browsers"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dalang",
+    "url": "https://dalang.page/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Dalang Web free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every feature is free while Dalang Web is in beta, nothing is locked behind a payment. The free plan covers 2 campaigns, with per-campaign limits of 40 NPCs, 25 locations, 40 jobs, 8 players, and 250 log entries. Plans with higher limits are planned for later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Dalang Web run entirely in the browser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There is nothing to install. You sign in and your campaigns are saved to your account, so you can open them from any browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my players need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You generate one read-only link and share it wherever your group talks. Players open it in any browser with no sign-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can players see my DM notes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The player view shows the current location, the active jobs, who is present, and during a fight the battle map, dice rolls, and your pings. It never shows your DM notes, secrets, encounters, or treasure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Dalang a virtual tabletop (VTT)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not exactly. Dalang is mainly a campaign prep and session tool. It does include a live battle map with tokens, initiative, and fog of war for running combat, but the focus is preparing and running the whole campaign, not just tactical maps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What D&D rules does it use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The built-in compendium covers the System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases, and you can add your own homebrew monsters, magic items, and equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I move a campaign between Dalang Web and the desktop app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in both directions. Export a whole campaign to a file from Campaign Settings and open it in Dalang Desktop, or bring one back. Nothing is lost either way."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/spectral-400.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="fonts/cinzel-700.woff2" crossorigin />
 
 <style>
+  /* Self-hosted fonts (Google's own pre-subsetted latin woff2 builds, SIL
+     Open Font License 1.1). Served from this origin so the landing page
+     makes no third-party request, matching the app (see the main repo's
+     src/styles/fonts.css). */
+  @font-face { font-family: "Cinzel"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/cinzel-600.woff2") format("woff2"); }
+  @font-face { font-family: "Cinzel"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/cinzel-700.woff2") format("woff2"); }
+  @font-face { font-family: "Spectral"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/spectral-400.woff2") format("woff2"); }
+  @font-face { font-family: "Spectral"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/spectral-500.woff2") format("woff2"); }
+  @font-face { font-family: "Spectral"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/spectral-600.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-mono-400.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-mono-500.woff2") format("woff2"); }
+
   :root {
     --bg: #171310;
     --panel: #221b15;
@@ -85,7 +207,16 @@
   }
 
   .hero { padding: 56px 0 36px; text-align: center; }
-  .hero .logo { width: min(400px, 100%); height: auto; margin: 0 auto 26px; display: block; }
+  .hero .logo { width: min(400px, 100%); height: auto; margin: 0 auto 22px; display: block; }
+  .hero-title {
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.25;
+    max-width: 640px;
+    margin: 0 auto 18px;
+    color: var(--parchment);
+  }
   .lede {
     text-align: center;
     max-width: 620px;
@@ -197,6 +328,24 @@
   ul.plain { padding-left: 20px; margin: 0; }
   ul.plain li { margin: 6px 0; color: var(--parchment-dim); font-size: 15px; }
 
+  .compare { overflow-x: auto; }
+  .compare table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  .compare th, .compare td {
+    text-align: left;
+    vertical-align: top;
+    padding: 12px 14px;
+    border: 1px solid var(--hairline);
+    line-height: 1.5;
+  }
+  .compare th {
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 600;
+    color: var(--brass);
+    background: var(--panel);
+  }
+  .compare td { color: var(--parchment-dim); }
+  .compare td:first-child { color: var(--parchment); }
+
   .itch-cta { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 26px 0 4px; }
   .itch-button {
     display: inline-flex;
@@ -215,6 +364,20 @@
   .itch-button img { display: block; }
   .itch-note { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--parchment-dim); margin: 0; }
   .itch-note a { color: var(--parchment-dim); }
+
+  .faq { max-width: 760px; margin: 0 auto; }
+  .faq details {
+    border-top: 1px solid var(--hairline);
+    padding: 14px 2px;
+  }
+  .faq details:last-child { border-bottom: 1px solid var(--hairline); }
+  .faq summary {
+    cursor: pointer;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 16px;
+    color: var(--parchment);
+  }
+  .faq details p { margin: 10px 0 0; color: var(--parchment-dim); font-size: 15px; }
 
   .close { text-align: center; }
   .close h2 { border: 0; }
@@ -258,7 +421,9 @@
   </header>
 
   <div class="hero">
-    <img class="logo" src="dalang-logo.png" alt="Dalang" />
+    <img class="logo" src="dalang-logo.png" alt="Dalang Web" width="586" height="220" fetchpriority="high" decoding="async" />
+
+    <h1 class="hero-title">Run your D&amp;D campaign from your browser</h1>
 
     <p class="lede">Dalang is a tool for a Dungeon Master: writing the world and house rules, prepping locations and NPCs and jobs, and running the actual session with a live battle map. Dalang Web is all of that in a browser.</p>
     <p class="lede">Your campaigns are saved to your account, so you can open them from any browser, and you can hand your players a live read-only link to the current scene.</p>
@@ -359,6 +524,39 @@
   </section>
 
   <section>
+    <h2>How Dalang compares</h2>
+    <p class="lede">Dalang overlaps with a few kinds of tool without being a direct replacement for any of them.</p>
+    <div class="compare">
+      <table>
+        <thead>
+          <tr>
+            <th>If you use</th>
+            <th>What it does well</th>
+            <th>Where Dalang is different</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A virtual tabletop like Roll20 or Foundry VTT</td>
+            <td>Playing out maps and combat online, with rules automation and add-ons.</td>
+            <td>Dalang has a live battle map for combat but no rules automation. The focus is prepping and running the whole campaign, and players join by a link with no account.</td>
+          </tr>
+          <tr>
+            <td>A worldbuilding wiki like World Anvil, LegendKeeper, or Obsidian</td>
+            <td>Deep, interlinked lore and long-form world notes.</td>
+            <td>Dalang keeps world notes lighter and adds the pieces around them: an NPC table, a job board, a session view, an event log, and a battle map, all cross-referenced.</td>
+          </tr>
+          <tr>
+            <td>Plain documents like Notion or Google Docs</td>
+            <td>Total flexibility and easy sharing.</td>
+            <td>Dalang is built for a D&amp;D campaign, so locations, NPCs, jobs, and encounters are real linked records, and the read-only player view hides your secrets for you.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
     <h2>Want it as an app on your own machine?</h2>
     <p class="lede">Dalang Desktop runs on your own computer with no account and no limits, everything stays in a local file so your notes and NPC secrets never leave your machine. A campaign moves between the two in either direction.</p>
     <div class="itch-cta">
@@ -368,6 +566,40 @@
       </a>
       <p class="itch-note">Free, pay what you want.</p>
       <p class="itch-note">Or see other versions on the <a href="https://guide.dalang.page/download.html">Download page</a>.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Is Dalang Web free?</summary>
+        <p>Yes. Every feature is free while Dalang Web is in beta, nothing is locked behind a payment. The free plan covers 2 campaigns, with per-campaign limits of 40 NPCs, 25 locations, 40 jobs, 8 players, and 250 log entries. Plans with higher limits are planned for later.</p>
+      </details>
+      <details>
+        <summary>Does Dalang Web run entirely in the browser?</summary>
+        <p>Yes. There is nothing to install. You sign in and your campaigns are saved to your account, so you can open them from any browser.</p>
+      </details>
+      <details>
+        <summary>Do my players need an account?</summary>
+        <p>No. You generate one read-only link and share it wherever your group talks. Players open it in any browser with no sign-in.</p>
+      </details>
+      <details>
+        <summary>Can players see my DM notes?</summary>
+        <p>No. The player view shows the current location, the active jobs, who is present, and during a fight the battle map, dice rolls, and your pings. It never shows your DM notes, secrets, encounters, or treasure.</p>
+      </details>
+      <details>
+        <summary>Is Dalang a virtual tabletop (VTT)?</summary>
+        <p>Not exactly. Dalang is mainly a campaign prep and session tool. It does include a live battle map with tokens, initiative, and fog of war for running combat, but the focus is preparing and running the whole campaign, not just tactical maps.</p>
+      </details>
+      <details>
+        <summary>What D&amp;D rules does it use?</summary>
+        <p>The built-in compendium covers the System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases, and you can add your own homebrew monsters, magic items, and equipment.</p>
+      </details>
+      <details>
+        <summary>Can I move a campaign between Dalang Web and the desktop app?</summary>
+        <p>Yes, in both directions. Export a whole campaign to a file from Campaign Settings and open it in Dalang Desktop, or bring one back. Nothing is lost either way.</p>
+      </details>
     </div>
   </section>
 
@@ -384,7 +616,7 @@
     &middot; <a href="https://app.dalang.page">Open the app</a>
     &middot; <a href="https://guide.dalang.page/">Guide</a>
     &middot; <a href="https://guide.dalang.page/legal.html">Legal &amp; Privacy</a>
-    &middot; <a href="https://discord.gg/WdeF45z9sn">Discord</a>
+    &middot; <a href="https://discord.gg/Q7CKz9Sbw">Discord</a>
     &middot; <a href="https://github.com/BukanPawkemon/Campaign-Dashboard">GitHub</a>
   </footer>
 

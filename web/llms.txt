@@ -1,0 +1,35 @@
+# Dalang Web
+
+> Dalang Web is the browser version of Dalang, a tool for Dungeon Masters
+> running a Dungeons & Dragons campaign. Prep the world, house rules,
+> locations, NPCs, and a job board; run the session with a live battle map,
+> tokens, initiative, and fog of war; and hand players one read-only link
+> that shows the current scene, live, with no sign-in for players. Campaigns
+> are saved to your account and open from any browser. Free during the
+> public beta, every feature included.
+
+- App: https://app.dalang.page
+- Desktop version: https://bukanpawkemon.itch.io/dalang-campaign-dashboard
+- User guide: https://guide.dalang.page
+- Source and issues: https://github.com/BukanPawkemon/Campaign-Dashboard
+
+## Free plan (during beta)
+
+- 2 campaigns
+- Per campaign: 40 NPCs, 25 locations, 40 jobs, 8 players, 250 log entries
+- 25 homebrew entries, 1 saved adventure
+- Every feature. Nothing is locked behind a payment. Higher limits are planned for later.
+
+## Key facts
+
+- Runs entirely in the browser, nothing to install.
+- Players open a shared link with no account; they never see DM notes, secrets, encounters, or treasure.
+- Rules content: the D&D System Reference Document, 5.1 (2014) and 5.2 (2024). Homebrew monsters, magic items, and equipment are supported.
+- A campaign exports to a file and moves between Dalang Web and Dalang Desktop in either direction.
+- Not a full virtual tabletop: there is a live battle map for combat, but the focus is prepping and running the whole campaign.
+
+## More
+
+- [How Dalang Web works](https://guide.dalang.page/dalang-web.html)
+- [Running a live session](https://guide.dalang.page/running-a-session.html)
+- [Setting up a battle map](https://guide.dalang.page/maps.html)
