@@ -45,10 +45,14 @@
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
 
   header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 14px 0;
+    background: var(--bg);
     border-bottom: 1px solid var(--hairline);
   }
   .brand { display: flex; align-items: center; gap: 10px; }
@@ -63,13 +67,22 @@
     border-radius: 4px;
     padding: 2px 7px;
   }
+  header nav { display: flex; align-items: center; gap: 18px; }
   header nav a {
     font-size: 14px;
     color: var(--parchment-dim);
     text-decoration: none;
-    margin-left: 20px;
   }
   header nav a:hover { color: var(--parchment); }
+  header nav a.nav-cta {
+    background: var(--brass);
+    color: var(--bg);
+    padding: 7px 16px;
+    border-radius: 5px;
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 700;
+    font-size: 13px;
+  }
 
   .hero { padding: 56px 0 36px; text-align: center; }
   .hero .logo { width: min(400px, 100%); height: auto; margin: 0 auto 26px; display: block; }
@@ -239,8 +252,8 @@
       <span class="beta">Beta</span>
     </span>
     <nav>
-      <a href="https://app.dalang.page">Sign in</a>
       <a href="https://guide.dalang.page/">Guide</a>
+      <a class="nav-cta" href="https://app.dalang.page">Sign in</a>
     </nav>
   </header>
 

@@ -49,8 +49,27 @@
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
+  // Sticky top bar across every guide page: brand back to the landing
+  // page, plus a Sign in call to action for Dalang Web. Injected once from
+  // whichever <site-nav> mounts first, so individual pages don't each have
+  // to include it.
+  function injectTopbar() {
+    if (document.querySelector(".site-topbar")) return;
+    var bar = document.createElement("div");
+    bar.className = "site-topbar";
+    bar.innerHTML =
+      '<a class="site-topbar-brand" href="https://dalang.page/" aria-label="Dalang home">'
+      + '<img src="images/dalang-logo.png" alt="Dalang" /></a>'
+      + '<nav class="site-topbar-nav">'
+      + '<a href="https://dalang.page/">dalang.page</a>'
+      + '<a class="site-topbar-cta" href="https://app.dalang.page/">Sign in</a>'
+      + '</nav>';
+    document.body.prepend(bar);
+  }
+
   class SiteNav extends HTMLElement {
     connectedCallback() {
+      injectTopbar();
       var current = this.getAttribute("current") || "";
       var html = '<a class="brand-link" href="index.html" aria-label="Dalang - Campaign Dashboard, home">'
         + '<div class="brand"><img src="images/dalang-logo.png" alt="Dalang - Campaign Dashboard" /></div>'
@@ -81,11 +100,18 @@
 
   class SiteFooter extends HTMLElement {
     connectedCallback() {
-      this.innerHTML = 'Dalang, Campaign Dashboard User Guide &middot; '
+      this.innerHTML =
+        '<div class="footer-cta">'
+        + '<div><strong>Dalang Web</strong> runs all of this from a browser, free during the beta, '
+        + 'with a live read-only link for your players.</div>'
+        + '<a class="footer-cta-btn" href="https://app.dalang.page/">Create a free account</a>'
+        + '</div>'
+        + '<div class="footer-links">Dalang, Campaign Dashboard User Guide &middot; '
         + '<a href="index.html">Home</a> &middot; '
+        + '<a href="https://dalang.page/">dalang.page</a> &middot; '
         + '<a href="download.html">Download</a> &middot; '
         + '<a href="https://github.com/BukanPawkemon/Campaign-Dashboard">GitHub</a> &middot; '
-        + '<a href="https://discord.gg/Q7CKz9Sbw" class="discord-link">' + DISCORD_ICON + ' Discord</a>';
+        + '<a href="https://discord.gg/Q7CKz9Sbw" class="discord-link">' + DISCORD_ICON + ' Discord</a></div>';
     }
   }
 
