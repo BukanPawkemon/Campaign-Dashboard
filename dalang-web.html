@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Using Dalang Web - Dalang, Campaign Dashboard User Guide</title>
+<meta name="description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
+<link rel="canonical" href="https://bukanpawkemon.github.io/Campaign-Dashboard/dalang-web.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="Using Dalang Web - Dalang, Campaign Dashboard" />
+<meta property="og:description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
+<meta property="og:url" content="https://bukanpawkemon.github.io/Campaign-Dashboard/dalang-web.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="dalang-web"></site-nav>
+
+  <main>
+    <h1 class="title">Using Dalang Web</h1>
+    <p class="subtitle">Dalang Web</p>
+
+    <p class="lede">Dalang Web is the browser version of Dalang. It has the same tabs and the same tools as the desktop app, with one difference up front: you sign in to an account, and your campaigns are saved on the server instead of a file on your computer.</p>
+
+    <p class="note">Dalang Web is in beta. Your campaigns are looked after, but while things are still settling in it is worth keeping your own copy too. See <a href="#export">Exporting your data</a> below.</p>
+
+    <section id="sign-in">
+      <h2>Creating an account and signing in</h2>
+      <p>The first time you visit, choose <strong>Create one</strong> and pick:</p>
+      <ul>
+        <li>a <strong>username</strong>, how you are shown in the app,</li>
+        <li>an <strong>email address</strong>, used only to sign in and to recover your account,</li>
+        <li>a <strong>password</strong>.</li>
+      </ul>
+      <p>You may be asked to confirm your email by clicking a link before you can sign in. If it does not arrive in a minute, check your spam folder.</p>
+      <p>To sign in afterwards you can type either your username or your email in the first field, along with your password. If you forget your password, use <strong>Forgot your password?</strong> on the sign-in screen to get a reset link.</p>
+    </section>
+
+    <section id="free-plan">
+      <h2>What the free plan includes</h2>
+      <p>During the beta, Dalang Web is free. The free plan is set generously so a full published starter adventure fits comfortably. It currently allows, per account:</p>
+      <ul>
+        <li><strong>2 campaigns</strong> at a time</li>
+        <li><strong>1 saved adventure</strong> in your Library</li>
+        <li><strong>25 homebrew entries</strong> (monsters, magic items, and equipment combined)</li>
+      </ul>
+      <p>And per campaign:</p>
+      <ul>
+        <li><strong>40 NPCs</strong></li>
+        <li><strong>25 locations</strong>, with up to <strong>2 maps</strong> on each</li>
+        <li><strong>40 quests</strong></li>
+        <li><strong>8 players</strong></li>
+        <li><strong>250 event log entries</strong></li>
+      </ul>
+      <p>Every feature is available on the free plan. Nothing is locked behind a payment. If you reach a limit, Dalang tells you which one and you can remove an item to add another. Plans with higher limits are planned for after the beta.</p>
+      <p class="note">Images are added by pasting a link to a hosted image. Uploading image files from your computer is a desktop-only feature for now.</p>
+    </section>
+
+    <section id="player-link">
+      <h2>The player link</h2>
+      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has two buttons:</p>
+      <ul>
+        <li><strong>Player View</strong> opens that read-only page in a new tab so you can see exactly what your players see.</li>
+        <li><strong>Share Link</strong> copies the link to your clipboard so you can paste it into Discord, Telegram, or wherever your group talks.</li>
+      </ul>
+      <p>Anyone with the link can open it, no sign-in needed. It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, and the pings and drawings you make. It updates on its own while it is open.</p>
+      <p>What the link shows is the same curated set the desktop Player Window shows. It never exposes your DM notes, secrets, encounter details, or treasure. You control what is visible by what you set as the current location and which quests are active.</p>
+    </section>
+
+    <section id="export">
+      <h2>Exporting your data</h2>
+      <p>Open <strong>Campaign Settings</strong> and use <strong>Move to Dalang Desktop</strong>. This saves the whole campaign, locations, NPCs, quests, players, the event log, your settings, and any homebrew you have used, to a single file.</p>
+      <p>That file opens in Dalang Desktop, and it can also be brought back into Dalang Web later from the New Campaign box (<strong>From a File</strong>). It is the same format in both directions, so nothing is lost moving a campaign between the two.</p>
+      <p>During the beta, this is also how you keep your own backup. It is worth doing every so often.</p>
+    </section>
+
+    <section id="differences">
+      <h2>How Dalang Web differs from Dalang Desktop</h2>
+      <p>The two are the same product with the same tabs. These are the practical differences:</p>
+      <ul>
+        <li><strong>An account.</strong> Dalang Web needs one; Dalang Desktop does not.</li>
+        <li><strong>Where campaigns live.</strong> Dalang Web keeps them on the server so you can reach them from any browser. Dalang Desktop keeps them in a file on one machine.</li>
+        <li><strong>Images.</strong> Dalang Web uses image links only. Dalang Desktop can also use image files from your computer.</li>
+        <li><strong>Importing a character from D&D Beyond.</strong> Desktop only for now.</li>
+        <li><strong>The player screen.</strong> Dalang Desktop opens a second window on your own computer, for a screen at the table. Dalang Web gives you a link instead, which works the same way for a remote group.</li>
+        <li><strong>Plan limits.</strong> Dalang Web has the per-account limits listed above. Dalang Desktop has none.</li>
+      </ul>
+      <p>Everything else, Story, Gameplay, Campaign Prep, NPCs, the Job Board, Players, the live battle map, the Event Log, the Compendium, and Campaign Settings, works the same in both.</p>
+    </section>
+
+    <site-footer></site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

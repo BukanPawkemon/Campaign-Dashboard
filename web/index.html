@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Dalang Web, run your D&D campaign from a browser</title>
+<meta name="description" content="Dalang Web is the browser version of Dalang: prep your world, NPCs, and jobs, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
+<link rel="canonical" href="https://dalang.page/" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dalang Web" />
+<meta property="og:title" content="Dalang Web, run your D&D campaign from a browser" />
+<meta property="og:description" content="Prep, run, and share a tabletop campaign from any browser, with a live read-only view for your players. Free during the beta." />
+<meta property="og:url" content="https://dalang.page/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #171310;
+    --panel: #221b15;
+    --parchment: #ece0c6;
+    --parchment-dim: #a99a7d;
+    --brass: #c9a227;
+    --brass-dim: #8a712a;
+    --hairline: #3a3025;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--parchment);
+    font-family: "Spectral", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brass); }
+  img { max-width: 100%; height: auto; }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand img { height: 30px; width: auto; display: block; }
+  .beta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brass);
+    border: 1px solid var(--brass-dim);
+    border-radius: 4px;
+    padding: 2px 7px;
+  }
+  header nav a {
+    font-size: 14px;
+    color: var(--parchment-dim);
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  header nav a:hover { color: var(--parchment); }
+
+  .hero { padding: 56px 0 36px; text-align: center; }
+  .hero .logo { width: min(400px, 100%); height: auto; margin: 0 auto 26px; display: block; }
+  .lede {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 16px;
+    color: var(--parchment-dim);
+    font-size: 18px;
+  }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 22px; }
+  .btn {
+    display: inline-block;
+    min-width: 220px;
+    padding: 13px 20px;
+    border-radius: 6px;
+    font-family: "Spectral", serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--brass);
+  }
+  .btn-primary { background: var(--brass); color: var(--bg); }
+  .btn-secondary { background: transparent; color: var(--brass); }
+  .cta-note { text-align: center; font-size: 14px; color: var(--parchment-dim); margin: 14px 0 0; }
+
+  figure { margin: 0; }
+  .shot {
+    margin: 36px auto 0;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--panel);
+  }
+  .shot img { display: block; width: 100%; height: auto; }
+  figcaption {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--parchment-dim);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  section { padding: 46px 0; border-top: 1px solid var(--hairline); }
+  section > h2 {
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 0 24px;
+    color: var(--parchment);
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card h3 {
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 10px;
+    color: var(--brass);
+  }
+  .card p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--parchment-dim); }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 34px;
+    align-items: center;
+    margin: 38px 0;
+  }
+  .feature.reverse .feature-text { order: 2; }
+  .feature h3 {
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 600;
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: var(--parchment);
+  }
+  .feature p { margin: 0; color: var(--parchment-dim); }
+  .feature figure { border: 1px solid var(--hairline); border-radius: 8px; overflow: hidden; background: var(--panel); }
+  .feature figure img { display: block; width: 100%; height: auto; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .box {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 20px 22px;
+  }
+  .box h3 {
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 16px;
+    margin: 0 0 12px;
+    color: var(--parchment);
+  }
+  .box p { margin: 0; color: var(--parchment-dim); font-size: 15px; }
+  ul.plain { padding-left: 20px; margin: 0; }
+  ul.plain li { margin: 6px 0; color: var(--parchment-dim); font-size: 15px; }
+
+  .itch-cta { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 26px 0 4px; }
+  .itch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffeef0;
+    color: #c1272d;
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+  }
+  .itch-button:hover { background: #ffd9dc; }
+  .itch-button img { display: block; }
+  .itch-note { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--parchment-dim); margin: 0; }
+  .itch-note a { color: var(--parchment-dim); }
+
+  .close { text-align: center; }
+  .close h2 { border: 0; }
+
+  footer {
+    padding: 30px 0 48px;
+    border-top: 1px solid var(--hairline);
+    font-size: 14px;
+    color: var(--parchment-dim);
+    text-align: center;
+  }
+  footer a { color: var(--parchment-dim); }
+  footer a:hover { color: var(--parchment); }
+
+  @media (max-width: 780px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+    .split { grid-template-columns: 1fr; }
+    .card { aspect-ratio: auto; }
+    .feature { grid-template-columns: 1fr; gap: 18px; }
+    .feature.reverse .feature-text { order: 0; }
+  }
+  @media (max-width: 460px) {
+    .grid { grid-template-columns: 1fr; }
+    header nav a:first-child { margin-left: 0; }
+    .btn { width: 100%; min-width: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="brand">
+      <img src="dalang-logo.png" alt="Dalang" />
+      <span class="beta">Beta</span>
+    </span>
+    <nav>
+      <a href="https://app.dalang.page">Sign in</a>
+      <a href="https://bukanpawkemon.github.io/Campaign-Dashboard/">Guide</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img class="logo" src="dalang-logo.png" alt="Dalang" />
+
+    <p class="lede">Dalang is a tool for a Dungeon Master: writing the world and house rules, prepping locations and NPCs and jobs, and running the actual session with a live battle map. Dalang Web is all of that in a browser.</p>
+    <p class="lede">Your campaigns are saved to your account, so you can open them from any browser, and you can hand your players a live read-only link to the current scene.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://app.dalang.page">Create a free account</a>
+      <a class="btn btn-secondary" href="https://app.dalang.page">Sign in</a>
+    </div>
+    <p class="cta-note">Free to use while it's in beta.</p>
+
+    <figure class="shot">
+      <img src="screenshots/01-my-campaigns-hero.png" width="1030" height="470" alt="The My Campaigns screen with a few campaign cards" />
+    </figure>
+    <figcaption>My Campaigns, where you land after signing in.</figcaption>
+  </div>
+
+  <section>
+    <h2>What you get</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Prep your world</h3>
+        <p>Story and house rules, a location hierarchy with encounters and treasure, an NPC table, and a job board. The pieces reference each other, so an NPC knows where it is and a job knows who gives it.</p>
+      </div>
+      <div class="card">
+        <h3>Run the session</h3>
+        <p>An Active Campaign view for the current scene, a live battle map with tokens, initiative, and fog of war, a ruler and pings, a dice roller, and the full SRD compendium a click away.</p>
+      </div>
+      <div class="card">
+        <h3>A live view for players</h3>
+        <p>One read-only link you share wherever your group talks. It shows the current location, the active jobs, and who is present, and during a fight the battle map, dice rolls, and your pings and drawings. Never your DM notes, secrets, or treasure.</p>
+      </div>
+      <div class="card">
+        <h3>Homebrew and a Library</h3>
+        <p>Add your own monsters, magic items, and equipment. Save a finished adventure to your Library and start new campaigns from it.</p>
+      </div>
+      <div class="card">
+        <h3>Moves to and from Dalang Desktop</h3>
+        <p>Export a whole campaign to a file and open it in the desktop app, or bring one back. Either direction, nothing is lost.</p>
+      </div>
+      <div class="card">
+        <h3>Synced to your account</h3>
+        <p>Your campaigns live on your account, not one machine, so you can pick them up from any browser you sign in on.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>A closer look</h2>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Prep that connects</h3>
+        <p>Build a location tree with encounters, treasure, and DM notes on each. Assign NPCs to places, hang jobs off the NPCs who give them, and set read-aloud text for when the party arrives. Nothing is a loose string of text you have to keep in sync by hand.</p>
+      </div>
+      <figure>
+        <img src="screenshots/16-campaign-prep-list.png" width="1920" height="1009" alt="The Campaign Prep location list with nested sub-locations" />
+      </figure>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>Run a live battle map</h3>
+        <p>Calibrate a map image to a grid, drop tokens, roll initiative, and paint fog of war as the party explores. A ruler, pings, and freehand drawing are one click away, and every monster's stat block is right there when you need it.</p>
+      </div>
+      <figure>
+        <img src="screenshots/08-combat-token-popup.png" width="1150" height="685" alt="A live battle map mid-combat with a token's quick-action popup open" />
+      </figure>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Your players see the scene, live</h3>
+        <p>Generate one link and share it. Players open it in any browser, no sign-in, and see the current location, the active jobs, and during a fight the battle map, the dice, and your pings, updating on its own. They never see what you have not shown them.</p>
+      </div>
+      <figure>
+        <img src="screenshots/10-player-window.png" width="984" height="661" alt="The player view showing the live battle map with a LIVE badge" />
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Free during the beta</h2>
+    <div class="split">
+      <div class="box">
+        <h3>What the free plan includes</h3>
+        <ul class="plain">
+          <li>2 campaigns</li>
+          <li>Per campaign: 40 NPCs, 25 locations, 40 jobs, 8 players, 250 log entries</li>
+          <li>25 homebrew entries, 1 saved adventure</li>
+          <li>Every feature. Nothing is locked behind a payment.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>What "beta" means here</h3>
+        <p>Dalang Web is new and still settling in. Your campaigns are looked after, and you can export a full copy any time from Campaign Settings, so it is worth keeping your own backup while the beta runs. Plans with higher limits are planned for later.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Want it as an app on your own machine?</h2>
+    <p class="lede">Dalang Desktop runs on your own computer with no account and no limits, everything stays in a local file so your notes and NPC secrets never leave your machine. A campaign moves between the two in either direction.</p>
+    <div class="itch-cta">
+      <a href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard" class="itch-button">
+        <img src="itchio-icon.png" alt="" width="20" height="20" />
+        Get Dalang on itch.io
+      </a>
+      <p class="itch-note">Free, pay what you want.</p>
+      <p class="itch-note">Or see other versions on the <a href="https://bukanpawkemon.github.io/Campaign-Dashboard/download.html">Download page</a>.</p>
+    </div>
+  </section>
+
+  <section class="close">
+    <h2>Start a campaign</h2>
+    <p class="lede">Make an account, spin up your first campaign, and see if it fits how you run a game.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://app.dalang.page">Create a free account</a>
+    </div>
+  </section>
+
+  <footer>
+    Dalang Web
+    &middot; <a href="https://app.dalang.page">Open the app</a>
+    &middot; <a href="https://bukanpawkemon.github.io/Campaign-Dashboard/">Guide</a>
+    &middot; <a href="https://bukanpawkemon.github.io/Campaign-Dashboard/legal.html">Legal &amp; Privacy</a>
+    &middot; <a href="https://discord.gg/WdeF45z9sn">Discord</a>
+    &middot; <a href="https://github.com/BukanPawkemon/Campaign-Dashboard">GitHub</a>
+  </footer>
+
+</div>
+</body>
+</html>

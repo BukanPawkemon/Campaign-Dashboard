@@ -37,6 +37,9 @@
       { key: "player-guide", href: "player-guide.html", label: "Player Guide" },
       { key: "library", href: "library.html", label: "Library" },
     ] },
+    { group: "Dalang Web", items: [
+      { key: "dalang-web", href: "dalang-web.html", label: "Using Dalang Web" },
+    ] },
     { group: "Get the App", items: [
       { key: "download", href: "download.html", label: "Download" },
     ] },
