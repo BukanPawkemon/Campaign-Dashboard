@@ -80,7 +80,7 @@
 
   <main>
     <h1 class="title">Legal &amp; Licensing</h1>
-    <p class="subtitle">Last updated: August 3, 2026</p>
+    <p class="subtitle">Last updated: August 31, 2026</p>
 
     <section id="ownership">
       <h2>1. Ownership</h2>
@@ -107,10 +107,27 @@
     </section>
 
     <section id="third-party-content">
-      <h2>3. Third-Party Content (SRD / OGL)</h2>
-      <p>Dalang includes reference content from the <em>Dungeons &amp; Dragons</em> System Reference Document (SRD 5.1), made available under the Open Game License and Creative Commons licensing by Wizards of the Coast.</p>
+      <h2>3. Attributions &amp; Licensing</h2>
+
+      <h3>Wizards of the Coast</h3>
       <p>Dalang is an independent product and is <strong>not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC or Hasbro</strong>. All D&amp;D-related trademarks, including "Dungeons &amp; Dragons" and "D&amp;D," belong to their respective owners.</p>
-      <p>Some underlying open-source data used in the Compendium is vendored from the community-maintained <code>5e-bits/5e-database</code> project (MIT licensed).</p>
+
+      <h3>System Reference Document</h3>
+      <p>Dalang's Compendium includes reference content from the <em>Dungeons &amp; Dragons</em> System Reference Document, both the 2014 rules and the 2024 rules, licensed by Wizards of the Coast under the Creative Commons Attribution 4.0 International License:</p>
+      <blockquote>
+        <p>This work includes material from the System Reference Document 5.1 ("SRD 5.1") by Wizards of the Coast LLC and available at <a href="https://dnd.wizards.com/resources/systems-reference-document">https://dnd.wizards.com/resources/systems-reference-document</a>. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at <a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a>.</p>
+        <p>This work includes material from the System Reference Document 5.2.1 ("SRD 5.2.1") by Wizards of the Coast LLC, available at <a href="https://www.dndbeyond.com/srd">https://www.dndbeyond.com/srd</a>. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at <a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a>.</p>
+      </blockquote>
+      <p>The Compendium data is compiled and cross-checked by this project and published openly at <a href="https://github.com/BukanPawkemon/dalang-data">github.com/BukanPawkemon/dalang-data</a>. The official SRD text hosted by D&amp;D Beyond and Wizards of the Coast is the primary source; the community projects 5e-bits/5e-database and open5e were used as references during compilation.</p>
+
+      <h3>Fonts</h3>
+      <p>Dalang bundles three typefaces, all under the SIL Open Font License, version 1.1: <strong>Cinzel</strong> (The Cinzel Project Authors), <strong>Spectral</strong> (The Spectral Project Authors), and <strong>IBM Plex Mono</strong> (IBM Corp., with Reserved Font Name "Plex"). The full license text ships with the app and is available at <a href="https://openfontlicense.org">openfontlicense.org</a>.</p>
+
+      <h3>D&amp;D Beyond character import (Dalang Desktop only)</h3>
+      <p>Dalang Desktop's "Import from D&amp;D Beyond" feature adapts the armor class and hit point calculations from <a href="https://github.com/MrPrimate/ddb-importer">MrPrimate/ddb-importer</a>, used under the MIT License.</p>
+
+      <h3>Open-source software</h3>
+      <p>Dalang is built with open-source software, including React and React DOM (MIT, Meta Platforms Inc.), lucide-react icons (ISC, Lucide Contributors), react-markdown and remark-gfm (MIT), qrcode (MIT), and, in Dalang Web, @supabase/supabase-js (MIT).</p>
     </section>
 
     <section id="homebrew-content">
@@ -120,40 +137,62 @@
     </section>
 
     <section id="privacy">
-      <h2>5. Privacy</h2>
-      <p>Dalang runs entirely on your own device. All campaign data is stored locally in a file on your computer.</p>
+      <h2>5. Privacy (Dalang Desktop)</h2>
+      <p>Dalang Desktop runs entirely on your own device. All campaign data is stored locally in a file on your computer.</p>
       <ul>
-        <li>No account is required to use the app</li>
+        <li>No account is required to use the desktop app</li>
         <li>No campaign data, homebrew content, or personal information is collected, transmitted, or stored on any server</li>
         <li>The creator of Dalang has no access to your campaign data unless you choose to share it directly (for example, sending an exported file to someone)</li>
       </ul>
+      <p>App fonts are bundled with the app, so the desktop app does not contact any font CDN at startup.</p>
+    </section>
+
+    <section id="dalang-web">
+      <h2>6. Dalang Web (Privacy &amp; Terms)</h2>
+      <p><strong>Dalang Web</strong> is the browser version at <a href="https://app.dalang.page">app.dalang.page</a>. Unlike the desktop app, it uses an account and stores your campaigns on a server, so it has its own privacy and terms.</p>
+
+      <h3>What Dalang Web stores</h3>
+      <ul>
+        <li>Your account email and username, held by the authentication provider (Supabase) so you can sign in.</li>
+        <li>Your campaigns and everything in them, in the project database (Supabase, Singapore region).</li>
+        <li>Technical logs from the hosting providers (Cloudflare and Supabase), including IP addresses, kept to run and secure the service.</li>
+        <li>Anonymous usage analytics (Google Analytics), only if you accept the cookie notice. It records structural events like "a campaign was created", never the content of your campaigns. You can decline and use the app normally.</li>
+        <li>When you register, the fact that you agreed to these terms, with the date.</li>
+      </ul>
+      <p><strong>Do not put real personal data into your campaigns.</strong> Dalang is for fictional game content. We do not sell your data, use your campaign content to train anything, or share it with anyone beyond the infrastructure providers above.</p>
+
+      <h3>Your rights</h3>
+      <p>Export a full copy of any campaign at any time from Campaign Settings. To close your account and delete your campaigns, or for any other request, email <a href="mailto:support@dalang.page">support@dalang.page</a>. You must be at least 13 to create an account.</p>
+
+      <h3>Terms of Use</h3>
+      <p>By creating an account you agree that: Dalang Web is a free beta, so features may change and it may be unavailable at times, and while we take care with your data we do not guarantee against loss, keep your own exported backups. Your content is yours and your responsibility; do not use Dalang Web for anything illegal, for harassing or targeting a real person, or that infringes someone's rights. The read-only player link makes the curated parts of a campaign visible to anyone with the link. Do not attempt to break, overload, or gain unauthorized access to the service or other accounts, and do not resell access. We may suspend or close an account that breaks these terms. Dalang Web is provided "as is" without warranty; to the extent the law allows, we are not liable for any loss or damage, including data loss. These terms are governed by the laws of Indonesia. Dalang Web is run by Salahuddin (BukanPawkemon), Indonesia.</p>
     </section>
 
     <section id="no-warranty">
-      <h2>6. No Warranty</h2>
+      <h2>7. No Warranty</h2>
       <p>Dalang is provided "as is," without warranty of any kind. While care is taken to avoid bugs and data loss, the creator cannot guarantee the app will be error-free or uninterrupted.</p>
       <p>You are encouraged to back up important campaign files, especially before major updates. The creator is not liable for any data loss, corruption, or other damages resulting from use of the app.</p>
     </section>
 
     <section id="misuse">
-      <h2>7. Misuse of the App</h2>
+      <h2>8. Misuse of the App</h2>
       <p>Dalang is a tool for organizing and running tabletop roleplaying games. It has no built-in capability for illegal activity, and the creator does not build, endorse, or support any use of the app for unlawful or harmful purposes.</p>
       <p><strong>If a user misuses this app for illegal or harmful purposes, that responsibility belongs entirely to that user, not to the creator of the app.</strong> The creator is not liable for how individual users choose to use the software, in the same way a notebook manufacturer isn't responsible for what someone chooses to write in a notebook.</p>
       <p>If you become aware of the app being used in a way that violates the law or causes harm, please reach out at <a href="mailto:support@dalang.page">support@dalang.page</a> so it can be looked into.</p>
     </section>
 
     <section id="donations">
-      <h2>8. Donations</h2>
+      <h2>9. Donations</h2>
       <p>Dalang is free to download and use. If you choose to leave a donation, it's voluntary and non-refundable, thank you for supporting the project. If something's not working right, reach out at <a href="mailto:support@dalang.page">support@dalang.page</a>, most issues (bugs, confusion about features, etc.) can usually be resolved directly.</p>
     </section>
 
     <section id="changes">
-      <h2>9. Changes to This Document</h2>
+      <h2>10. Changes to This Document</h2>
       <p>This page may be updated as the app develops. Significant changes will be noted with an updated "last updated" date at the top.</p>
     </section>
 
     <section id="contact">
-      <h2>10. Contact</h2>
+      <h2>11. Contact</h2>
       <p>Questions about these terms, or anything else, reach out at:</p>
       <p><a href="mailto:support@dalang.page">support@dalang.page</a><br />
       <a href="https://discord.gg/Q7CKz9Sbw">https://discord.gg/Q7CKz9Sbw</a></p>
