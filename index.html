@@ -136,6 +136,28 @@
     <section id="whats-new">
       <h2>What's new</h2>
 
+      <h3>v1.3.0</h3>
+
+      <h4>New features</h4>
+      <ul>
+        <li><strong>Dalang Web</strong>, a browser version of Dalang at <a href="https://dalang.page/">dalang.page</a>, now in public beta. Make a free account and your campaigns sync to it, so you can prep from any computer and run a session without installing anything. The desktop app is unchanged and still works fully offline. See <a href="dalang-web.html">Using Dalang Web</a>.</li>
+        <li><strong>Player Window position lock</strong>, a lock toggle on the Live Run map toolbar. Lock it and the Player Window holds its current view while you pan and zoom your own screen, so tokens on a table monitor stay lined up. Separate from Pause. See <a href="player-window.html">The Player Window</a>.</li>
+        <li><strong>Player Window fullscreen</strong>, a toggle on the Player Window itself (F11 to toggle, Esc to exit). Hides the title bar and taskbar so the map fills a table monitor.</li>
+        <li>A <strong>"From a File"</strong> starting point in the New Campaign box, next to Fresh Adventure and From Your Library. It takes an adventure file or a full campaign file and always adds a new campaign. Importing used to be buried on the Library screen.</li>
+      </ul>
+
+      <h4>Improvements &amp; fixes</h4>
+      <ul>
+        <li>Mouse-wheel map zoom now moves in small steps instead of jumping by roughly half again each notch, and the zoom percentage is a field you can type an exact number into. Applies to the battle map and grid calibration.</li>
+        <li>One <strong>Export Campaign</strong> button replaces the separate "Move to Dalang Desktop" and "Move to Dalang Web" ones, they wrote the same file either way. It opens a chooser for Adventure or Full Campaign.</li>
+        <li>The campaign's card image now travels with a Full Campaign export and import.</li>
+        <li>Revealing or hiding fog of war on the Player Window now fades over about half a second instead of snapping.</li>
+        <li>Guide and Feedback links moved from the top bar into the sidebar, each with a small arrow marking that it opens a browser tab.</li>
+        <li>Print mode is reachable straight from grid calibration now, no Save &amp; Close and reopen first.</li>
+        <li>Image URL fields fall back to the placeholder icon when a URL doesn't load, instead of a blank box.</li>
+        <li>App fonts are bundled with the app instead of loaded from Google's font CDN, no network call to Google at startup.</li>
+      </ul>
+
       <h3>v1.2.0</h3>
 
       <h4>New features</h4>
@@ -174,22 +196,6 @@
       <ul>
         <li>Popups no longer close if you start a text selection inside one and release the mouse outside it.</li>
         <li>The main window can no longer be resized down to a broken, unusably small size.</li>
-      </ul>
-
-      <h3>v1.1.0</h3>
-
-      <h4>New features</h4>
-      <ul>
-        <li>Every image field, NPC and Player portraits, Location images, the Campaign card, the DM background, can now <strong>Browse</strong> to a file on your own computer instead of only pasting a URL. (It's a desktop app. Of course it can read a file off your own disk. Silly me.) See <a href="campaign-prep.html">Campaign Prep</a>.</li>
-        <li>Monster portraits can now be fixed directly from the <strong>Battle Map</strong> mid-encounter, no more detouring through Compendium just to set a picture. See <a href="running-a-session.html">Running a Live Session</a>.</li>
-      </ul>
-
-      <h4>Improvements &amp; fixes</h4>
-      <ul>
-        <li>Fixed the Player Window's dice roll banner not animating on a fresh roll, and blending into busy map backgrounds.</li>
-        <li>The Player Window now has its own distinct title, fixing tools like OBS showing two identical, indistinguishable windows.</li>
-        <li>Fixed the sidebar's tab list getting clipped on a short window, with no way to scroll to tabs past the bottom.</li>
-        <li>Every native file picker now shows the Dalang icon instead of the generic one.</li>
       </ul>
 
       <p><a href="download.html">See the full version history &rarr;</a></p>

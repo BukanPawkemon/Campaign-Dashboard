@@ -91,6 +91,7 @@
         </a>
       </p>
       <p class="note center-text">Free to download, pay what you want.</p>
+      <p class="note center-text">Prefer not to install anything? Dalang also runs in a browser at <a href="https://dalang.page/">dalang.page</a> (public beta). See <a href="dalang-web.html">Using Dalang Web</a>.</p>
 
       <h3>Older versions</h3>
       <p class="note">Previous releases, kept for reference:</p>
@@ -101,6 +102,30 @@
 
     <section id="whats-new">
       <h2>Version history</h2>
+
+      <h3>v1.3.0</h3>
+
+      <h4>New features</h4>
+      <ul>
+        <li><strong>Dalang Web</strong>, a browser version of Dalang at <a href="https://dalang.page/">dalang.page</a>, now in public beta. It runs everything the desktop app does from a browser: make a free account and your campaigns are saved to it, so you can prep from any computer and run a session without installing anything, and your players get the same read-only live link. The free tier has generous per-account limits that never gate a core feature. Dalang Desktop is unchanged, still fully offline, still stores everything in a file on your own machine, and a campaign moves between the two in either direction with the Export Campaign button. See <a href="dalang-web.html">Using Dalang Web</a>.</li>
+        <li><strong>Player Window position lock</strong>, a lock toggle on the Live Run map toolbar. Locking it snapshots your current view onto the Player Window, which then stops following your camera, so real tokens sitting on a table monitor stay lined up no matter how you zoom or pan your own screen. Nothing on that screen changes until you unlock. Separate from Pause, which also freezes tokens, HP, and fog. Clears when the run ends. See <a href="player-window.html">The Player Window</a>.</li>
+        <li><strong>Player Window fullscreen</strong>, a labelled toggle at the top center of the Player Window that appears on mouse move and fades during play. F11 toggles it, Esc exits. Fullscreen hides the title bar and taskbar so the map fills a table monitor edge to edge.</li>
+        <li>A third <strong>"From a File"</strong> starting point in the New Campaign box, next to Fresh Adventure and From Your Library. It takes an adventure file or a full campaign file (the file itself says which) and always adds a new campaign. Import used to be reachable only from a button on the Library screen labelled "Import adventure...", which made it look like it wouldn't accept a full campaign. The Library screen keeps an import button, now labelled "Import from File".</li>
+      </ul>
+
+      <h4>Improvements &amp; fixes</h4>
+      <ul>
+        <li>Mouse-wheel zoom on every map viewport (battle map, Encounter setup, grid calibration) now moves in small steps instead of jumping by roughly half again at every notch, and the zoom percentage on the toolbar is a field you can type an exact number into.</li>
+        <li>One <strong>Export Campaign</strong> button replaces the separate "Move to Dalang Desktop" and "Move to Dalang Web" ones. They wrote a byte-identical file, so the split just raised the question of which app the file was for. The button opens a chooser for Adventure or Full Campaign, and it now spells out that the same file opens in Dalang Desktop or Dalang Web. "Save Adventure to Library" is now just "Save to Library".</li>
+        <li>The campaign's card image (the background on its My Campaigns card) now travels with a Full Campaign export and import, it was being dropped before.</li>
+        <li>Revealing or hiding fog of war on the Player Window now fades in or out over about half a second instead of snapping instantly. Your own fog-editing view stays instant.</li>
+        <li>Dragging to paint fog of war now saves once, when you let go of the mouse, instead of once per cell the drag crosses.</li>
+        <li>The Guide and Feedback links moved from the top bar into the sidebar, Guide under Reference next to Compendium and Feedback under Campaign Settings, each with a small arrow marking that it opens a new browser tab. This keeps the top bar from overflowing.</li>
+        <li>The Print tab in map calibration is no longer disabled while you are still calibrating, jump straight in once the grid handles are placed, instead of needing to Save &amp; Close the map and reopen it first.</li>
+        <li>Image URL fields (campaign image, portraits, and so on) show the placeholder icon again if the URL does not load, with a tooltip, instead of a blank box.</li>
+        <li>The dice roll result box on the Player Window and the DM dice tray is now one plain panel with a simple outline, instead of a box inside a box with a stray coloured border.</li>
+        <li>App fonts (Cinzel, Spectral, IBM Plex Mono) are bundled with the app instead of loaded from Google's font CDN, so there is no network call to Google at startup.</li>
+      </ul>
 
       <h3>v1.2.0</h3>
 
