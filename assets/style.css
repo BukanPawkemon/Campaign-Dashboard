@@ -206,6 +206,75 @@ main > p:first-of-type {
   margin: 20px 0 28px;
   text-align: center;
 }
+.editions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 20px 0 28px;
+}
+.edition {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-panel);
+  border: 1px solid var(--color-hairline);
+  border-radius: 6px;
+  padding: 16px 18px;
+}
+.edition-name {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-parchment);
+  margin-bottom: 8px;
+}
+.edition-desc {
+  flex: 1;
+  margin: 0 0 14px;
+  font-size: 0.94rem;
+  color: var(--color-parchment-dim);
+  line-height: 1.55;
+}
+.edition .itch-button,
+.edition .cta-button-primary {
+  align-self: flex-start;
+}
+.edition-note {
+  margin: 8px 0 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--color-parchment-dim);
+}
+.edition-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brass);
+  border: 1px solid var(--color-brass-dim);
+  border-radius: 3px;
+  padding: 2px 6px;
+  vertical-align: middle;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.cta-button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-brass);
+  color: #1a1409;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+.cta-button-primary:hover {
+  filter: brightness(1.08);
+}
 .itch-button {
   display: inline-flex;
   align-items: center;

@@ -61,7 +61,7 @@
       '<a class="site-topbar-brand" href="https://dalang.page/" aria-label="Dalang home">'
       + '<img src="images/dalang-logo.png" alt="Dalang" /></a>'
       + '<nav class="site-topbar-nav">'
-      + '<a href="https://dalang.page/">dalang.page</a>'
+      + '<a href="https://app.dalang.page/">Dalang Web</a>'
       + '<a class="site-topbar-cta" href="https://app.dalang.page/">Sign in</a>'
       + '</nav>';
     document.body.prepend(bar);
