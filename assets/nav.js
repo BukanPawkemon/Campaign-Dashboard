@@ -59,7 +59,7 @@
     bar.className = "site-topbar";
     bar.innerHTML =
       '<a class="site-topbar-brand" href="https://dalang.page/" aria-label="Dalang home">'
-      + '<img src="images/dalang-logo.png" alt="Dalang" /></a>'
+      + '<img src="images/dalang-wordmark.svg" alt="Dalang" /></a>'
       + '<nav class="site-topbar-nav">'
       + '<a href="https://app.dalang.page/">Dalang Web</a>'
       + '<a class="site-topbar-cta" href="https://app.dalang.page/">Sign in</a>'
@@ -72,7 +72,7 @@
       injectTopbar();
       var current = this.getAttribute("current") || "";
       var html = '<a class="brand-link" href="index.html" aria-label="Dalang - Campaign Dashboard, home">'
-        + '<div class="brand"><img src="images/dalang-logo.png" alt="Dalang - Campaign Dashboard" /></div>'
+        + '<div class="brand"><img src="images/dalang-wordmark.svg" alt="Dalang - Campaign Dashboard" /></div>'
         + '</a>'
         + '<div class="brand-sub">User Guide</div>'
         + '<ol>';

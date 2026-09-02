@@ -13,12 +13,14 @@ The real domain (`dalang.page` / `https://app.dalang.page`) is already
 wired into `index.html`.
 
 Self-contained: inline CSS, one Google Fonts link, and local assets:
-`dalang-logo.png`, `itchio-icon.png`, `favicon.png`, `og-image.png` (the
-share-card image, 1200x630, copied from the repo's `images/og-image.png`),
-and `screenshots/` (four images copied from the repo's own `screenshots/`
-folder, used as selling points). No build step. Drop the whole `web/`
-folder at the root of the Cloudflare Pages project (or wherever
-`dalang.page` is served from).
+`dalang-web.svg` (hero), `dalang-wordmark.svg` (header), `dalang-logo.svg`
+(spare), `itchio-icon.png`, `favicon.png`, `og-image.png` (the share-card
+image, 1200x630, copied from the repo's `images/og-image.png`), and
+`screenshots/` (four images copied from the repo's own `screenshots/`
+folder, used as selling points). The brand SVGs are the source of truth in
+the app repo's `src/assets/brand/`, copied here by hand. No build step.
+Drop the whole `web/` folder at the root of the Cloudflare Pages project
+(or wherever `dalang.page` is served from).
 
 SEO / GEO files, also served from this folder root:
 
