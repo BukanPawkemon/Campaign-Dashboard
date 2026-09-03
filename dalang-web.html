@@ -11,14 +11,14 @@
   gtag('config', 'G-TVGS5WWJT5');
 </script>
 <title>Using Dalang Web - Dalang, Campaign Dashboard User Guide</title>
-<meta name="description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
+<meta name="description" content="Signing in, the free plan, the player link, bringing a campaign over from Dalang Desktop, exporting your data, and how Dalang Web differs from the desktop app." />
 <link rel="canonical" href="https://guide.dalang.page/dalang-web.html" />
 <link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dalang - Campaign Dashboard" />
 <meta property="og:title" content="Using Dalang Web - Dalang, Campaign Dashboard" />
-<meta property="og:description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
+<meta property="og:description" content="Signing in, the free plan, the player link, bringing a campaign over from Dalang Desktop, exporting your data, and how Dalang Web differs from the desktop app." />
 <meta property="og:url" content="https://guide.dalang.page/dalang-web.html" />
 <meta property="og:image" content="https://guide.dalang.page/images/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -26,7 +26,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Using Dalang Web - Dalang, Campaign Dashboard" />
-<meta name="twitter:description" content="Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app." />
+<meta name="twitter:description" content="Signing in, the free plan, the player link, bringing a campaign over from Dalang Desktop, exporting your data, and how Dalang Web differs from the desktop app." />
 <meta name="twitter:image" content="https://guide.dalang.page/images/og-image.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Using Dalang Web",
-  "description": "Signing in, the player link, the free plan, exporting your data, and how Dalang Web differs from the desktop app.",
+  "description": "Signing in, the free plan, the player link, bringing a campaign over from Dalang Desktop, exporting your data, and how Dalang Web differs from the desktop app.",
   "image": "https://guide.dalang.page/images/og-image.png",
   "url": "https://guide.dalang.page/dalang-web.html",
   "inLanguage": "en",
@@ -95,7 +95,7 @@
         <li>a <strong>password</strong>.</li>
       </ul>
       <p>You may be asked to confirm your email by clicking a link before you can sign in. If it does not arrive in a minute, check your spam folder.</p>
-      <p>To sign in afterwards you can type either your username or your email in the first field, along with your password. If you forget your password, use <strong>Forgot your password?</strong> on the sign-in screen to get a reset link.</p>
+      <p>To sign in afterwards you can type either your username or your email in the first field, along with your password. Password resets are not automated yet during the beta: if you are locked out, email <a href="mailto:support@dalang.page">support@dalang.page</a> and it is handled by hand.</p>
     </section>
 
     <section id="free-plan">
@@ -129,9 +129,25 @@
       <p>What the link shows is the same curated set the desktop Player Window shows. It never exposes your DM notes, secrets, encounter details, or treasure. You control what is visible by what you set as the current location and which quests are active.</p>
     </section>
 
+    <section id="from-desktop">
+      <h2>Bringing a campaign from Dalang Desktop</h2>
+      <p>A campaign moves from Dalang Desktop into Dalang Web as a file:</p>
+      <ol>
+        <li>In Dalang Desktop, open <strong>Campaign Settings</strong> and use <strong>Export Campaign</strong>. Choose <strong>Full Campaign</strong> and save the file.</li>
+        <li>In Dalang Web, open the <strong>New Campaign</strong> box and choose <strong>From a File</strong>, then pick that file. It always adds a new campaign, it never overwrites one you already have.</li>
+      </ol>
+      <p>Locations (including nested sub-locations), NPCs, quests, players, the event log, the current location, and any homebrew the campaign uses all carry across. Homebrew merges into your account's Compendium with the same keep-mine, keep-theirs, or keep-both choice Dalang Desktop uses.</p>
+      <p class="see-also"><strong>Update Dalang Desktop to version 1.3.0 first.</strong> The desktop-to-web transfer was built and tested in 1.3.0, and it is the version that carries the campaign's card image across as well. Files exported from an older version still import, but the card image will be missing and the path has had less testing. Check your version under Campaign Settings, and get the latest from the <a href="download.html">Download</a> page.</p>
+      <p>Two things to know going in:</p>
+      <ul>
+        <li><strong>Images added from a file on your computer</strong> (portraits, photos) do not carry across, because Dalang Web only uses hosted image links. Dalang Web tells you how many there are so you can re-add them with a link afterwards.</li>
+        <li><strong>Free-plan limits</strong> are checked before anything is imported. If the campaign is over a limit, Dalang Web names exactly which one (for example, a location with 3 maps against the free limit of 2) so you can remove what is over and export again.</li>
+      </ul>
+    </section>
+
     <section id="export">
       <h2>Exporting your data</h2>
-      <p>Open <strong>Campaign Settings</strong> and use <strong>Move to Dalang Desktop</strong>. This saves the whole campaign, locations, NPCs, quests, players, the event log, your settings, and any homebrew you have used, to a single file.</p>
+      <p>Open <strong>Campaign Settings</strong> and use <strong>Export Campaign</strong>. This saves the whole campaign, locations, NPCs, quests, players, the event log, your settings, and any homebrew you have used, to a single file.</p>
       <p>That file opens in Dalang Desktop, and it can also be brought back into Dalang Web later from the New Campaign box (<strong>From a File</strong>). It is the same format in both directions, so nothing is lost moving a campaign between the two.</p>
       <p>During the beta, this is also how you keep your own backup. It is worth doing every so often.</p>
     </section>
