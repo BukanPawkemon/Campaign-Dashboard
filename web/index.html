@@ -4,16 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Dalang Web, run your D&D campaign from a browser</title>
-<meta name="description" content="Dalang Web is the browser version of Dalang: prep your world, NPCs, and jobs, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
+<title>Dalang, prep and run your D&D campaign</title>
+<meta name="description" content="Dalang is a Dungeon Master's dashboard: the world and house rules, NPCs and jobs, a live battle map for the session, and a read-only link for your players. A Windows desktop app, and now a browser version in beta." />
 <meta name="theme-color" content="#171310" />
 <link rel="canonical" href="https://dalang.page/" />
 <link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Dalang Web" />
-<meta property="og:title" content="Dalang Web, run your D&D campaign from a browser" />
-<meta property="og:description" content="Dalang Web is the browser version of Dalang: prep your world, NPCs, and jobs, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
+<meta property="og:site_name" content="Dalang" />
+<meta property="og:title" content="Dalang, prep and run your D&D campaign" />
+<meta property="og:description" content="A Dungeon Master's dashboard: the world and house rules, NPCs and jobs, a live battle map, and a read-only link for your players. A Windows desktop app, and now a browser version in beta." />
 <meta property="og:url" content="https://dalang.page/" />
 <meta property="og:image" content="https://dalang.page/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -22,27 +22,26 @@
 <meta property="og:locale" content="en_US" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Dalang Web, run your D&D campaign from a browser" />
-<meta name="twitter:description" content="Prep your world, run the session with a live battle map, and hand players a live read-only link. Free during the beta." />
+<meta name="twitter:title" content="Dalang, prep and run your D&D campaign" />
+<meta name="twitter:description" content="A Dungeon Master's dashboard: NPCs and jobs, a live battle map, and a read-only link for your players. Desktop app, and now a browser version in beta." />
 <meta name="twitter:image" content="https://dalang.page/og-image.png" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Dalang Web",
+  "@type": "SoftwareApplication",
+  "name": "Dalang",
   "alternateName": "Dalang - Campaign Dashboard",
   "url": "https://dalang.page/",
   "applicationCategory": "GameApplication",
-  "operatingSystem": "All",
-  "browserRequirements": "Requires a modern web browser with JavaScript enabled",
-  "description": "The browser version of Dalang, a tool for Dungeon Masters: prep the world, house rules, locations, NPCs, and jobs, run the session with a live battle map and fog of war, and hand players a live read-only link to the current scene. Free during the beta.",
+  "operatingSystem": "Windows, Web",
+  "description": "A Dungeon Master's dashboard: prep the world, house rules, locations, NPCs, and jobs, run the session with a live battle map and fog of war, and hand players a live read-only link to the current scene. A Windows desktop app, and a browser version in beta.",
   "image": "https://dalang.page/og-image.png",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "Free during the public beta"
+    "description": "Dalang Desktop is free, pay what you want. Dalang Web is free during the public beta."
   },
   "featureList": [
     "Campaign prep: story, house rules, linked locations, NPCs, and job board",
@@ -50,8 +49,7 @@
     "Read-only live player view, no sign-in for players",
     "Homebrew monsters, magic items, and equipment",
     "SRD 5.1 and 5.2 compendium",
-    "Campaign export and import with Dalang Desktop",
-    "Campaigns synced to your account across browsers"
+    "Campaign export and import between desktop and browser"
   ],
   "publisher": {
     "@type": "Organization",
@@ -112,6 +110,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "The built-in compendium covers the System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases, and you can add your own homebrew monsters, magic items, and equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a desktop version of Dalang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Dalang started as a Windows desktop app and still is one, with no account, no limits, and no internet needed. Dalang Web is the newer browser version. A campaign moves between them in either direction."
       }
     },
     {
@@ -311,6 +317,22 @@
   .feature figure { border: 1px solid var(--hairline); border-radius: 8px; overflow: hidden; background: var(--panel); }
   .feature figure img { display: block; width: 100%; height: auto; }
 
+  .editions { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .edition {
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .edition-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; min-height: 46px; }
+  .edition-logo { height: 44px; width: auto; display: block; }
+  .edition > p { margin: 0 0 18px; color: var(--parchment-dim); font-size: 15px; flex: 1; }
+  .edition .btn, .edition .itch-button { align-self: stretch; justify-content: center; }
+  .edition .itch-note { margin-top: 12px; }
+
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .box {
     background: var(--panel);
@@ -346,8 +368,6 @@
   .compare td { color: var(--parchment-dim); }
   .compare td:first-child { color: var(--parchment); }
 
-  .itch-cta { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 26px 0 4px; }
-  .itch-cta .desktop-logo { height: 46px; width: auto; display: block; margin-bottom: 6px; }
   .itch-button {
     display: inline-flex;
     align-items: center;
@@ -396,6 +416,7 @@
   @media (max-width: 780px) {
     .grid { grid-template-columns: 1fr 1fr; }
     .split { grid-template-columns: 1fr; }
+    .editions { grid-template-columns: 1fr; }
     .card { aspect-ratio: auto; }
     .feature { grid-template-columns: 1fr; gap: 18px; }
     .feature.reverse .feature-text { order: 0; }
@@ -413,7 +434,6 @@
   <header>
     <span class="brand">
       <img src="dalang-wordmark.svg" alt="Dalang" />
-      <span class="beta">Beta</span>
     </span>
     <nav>
       <a href="https://guide.dalang.page/">Guide</a>
@@ -422,27 +442,54 @@
   </header>
 
   <div class="hero">
-    <img class="logo" src="dalang-web.svg" alt="Dalang Web" width="348" height="189" fetchpriority="high" decoding="async" />
+    <img class="logo" src="dalang-logo.svg" alt="Dalang" width="914" height="343" fetchpriority="high" decoding="async" />
 
-    <h1 class="hero-title">Run your D&amp;D campaign from your browser</h1>
+    <h1 class="hero-title">Prep and run your D&amp;D campaign</h1>
 
-    <p class="lede">Dalang is a tool for a Dungeon Master: writing the world and house rules, prepping locations and NPCs and jobs, and running the actual session with a live battle map. Dalang Web is all of that in a browser.</p>
-    <p class="lede">Your campaigns are saved to your account, so you can open them from any browser, and you can hand your players a live read-only link to the current scene.</p>
+    <p class="lede">The Dungeon Master's dashboard: the world and house rules, locations, NPCs, and a job board, plus a live battle map for the session and a read-only link that shows your players the current scene. Dalang runs on your desktop, and now in your browser.</p>
 
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://app.dalang.page">Create a free account</a>
-      <a class="btn btn-secondary" href="https://app.dalang.page">Sign in</a>
+      <a class="btn btn-primary" href="https://app.dalang.page">Try Dalang Web, free</a>
+      <a class="btn btn-secondary" href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard">Get Dalang Desktop</a>
     </div>
-    <p class="cta-note">Free to use while it's in beta.</p>
+    <p class="cta-note">Dalang Web is free during the beta. Dalang Desktop is free, pay what you want.</p>
 
     <figure class="shot">
       <img src="screenshots/01-my-campaigns-hero.png" width="1030" height="470" alt="The My Campaigns screen with a few campaign cards" />
     </figure>
-    <figcaption>My Campaigns, where you land after signing in.</figcaption>
+    <figcaption>My Campaigns, the screen you land on.</figcaption>
   </div>
 
   <section>
+    <h2>Desktop or browser</h2>
+    <p class="lede">Both build the same campaign in the same file format. Start with either, a campaign moves between them in both directions.</p>
+    <div class="editions">
+      <div class="edition">
+        <div class="edition-head">
+          <img class="edition-logo" src="dalang-web.svg" alt="Dalang Web" width="348" height="189" />
+          <span class="beta">Public beta</span>
+        </div>
+        <p>The newer browser version. Nothing to install: make a free account and start in under a minute. Your campaigns are saved to your account, so you can prep from any computer and your players always open the same live link.</p>
+        <a class="btn btn-primary" href="https://app.dalang.page">Create a free account</a>
+        <p class="itch-note">Free during the beta.</p>
+      </div>
+      <div class="edition">
+        <div class="edition-head">
+          <img class="edition-logo" src="dalang-desktop.svg" alt="Dalang Desktop" width="348" height="189" />
+        </div>
+        <p>Where Dalang started, and still the core version. Runs on your Windows machine with no account and no limits, keeps everything in a local file, and works with no internet at all.</p>
+        <a class="itch-button" href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard">
+          <img src="itchio-icon.png" alt="" width="20" height="20" />
+          Get Dalang on itch.io
+        </a>
+        <p class="itch-note">Free, pay what you want.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>What you get</h2>
+    <p class="lede">Every version of Dalang does all of this.</p>
     <div class="grid">
       <div class="card">
         <h3>Prep your world</h3>
@@ -461,12 +508,12 @@
         <p>Add your own monsters, magic items, and equipment. Save a finished adventure to your Library and start new campaigns from it.</p>
       </div>
       <div class="card">
-        <h3>Moves to and from Dalang Desktop</h3>
-        <p>Export a whole campaign to a file and open it in the desktop app, or bring one back. Either direction, nothing is lost.</p>
+        <h3>Moves between desktop and browser</h3>
+        <p>Export a whole campaign to a file and open it in the other version, or bring one back. Either direction, nothing is lost.</p>
       </div>
       <div class="card">
-        <h3>Synced to your account</h3>
-        <p>Your campaigns live on your account, not one machine, so you can pick them up from any browser you sign in on.</p>
+        <h3>Yours, wherever you work</h3>
+        <p>Dalang Web saves your campaigns to your account, so you can pick them up from any browser. Dalang Desktop keeps them in one local file on your machine, fully offline.</p>
       </div>
     </div>
   </section>
@@ -506,7 +553,8 @@
   </section>
 
   <section>
-    <h2>Free during the beta</h2>
+    <h2>The Dalang Web free plan</h2>
+    <p class="lede">Dalang Desktop has no limits. These caps apply only to the browser version during the beta.</p>
     <div class="split">
       <div class="box">
         <h3>What the free plan includes</h3>
@@ -557,20 +605,6 @@
     </div>
   </section>
 
-  <section>
-    <h2>Want it as an app on your own machine?</h2>
-    <p class="lede">Dalang Desktop runs on your own computer with no account and no limits, everything stays in a local file so your notes and NPC secrets never leave your machine. A campaign moves between the two in either direction.</p>
-    <div class="itch-cta">
-      <img class="desktop-logo" src="dalang-desktop.svg" alt="Dalang Desktop" width="348" height="189" />
-      <a href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard" class="itch-button">
-        <img src="itchio-icon.png" alt="" width="20" height="20" />
-        Get Dalang on itch.io
-      </a>
-      <p class="itch-note">Free, pay what you want.</p>
-      <p class="itch-note">Or see other versions on the <a href="https://guide.dalang.page/download.html">Download page</a>.</p>
-    </div>
-  </section>
-
   <section id="faq">
     <h2>Questions</h2>
     <div class="faq">
@@ -599,6 +633,10 @@
         <p>The built-in compendium covers the System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases, and you can add your own homebrew monsters, magic items, and equipment.</p>
       </details>
       <details>
+        <summary>Is there a desktop version of Dalang?</summary>
+        <p>Yes. Dalang started as a Windows desktop app and still is one, with no account, no limits, and no internet needed. Dalang Web is the newer browser version. Get the desktop app on <a href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard">itch.io</a>, or see every version on the <a href="https://guide.dalang.page/download.html">Download page</a>.</p>
+      </details>
+      <details>
         <summary>Can I move a campaign between Dalang Web and the desktop app?</summary>
         <p>Yes, in both directions. Export a whole campaign to a file from Campaign Settings and open it in Dalang Desktop, or bring one back. Nothing is lost either way.</p>
       </details>
@@ -607,15 +645,16 @@
 
   <section class="close">
     <h2>Start a campaign</h2>
-    <p class="lede">Make an account, spin up your first campaign, and see if it fits how you run a game.</p>
+    <p class="lede">Spin up your first campaign and see if it fits how you run a game. Try it in the browser now, or get the desktop app.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://app.dalang.page">Create a free account</a>
+      <a class="btn btn-primary" href="https://app.dalang.page">Try Dalang Web, free</a>
+      <a class="btn btn-secondary" href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard">Get Dalang Desktop</a>
     </div>
   </section>
 
   <footer>
-    Dalang Web
-    &middot; <a href="https://app.dalang.page">Open the app</a>
+    Dalang
+    &middot; <a href="https://app.dalang.page">Dalang Web</a>
     &middot; <a href="https://guide.dalang.page/">Guide</a>
     &middot; <a href="https://guide.dalang.page/legal.html">Legal &amp; Privacy</a>
     &middot; <a href="https://discord.gg/Q7CKz9Sbw">Discord</a>
