@@ -284,16 +284,15 @@
     background: var(--panel);
     border: 1px solid var(--hairline);
     border-radius: 6px;
-    padding: 20px;
-    aspect-ratio: 1 / 1;
+    padding: 18px;
     display: flex;
     flex-direction: column;
   }
   .card h3 {
     font-family: "Cinzel", Georgia, serif;
     font-weight: 600;
-    font-size: 15px;
-    margin: 0 0 10px;
+    font-size: 14px;
+    margin: 0 0 8px;
     color: var(--brass);
   }
   .card p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--parchment-dim); }
@@ -325,13 +324,13 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
   }
-  .edition-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; min-height: 46px; }
+  .edition-name { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; min-height: 44px; }
   .edition-logo { height: 44px; width: auto; display: block; }
-  .edition > p { margin: 0 0 18px; color: var(--parchment-dim); font-size: 15px; flex: 1; }
-  .edition .btn, .edition .itch-button { align-self: stretch; justify-content: center; }
-  .edition .itch-note { margin-top: 12px; }
+  .edition-desc { flex: 1; margin: 0 0 18px; color: var(--parchment-dim); font-size: 15px; line-height: 1.55; }
+  .edition-note { margin: 12px 0 0; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--parchment-dim); }
+  .edition .itch-button,
+  .edition .cta-button-primary { align-self: stretch; }
 
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .box {
@@ -350,41 +349,26 @@
   ul.plain { padding-left: 20px; margin: 0; }
   ul.plain li { margin: 6px 0; color: var(--parchment-dim); font-size: 15px; }
 
-  .compare { overflow-x: auto; }
-  .compare table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
-  .compare th, .compare td {
-    text-align: left;
-    vertical-align: top;
-    padding: 12px 14px;
-    border: 1px solid var(--hairline);
-    line-height: 1.5;
-  }
-  .compare th {
-    font-family: "Cinzel", Georgia, serif;
-    font-weight: 600;
-    color: var(--brass);
-    background: var(--panel);
-  }
-  .compare td { color: var(--parchment-dim); }
-  .compare td:first-child { color: var(--parchment); }
-
+  /* Edition-card buttons. Same size, weight, and case as the guide's
+     editions block (Cinzel 600, 15px), so the two cards read as a pair. */
+  .cta-button-primary,
   .itch-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    background: #ffeef0;
-    color: #c1272d;
     font-family: "Cinzel", Georgia, serif;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15px;
     text-decoration: none;
-    padding: 12px 22px;
-    border-radius: 6px;
+    padding: 12px 18px;
+    border-radius: 5px;
   }
+  .cta-button-primary { background: var(--brass); color: var(--bg); }
+  .cta-button-primary:hover { filter: brightness(1.08); }
+  .itch-button { background: #ffeef0; color: #c1272d; }
   .itch-button:hover { background: #ffd9dc; }
   .itch-button img { display: block; }
-  .itch-note { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--parchment-dim); margin: 0; }
-  .itch-note a { color: var(--parchment-dim); }
 
   .faq { max-width: 760px; margin: 0 auto; }
   .faq details {
@@ -417,7 +401,6 @@
     .grid { grid-template-columns: 1fr 1fr; }
     .split { grid-template-columns: 1fr; }
     .editions { grid-template-columns: 1fr; }
-    .card { aspect-ratio: auto; }
     .feature { grid-template-columns: 1fr; gap: 18px; }
     .feature.reverse .feature-text { order: 0; }
   }
@@ -465,24 +448,24 @@
     <p class="lede">Both build the same campaign in the same file format. Start with either, a campaign moves between them in both directions.</p>
     <div class="editions">
       <div class="edition">
-        <div class="edition-head">
+        <div class="edition-name">
           <img class="edition-logo" src="dalang-web.svg" alt="Dalang Web" width="348" height="189" />
           <span class="beta">Public beta</span>
         </div>
-        <p>The newer browser version. Nothing to install: make a free account and start in under a minute. Your campaigns are saved to your account, so you can prep from any computer and your players always open the same live link.</p>
-        <a class="btn btn-primary" href="https://app.dalang.page">Create a free account</a>
-        <p class="itch-note">Free during the beta.</p>
+        <p class="edition-desc">The newer browser version. Nothing to install: make a free account and start in under a minute. Your campaigns are saved to your account, so you can prep from any computer and your players always open the same live link.</p>
+        <a class="cta-button-primary" href="https://app.dalang.page">Create a free account</a>
+        <p class="edition-note">Free during the beta.</p>
       </div>
       <div class="edition">
-        <div class="edition-head">
+        <div class="edition-name">
           <img class="edition-logo" src="dalang-desktop.svg" alt="Dalang Desktop" width="348" height="189" />
         </div>
-        <p>Where Dalang started, and still the core version. Runs on your Windows machine with no account and no limits, keeps everything in a local file, and works with no internet at all.</p>
+        <p class="edition-desc">Where Dalang started, and still the core version. Runs on your Windows machine with no account and no limits, keeps everything in a local file, and works with no internet at all.</p>
         <a class="itch-button" href="https://bukanpawkemon.itch.io/dalang-campaign-dashboard">
           <img src="itchio-icon.png" alt="" width="20" height="20" />
           Get Dalang on itch.io
         </a>
-        <p class="itch-note">Free, pay what you want.</p>
+        <p class="edition-note">Free, pay what you want.</p>
       </div>
     </div>
   </section>
@@ -569,39 +552,6 @@
         <h3>What "beta" means here</h3>
         <p>Dalang Web is new and still settling in. Your campaigns are looked after, and you can export a full copy any time from Campaign Settings, so it is worth keeping your own backup while the beta runs. Plans with higher limits are planned for later.</p>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>How Dalang compares</h2>
-    <p class="lede">Dalang overlaps with a few kinds of tool without being a direct replacement for any of them.</p>
-    <div class="compare">
-      <table>
-        <thead>
-          <tr>
-            <th>If you use</th>
-            <th>What it does well</th>
-            <th>Where Dalang is different</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>A virtual tabletop like Roll20 or Foundry VTT</td>
-            <td>Playing out maps and combat online, with rules automation and add-ons.</td>
-            <td>Dalang has a live battle map for combat but no rules automation. The focus is prepping and running the whole campaign, and players join by a link with no account.</td>
-          </tr>
-          <tr>
-            <td>A worldbuilding wiki like World Anvil, LegendKeeper, or Obsidian</td>
-            <td>Deep, interlinked lore and long-form world notes.</td>
-            <td>Dalang keeps world notes lighter and adds the pieces around them: an NPC table, a job board, a session view, an event log, and a battle map, all cross-referenced.</td>
-          </tr>
-          <tr>
-            <td>Plain documents like Notion or Google Docs</td>
-            <td>Total flexibility and easy sharing.</td>
-            <td>Dalang is built for a D&amp;D campaign, so locations, NPCs, jobs, and encounters are real linked records, and the read-only player view hides your secrets for you.</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
