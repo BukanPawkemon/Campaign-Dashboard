@@ -10,10 +10,10 @@
 
   var PAGES = [
     { group: "About", items: [
-      { key: "faq", href: "faq.html", label: "FAQ" },
-      { key: "compare", href: "compare.html", label: "How Dalang Compares" },
       { key: "philosophy", href: "philosophy.html", label: "Philosophy" },
       { key: "background", href: "background.html", label: "Background" },
+      { key: "compare", href: "compare.html", label: "How Dalang Compares" },
+      { key: "faq", href: "faq.html", label: "FAQ" },
       { key: "legal", href: "legal.html", label: "Legal & Sources" },
     ] },
     { group: "Preparation", items: [
