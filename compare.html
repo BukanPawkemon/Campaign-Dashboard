@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVGS5WWJT5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVGS5WWJT5');
+</script>
+<title>Dalang vs Roll20, Foundry VTT, World Anvil &amp; Kanka</title>
+<meta name="description" content="How Dalang compares to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo. A D&D campaign manager with a light live battle map and a one-link player view, local-first and free, and an honest look at when another tool is the better choice." />
+<link rel="canonical" href="https://guide.dalang.page/compare.html" />
+<link rel="icon" type="image/png" href="favicon.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Dalang - Campaign Dashboard" />
+<meta property="og:title" content="How Dalang Compares to Other D&D Tools" />
+<meta property="og:description" content="Where Dalang fits next to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo: campaign prep with a light live battle map and a one-link player view, local-first and free." />
+<meta property="og:url" content="https://guide.dalang.page/compare.html" />
+<meta property="og:image" content="https://guide.dalang.page/images/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How Dalang Compares to Other D&D Tools" />
+<meta name="twitter:description" content="Where Dalang fits next to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo." />
+<meta name="twitter:image" content="https://guide.dalang.page/images/og-image.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How Dalang Compares to Other D&D Tools",
+  "description": "Where Dalang fits next to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo: a campaign prep tool with a light live battle map and a one-link player view, local-first and free.",
+  "image": "https://guide.dalang.page/images/og-image.png",
+  "url": "https://guide.dalang.page/compare.html",
+  "inLanguage": "en",
+  "dateModified": "2026-09-04",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Dalang Campaign Dashboard User Guide",
+    "url": "https://guide.dalang.page/"
+  },
+  "author": { "@type": "Organization", "name": "Dalang", "url": "https://dalang.page/" },
+  "publisher": { "@type": "Organization", "name": "Dalang", "url": "https://dalang.page/" }
+}
+</script>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="layout">
+  <site-nav current="compare">
+    <!-- fallback-nav-start: static fallback for non-JS crawlers; assets/nav.js replaces this on load -->
+    <a class="brand-link" href="index.html" aria-label="Dalang - Campaign Dashboard, home"><div class="brand"><img src="images/dalang-wordmark.svg" alt="Dalang - Campaign Dashboard" /></div></a>
+    <div class="brand-sub">User Guide</div>
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="compare.html">How Dalang Compares</a></li>
+      <li><a href="dalang-web.html">Using Dalang Web</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="https://dalang.page/">dalang.page</a></li>
+    </ol>
+  </site-nav>
+
+  <main>
+    <h1 class="title">How Dalang compares to other D&amp;D tools</h1>
+    <p class="subtitle">About Dalang</p>
+
+    <p class="lede">Dalang is a D&amp;D campaign manager with a light live battle map and a one-link player view. It is local-first, DM-owned, and free. This page is an honest look at where it sits next to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo, and where one of those is the better choice.</p>
+
+    <p class="page-jump"><span class="label">On this page</span>
+      <a href="#short">The short version</a>
+      <a href="#table">At a glance</a>
+      <a href="#roll20">vs Roll20</a>
+      <a href="#foundry">vs Foundry VTT</a>
+      <a href="#wikis">vs World Anvil and Kanka</a>
+      <a href="#owlbear">vs Owlbear Rodeo</a>
+      <a href="#docs">vs a docs setup</a>
+      <a href="#not-fit">When Dalang is not the fit</a>
+    </p>
+
+    <section id="short">
+      <h2>The short version</h2>
+      <p>Most D&amp;D tools fall into one of two camps:</p>
+      <ul>
+        <li><strong>Virtual tabletops</strong> (Roll20, Foundry VTT, Owlbear Rodeo) are built around running the tactical encounter online: maps, tokens, character sheets, dice, and often lighting and automation.</li>
+        <li><strong>Worldbuilding wikis</strong> (World Anvil, Kanka, Legend Keeper) are built around writing and linking deep lore: articles, timelines, family trees, maps with pins.</li>
+      </ul>
+      <p>Dalang sits between the two, deliberately smaller than either. It covers the DM's prep-to-table loop: write the world and house rules, prep locations, NPCs, and jobs that reference each other, run the session with a simple battle map, show players the current scene through one link, and keep an event log. It does not try to be a full VTT or a full wiki.</p>
+      <p>It is a good fit if you want your prep organised and one uncomplicated way to run and share a session, without a subscription, a big install, or a setup project. It is the wrong fit if you need tactical automation, dynamic lighting, integrated character sheets, or an encyclopedia-scale lore wiki.</p>
+    </section>
+
+    <section id="table">
+      <h2>At a glance</h2>
+      <div class="table-scroll">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col">Dalang</th>
+              <th scope="col">Roll20</th>
+              <th scope="col">Foundry VTT</th>
+              <th scope="col">World Anvil</th>
+              <th scope="col">Kanka</th>
+              <th scope="col">Owlbear Rodeo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Main purpose</th>
+              <td>Campaign prep + light session running</td>
+              <td>Online virtual tabletop</td>
+              <td>Online virtual tabletop</td>
+              <td>Worldbuilding wiki</td>
+              <td>Worldbuilding wiki</td>
+              <td>Shared battle map</td>
+            </tr>
+            <tr>
+              <th scope="row">Connected prep (locations, NPCs, jobs)</th>
+              <td class="yes">Yes, core</td>
+              <td>Limited</td>
+              <td>Via journals and modules</td>
+              <td class="yes">Yes, deep</td>
+              <td class="yes">Yes, deep</td>
+              <td class="no">No</td>
+            </tr>
+            <tr>
+              <th scope="row">Live battle map</th>
+              <td>Yes, light (grid, tokens, initiative, fog)</td>
+              <td class="yes">Yes, full</td>
+              <td class="yes">Yes, full + lighting</td>
+              <td class="no">No</td>
+              <td class="no">No</td>
+              <td>Yes, map only</td>
+            </tr>
+            <tr>
+              <th scope="row">Character sheets and rules automation</th>
+              <td class="no">No</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes, extensive</td>
+              <td>Partial</td>
+              <td class="no">No</td>
+              <td class="no">No</td>
+            </tr>
+            <tr>
+              <th scope="row">Player-facing view</th>
+              <td>One read-only live link, no sign-in</td>
+              <td>Players join the tabletop</td>
+              <td>Players join the tabletop</td>
+              <td>Player-facing wiki pages</td>
+              <td>Campaign pages you share</td>
+              <td>Share the map link</td>
+            </tr>
+            <tr>
+              <th scope="row">Works fully offline</th>
+              <td class="yes">Yes (desktop)</td>
+              <td class="no">No</td>
+              <td>Yes (self-hosted)</td>
+              <td class="no">No</td>
+              <td class="no">No</td>
+              <td class="no">No</td>
+            </tr>
+            <tr>
+              <th scope="row">Price</th>
+              <td>Free (desktop PWYW; web free in beta)</td>
+              <td>Free tier + subscription</td>
+              <td>One-time purchase</td>
+              <td>Free tier + subscription</td>
+              <td>Free tier + subscription</td>
+              <td>Free tier + subscription</td>
+            </tr>
+            <tr>
+              <th scope="row">Where your data lives</th>
+              <td>Local file, or your web account</td>
+              <td>Roll20 servers</td>
+              <td>Your server or a host</td>
+              <td>World Anvil servers</td>
+              <td>Kanka servers (or self-host)</td>
+              <td>Owlbear servers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Other tools change often. Treat this as a rough map of the categories, not a live feature audit, and check each product for current details.</p>
+    </section>
+
+    <section id="roll20">
+      <h2>Dalang vs Roll20</h2>
+      <p>Roll20 is a browser virtual tabletop for playing the game online: shared maps and tokens, integrated character sheets, a dice engine, and a marketplace of adventures and art. Your table logs in and plays inside it, often with voice and video.</p>
+      <p>Dalang is not that. It does not run the session inside itself, has no character sheets or dice automation, and no marketplace. Its battle map is a single shared view, not a space players move their own tokens around in.</p>
+      <p><strong>Choose Roll20</strong> if the online tactical session is the point and you want everyone acting on the same board. <strong>Choose Dalang</strong> if you mostly want your prep in order and a simple current-scene view to share, and you run the actual conversation on Discord, at a table, or by post.</p>
+    </section>
+
+    <section id="foundry">
+      <h2>Dalang vs Foundry VTT</h2>
+      <p>Foundry VTT is a one-time-purchase virtual tabletop you host yourself or through a service. It is powerful and highly extensible: dynamic lighting, deep system automation, and a large module ecosystem. That power comes with setup and upkeep, a server to run, modules to manage, updates to keep on top of.</p>
+      <p>Dalang has none of that surface. The desktop app is a single download that keeps a local file; the web app is a login. There is nothing to host and nothing to configure before you can prep.</p>
+      <p><strong>Choose Foundry</strong> if you want a serious tactical VTT and do not mind running it. <strong>Choose Dalang</strong> if that is more machinery than your game needs and you would rather spend the time prepping.</p>
+    </section>
+
+    <section id="wikis">
+      <h2>Dalang vs World Anvil and Kanka</h2>
+      <p>World Anvil and Kanka are worldbuilding platforms. They are built for writing large amounts of interlinked lore, articles, characters, locations, organisations, timelines, and family trees, and they have campaign-management features layered on top. World Anvil leans toward long-form worldbuilding and publishing; Kanka is lighter and more campaign-focused, with a generous free tier and a self-host option.</p>
+      <p>Dalang's prep model is smaller and more opinionated. It gives you a fixed set of things a DM needs to run sessions of a published-style adventure, a two-level location hierarchy, NPCs tied to locations, jobs tied to NPCs, encounters and treasure per location, and it stops there. There is no free-form wiki, no timeline, no relationship graph.</p>
+      <p>What Dalang adds that the wikis do not have is the live side: a battle map, initiative, fog of war, and a player link that updates during play.</p>
+      <p><strong>Choose World Anvil or Kanka</strong> if worldbuilding depth is what you want, and you are happy to run the session elsewhere. <strong>Choose Dalang</strong> if your lore needs are modest and you want the prep and the table in one tool.</p>
+    </section>
+
+    <section id="owlbear">
+      <h2>Dalang vs Owlbear Rodeo</h2>
+      <p>Owlbear Rodeo is a clean, lightweight shared battle map: load an image, drop tokens, share a link. It is close in spirit to Dalang's map, minimal, fast, no account friction for players, and it does that one job well.</p>
+      <p>The difference is scope. Owlbear Rodeo is the map and little else. Dalang wraps a comparable map in the rest of the campaign: the prep that feeds it, the NPCs and jobs, and the event log after.</p>
+      <p><strong>Choose Owlbear Rodeo</strong> if all you want is a quick shared map and you keep prep elsewhere. <strong>Choose Dalang</strong> if you want the map and the prep to live together, and the player link to show more than just the battlefield.</p>
+    </section>
+
+    <section id="docs">
+      <h2>Dalang vs a Notion or Google Docs setup</h2>
+      <p>Many DMs prep in a general tool: a Notion workspace, a folder of documents, a spreadsheet of NPCs. That is flexible and free, and if it works for you there is no reason to move.</p>
+      <p>Where it tends to strain is the connections and the table. Keeping an NPC's location, a job's giver, and a location's encounters in sync by hand gets fragile, and a doc does not give your players a live view of the current scene or a battle map. Dalang trades some of that flexibility for structure that stays consistent and for the live-session half a doc cannot do.</p>
+    </section>
+
+    <section id="not-fit">
+      <h2>When Dalang is not the right fit</h2>
+      <ul>
+        <li><strong>You want tactical automation.</strong> Attack rolls, damage, conditions, and line-of-sight resolved for you. Use Foundry VTT or Roll20.</li>
+        <li><strong>You want integrated character sheets.</strong> Dalang tracks players lightly and links out to sheets; it does not host them.</li>
+        <li><strong>You are building an encyclopedia-scale world.</strong> A wiki platform will serve long-form, heavily cross-linked lore far better.</li>
+        <li><strong>Your group plays entirely inside one shared virtual space</strong> with everyone moving tokens. Dalang's map is a single DM-driven view.</li>
+        <li><strong>You need a native Mac or Linux desktop app.</strong> The desktop build is Windows only; the web app is the cross-platform option.</li>
+      </ul>
+      <p>If none of those is a dealbreaker, the fastest way to tell is to try it. <a href="getting-started.html">Getting Started</a> walks through the first campaign, or open <a href="https://app.dalang.page/">Dalang Web</a> and make one now.</p>
+    </section>
+
+    <site-footer>
+      <!-- fallback-nav-start: static fallback for non-JS crawlers; assets/nav.js replaces this on load -->
+      <div class="footer-cta">
+        <div><strong>Dalang Web</strong> runs all of this from a browser, free during the beta, with a live read-only link for your players.</div>
+        <a class="footer-cta-btn" href="https://app.dalang.page/">Create a free account</a>
+      </div>
+      <div class="footer-links">Dalang, Campaign Dashboard User Guide &middot;
+        <a href="index.html">Home</a> &middot;
+        <a href="getting-started.html">Getting Started</a> &middot;
+        <a href="faq.html">FAQ</a> &middot;
+        <a href="download.html">Download</a> &middot;
+        <a href="https://dalang.page/">dalang.page</a> &middot;
+        <a href="https://github.com/BukanPawkemon/Campaign-Dashboard">GitHub</a> &middot;
+        <a href="https://discord.gg/Q7CKz9Sbw">Discord</a></div>
+    </site-footer>
+  </main>
+</div>
+<script src="assets/nav.js" defer></script>
+<script src="assets/lightbox.js" defer></script>
+</body>
+</html>

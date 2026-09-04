@@ -533,6 +533,58 @@ footer a,
 }
 .hero-grid figure { margin: 0; }
 
+/* FAQ list: a plain question/answer stack, no accordion, so the answers
+   are in the page for a crawler and print cleanly. Each question is an
+   h3 with an id so it can be linked directly. */
+.faq-list { margin: 8px 0 0; }
+.faq-item { margin: 0 0 26px; }
+.faq-item h3 {
+  color: var(--color-parchment);
+  font-size: 1.02rem;
+  margin: 0 0 6px;
+}
+.faq-item p { margin: 0 0 8px; }
+
+/* Comparison table. Wrapped in .table-scroll so a wide table scrolls
+   inside its own box on a narrow screen instead of stretching the page. */
+.table-scroll {
+  overflow-x: auto;
+  margin: 20px 0;
+  border: 1px solid var(--color-hairline);
+  border-radius: 6px;
+}
+table.compare {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 640px;
+  font-size: 0.9rem;
+}
+table.compare th,
+table.compare td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-hairline);
+  vertical-align: top;
+}
+table.compare thead th {
+  font-family: 'Cinzel', Georgia, serif;
+  color: var(--color-brass);
+  font-size: 0.82rem;
+  background: var(--color-panel);
+  position: sticky;
+  top: 0;
+}
+table.compare tbody th {
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+  color: var(--color-parchment);
+}
+table.compare tbody tr:last-child th,
+table.compare tbody tr:last-child td { border-bottom: 0; }
+table.compare td { color: var(--color-parchment-dim); }
+table.compare .yes { color: var(--color-teal); }
+table.compare .no { color: var(--color-rust); }
+
 .discord-link {
   display: inline-flex;
   align-items: center;

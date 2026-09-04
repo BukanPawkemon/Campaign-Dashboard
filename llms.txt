@@ -1,13 +1,14 @@
 # Dalang, Campaign Dashboard
 
-> Dalang is a tool for Dungeon Masters to prep and run a Dungeons & Dragons
-> campaign: writing the world and house rules, prepping locations, NPCs, and
-> a job board, running the session with a live battle map and fog of war,
-> handing players a read-only live view of the current scene, and keeping a
-> permanent event log. It comes as a free Windows desktop app (local file,
-> no account) and as a browser app at https://dalang.page (account, synced,
-> free during the beta). A campaign file moves between the two in either
-> direction.
+> Dalang is a Dungeons & Dragons campaign manager and session tool for
+> Dungeon Masters: writing the world and house rules, prepping locations,
+> NPCs, and a job board, running the session with a live battle map and fog
+> of war, handing players a read-only live view of the current scene, and
+> keeping a permanent event log. It is a DM prep tool that also works for
+> play-by-post and games run over Discord or Telegram. It comes as a free
+> Windows desktop app (local file, no account) and as a browser app at
+> https://dalang.page (account, synced, free during the beta). A campaign
+> file moves between the two in either direction.
 
 This site (guide.dalang.page) is the user guide. The app itself is at
 https://app.dalang.page and the landing page is at https://dalang.page.
@@ -16,6 +17,8 @@ https://app.dalang.page and the landing page is at https://dalang.page.
 
 - [Home](https://guide.dalang.page/): what Dalang is and an index of every guide page
 - [Getting Started](https://guide.dalang.page/getting-started.html): first launch, the My Campaigns screen, the sidebar
+- [FAQ](https://guide.dalang.page/faq.html): is it a VTT, async and play-by-post play, offline use, platforms, pricing, player privacy, data ownership
+- [How Dalang Compares](https://guide.dalang.page/compare.html): where Dalang sits next to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo
 - [Using Dalang Web](https://guide.dalang.page/dalang-web.html): signing in, the player link, the free plan limits, exporting, how the web app differs from desktop
 - [Story](https://guide.dalang.page/story.html): campaign pitch, world lore, factions
 - [Gameplay](https://guide.dalang.page/gameplay.html): table logistics, character creation rules, the shareable handout
@@ -44,3 +47,14 @@ https://app.dalang.page and the landing page is at https://dalang.page.
 - The player view never shows DM notes, secrets, encounters, or treasure.
 - Desktop stores everything in one local file and makes no network calls. Web stores campaigns on your account.
 - Not a full virtual tabletop: it has a live battle map for combat, but the focus is prepping and running the whole campaign.
+
+## Common questions
+
+- Is Dalang a VTT? Not fully. It has a live battle map with grid, tokens, initiative, and fog of war, but no dynamic lighting, character sheets, rules automation, or marketplace. It is mainly a prep and session tool. For a heavy tactical VTT, Foundry VTT or Roll20 fit better.
+- Does it work for play-by-post or async play? Yes. The prep tools, event log, and Player Guide export do not assume everyone is online at once. The live map and shared link are optional.
+- Can players see DM notes? No. The shared link shows only the current scene, active jobs, present NPCs, and during a fight the battle map, dice, and pings. DM notes, secrets, encounters, treasure, unrevealed map areas, and hidden tokens are never sent.
+- Do players need an account? No. They open one read-only link in any browser with no sign-in.
+- Is it free? Desktop is free, pay what you want. Web is free during the public beta with every feature included.
+- Which platforms? Desktop is Windows only. Dalang Web runs in any browser, so macOS and Linux users use the web app.
+- How is it different from Roll20 / Foundry / World Anvil / Kanka? Roll20 and Foundry are virtual tabletops for running the tactical fight online. World Anvil and Kanka are worldbuilding wikis with no battle map. Dalang is connected campaign prep plus a light live map plus a one-link player view, local-first and free.
+- Does Dalang use AI? No. It does not generate lore, NPCs, plot, or narration. It is a tool for organising what the DM writes.
