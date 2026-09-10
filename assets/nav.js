@@ -66,7 +66,7 @@
       '<a class="site-topbar-brand" href="https://dalang.page/" aria-label="Dalang home">'
       + '<img src="images/dalang-wordmark.svg" alt="Dalang" /></a>'
       + '<nav class="site-topbar-nav">'
-      + '<button type="button" class="site-topbar-search" data-guide-search aria-label="Search the guide">'
+      + '<button type="button" class="site-topbar-search" data-guide-search aria-label="Search the guide" title="Search the guide (' + escapeHtml(shortcut) + ')">'
       + '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
       + '<span class="site-topbar-search-label">Search</span>'
       + '<kbd>' + escapeHtml(shortcut) + '</kbd>'

@@ -106,31 +106,32 @@ code, kbd {
   font-size: 13px !important;
 }
 
-/* Search trigger in the top bar (assets/search.js) */
+/* Search trigger in the top bar (assets/search.js). Styled as a peer of
+   the plain nav link next to it, not a heavy widget. */
 .site-topbar-search {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  background: var(--color-panel);
-  border: 1px solid var(--color-hairline);
-  border-radius: 5px;
-  padding: 5px 9px;
+  gap: 6px;
+  background: none;
+  border: 0;
+  padding: 0;
   color: var(--color-parchment-dim);
   font-family: 'Spectral', Georgia, serif;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1;
   cursor: pointer;
 }
-.site-topbar-search:hover {
-  color: var(--color-parchment);
-  border-color: var(--color-brass-dim);
-}
+.site-topbar-search:hover { color: var(--color-parchment); }
+.site-topbar-search svg { display: block; }
 .site-topbar-search kbd {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
-  border: 1px solid var(--color-hairline);
-  border-radius: 3px;
-  padding: 1px 5px;
-  background: var(--color-bg);
+  letter-spacing: 0.02em;
+  color: var(--color-parchment-dim);
+  background: none;
+  border: 0;
+  padding: 0;
+  opacity: 0.75;
 }
 
 /* Search palette overlay */
