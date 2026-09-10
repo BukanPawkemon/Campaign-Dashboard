@@ -41,7 +41,7 @@
   "image": "https://guide.dalang.page/images/og-image.png",
   "url": "https://guide.dalang.page/dalang-web.html",
   "inLanguage": "en",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-10",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -94,6 +94,7 @@
         <li>an <strong>email address</strong>, used only to sign in and to recover your account,</li>
         <li>a <strong>password</strong>, at least 8 characters with a lowercase letter, an uppercase letter, and a number.</li>
       </ul>
+      <p>Creating an account also asks you to confirm that you are at least 13 years old and to agree to the Terms of Use and Privacy Policy. That agreement, and the version of the terms you agreed to, is recorded on your account.</p>
       <p>You may be asked to confirm your email by clicking a link before you can sign in. If it does not arrive in a minute, check your spam folder.</p>
       <p>To sign in afterwards you can type either your username or your email in the first field, along with your password. Password resets are not automated yet during the beta: if you are locked out, email <a href="mailto:support@dalang.page">support@dalang.page</a> and it is handled by hand.</p>
     </section>
@@ -120,13 +121,26 @@
 
     <section id="player-link">
       <h2>The player link</h2>
-      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has two buttons:</p>
+      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has a <strong>Player Link</strong> button that opens a small panel with everything for sharing it:</p>
       <ul>
-        <li><strong>Player View</strong> opens that read-only page in a new tab so you can see exactly what your players see.</li>
-        <li><strong>Share Link</strong> copies the link to your clipboard so you can paste it into Discord, Telegram, or wherever your group talks.</li>
+        <li><strong>The link itself</strong>, with a one-tap <strong>Copy</strong> button, ready to paste into Discord, Telegram, or wherever your group talks.</li>
+        <li><strong>A QR code</strong> your players can scan to open the view on a phone. <strong>Copy image</strong> puts the QR code on your clipboard so you can paste it straight into a chat.</li>
+        <li><strong>Open in new tab</strong> opens the read-only page yourself, so you can see exactly what your players see.</li>
+        <li><strong>Reset link</strong> creates a fresh link and switches the old one off. Use it if a link has leaked or a player has left the group. Dalang asks you to confirm first, because the current link and its QR code stop working right away and everyone still playing will need the new one. Anyone open on the old link is dropped and sees a short message telling them to ask you for the new link.</li>
       </ul>
-      <p>Anyone with the link can open it, no sign-in needed. It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, and the pings and drawings you make. It updates on its own while it is open.</p>
+      <p>Anyone with the link can open it, no sign-in needed. Apart from a reset, the link stays the same for the life of the campaign, so you can share it once and reuse it every session.</p>
+      <p>It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, and the pings and drawings you make. It updates on its own while it is open.</p>
       <p>What the link shows is the same curated set the desktop Player Window shows. It never exposes your DM notes, secrets, encounter details, or treasure. You control what is visible by what you set as the current location and which quests are active.</p>
+    </section>
+
+    <section id="player-view-controls">
+      <h2>What your players can do on the battle map</h2>
+      <p>During a live fight, the read-only view is not completely fixed to your camera:</p>
+      <ul>
+        <li><strong>Pan and zoom.</strong> Each player can move around the revealed map on their own screen, by mouse drag and scroll wheel, or by dragging and pinching on a phone or tablet. It only affects their screen, never yours or anyone else's. A <strong>Follow DM</strong> button appears once they have moved away from your framing and snaps them back to it, and the view also resets on its own whenever you switch to a new map or location.</li>
+        <li><strong>Inspect a token.</strong> Off by default. In the Live Run map toolbar, next to the HP visibility menu, a <strong>Let players inspect</strong> toggle per category (Player Characters, NPCs, Monsters) lets players click a token during an encounter to open a read-only info panel with its full stat block and active conditions. For a player character it shows a character card (race, class, level, speed, initiative, passives, ability modifiers). Turning it on for NPCs reveals a linked stat block to everyone, so think about plot-twist NPCs before you enable that one.</li>
+      </ul>
+      <p>Both of these work the same on the desktop Player Window.</p>
     </section>
 
     <section id="from-desktop">
@@ -159,7 +173,6 @@
         <li><strong>An account.</strong> Dalang Web needs one; Dalang Desktop does not.</li>
         <li><strong>Where campaigns live.</strong> Dalang Web keeps them on the server so you can reach them from any browser. Dalang Desktop keeps them in a file on one machine.</li>
         <li><strong>Images.</strong> Dalang Web uses image links only. Dalang Desktop can also use image files from your computer.</li>
-        <li><strong>Importing a character from D&D Beyond.</strong> Desktop only for now.</li>
         <li><strong>The player screen.</strong> Dalang Desktop opens a second window on your own computer, for a screen at the table. Dalang Web gives you a link instead, which works the same way for a remote group.</li>
         <li><strong>Plan limits.</strong> Dalang Web has the per-account limits listed above. Dalang Desktop has none.</li>
       </ul>

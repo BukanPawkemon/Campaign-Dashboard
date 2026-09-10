@@ -45,6 +45,8 @@ https://app.dalang.page and the landing page is at https://dalang.page.
 - License to use: free. Desktop is pay what you want on itch.io. Web is free during the public beta.
 - Rules content: the D&D System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases. Homebrew monsters, magic items, and equipment are supported.
 - The player view never shows DM notes, secrets, encounters, or treasure.
+- During a fight each player can pan and zoom their own copy of the revealed map, and a "Follow DM" button snaps back to the DM's framing. The DM can optionally let players click a token to see a read-only stat block. Both work on the web player link and the desktop Player Window.
+- Importing a character from a public D&D Beyond URL works in both Dalang Desktop and Dalang Web.
 - Desktop stores everything in one local file and makes no network calls. Web stores campaigns on your account.
 - Not a full virtual tabletop: it has a live battle map for combat, but the focus is prepping and running the whole campaign.
 
