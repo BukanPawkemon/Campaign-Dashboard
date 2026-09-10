@@ -11,14 +11,14 @@
   gtag('config', 'G-TVGS5WWJT5');
 </script>
 <title>Setting Up a Map - Dalang, Campaign Dashboard User Guide</title>
-<meta name="description" content="Grid calibration, Fog of War setup, and printing a true-scale physical map, in Dalang - Campaign Dashboard." />
+<meta name="description" content="Grid calibration, animated video maps, Fog of War setup, which image and video links work, and printing a true-scale physical map, in Dalang - Campaign Dashboard." />
 <link rel="canonical" href="https://guide.dalang.page/maps.html" />
 <link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dalang - Campaign Dashboard" />
 <meta property="og:title" content="Setting Up a Map - Dalang, Campaign Dashboard" />
-<meta property="og:description" content="Grid calibration, Fog of War setup, and printing a true-scale physical map, in Dalang - Campaign Dashboard." />
+<meta property="og:description" content="Grid calibration, animated video maps, Fog of War setup, which image and video links work, and printing a true-scale physical map, in Dalang - Campaign Dashboard." />
 <meta property="og:url" content="https://guide.dalang.page/maps.html" />
 <meta property="og:image" content="https://guide.dalang.page/screenshots/01-my-campaigns.png" />
 <meta property="og:image:width" content="1920" />
@@ -26,7 +26,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Setting Up a Map - Dalang, Campaign Dashboard" />
-<meta name="twitter:description" content="Grid calibration, Fog of War setup, and printing a true-scale physical map, in Dalang - Campaign Dashboard." />
+<meta name="twitter:description" content="Grid calibration, animated video maps, Fog of War setup, which image and video links work, and printing a true-scale physical map, in Dalang - Campaign Dashboard." />
 <meta name="twitter:image" content="https://guide.dalang.page/screenshots/01-my-campaigns.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,11 +37,11 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Setting Up a Map",
-  "description": "Grid calibration, Fog of War setup, and printing a true-scale physical map, in Dalang - Campaign Dashboard.",
+  "description": "Grid calibration, animated video maps, Fog of War setup, which image and video links work, and printing a true-scale physical map, in Dalang - Campaign Dashboard.",
   "image": "https://guide.dalang.page/screenshots/01-my-campaigns.png",
   "url": "https://guide.dalang.page/maps.html",
   "inLanguage": "en",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-10",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -84,7 +84,7 @@
 
     <p>Do this before a session so you're not fumbling with grid calibration while people are waiting.</p>
     <ol>
-      <li>On a location's <a href="campaign-prep.html">Campaign Prep</a> page, add a map by pasting an image URL and clicking <strong>Load</strong>, or <strong>Browse...</strong> for a file on your own computer.</li>
+      <li>On a location's <a href="campaign-prep.html">Campaign Prep</a> page, add a map by pasting an image or video URL and clicking <strong>Load</strong>, or <strong>Browse...</strong> for a file on your own computer. Not every link works, see <a href="#map-links">What kind of link works</a> below.</li>
       <li>This opens the map popup with four modes: <strong>Pan &amp; View</strong>, <strong>Calibrate Grid</strong>, <strong>Fog of War</strong>, and <strong>Print</strong> (see below).</li>
       <li>In Calibrate mode, drag the two handles onto adjacent grid intersections on the image. The app uses that spacing to work out real distances later (for the ruler tool, spell radius labels, and so on). You can also select a handle and nudge it with arrow keys for precision.</li>
       <li>In Fog of War mode, click or drag to mark which cells are hidden by default when a session starts. This sets the baseline, not what's revealed live during play, that gets edited separately once a run is underway.</li>
@@ -95,6 +95,20 @@
       <figcaption>Calibrating a map's grid: drag the brass and teal handles onto adjacent intersections.</figcaption>
     </figure>
     <p>If you want to place tokens ahead of time (an ambush, a set encounter), open the encounter from Campaign Prep and use its <strong>Map Setup</strong> section. It uses the same placement grid as the live battle map, so tokens you place here are exactly where they'll be when you hit Start, see <a href="running-a-session.html">Running a Live Session</a>.</p>
+
+    <h2 id="map-links">What kind of link works</h2>
+    <p>When you paste a URL instead of using <strong>Browse...</strong>, Dalang loads the file straight from that address every time the map is shown. That only works if the link points directly at the image or video file itself, on a host that lets other sites load it.</p>
+    <p><strong>These work:</strong> a link that ends in the file itself, for example <code>https://example.com/maps/cave.jpg</code>, or <code>.png</code>, <code>.webp</code>, <code>.mp4</code>, <code>.webm</code>, from an image or file host that allows hotlinking, your own web space, or a content host you control.</p>
+    <p><strong>These do not work:</strong></p>
+    <ul>
+      <li><strong>Google Drive and Dropbox share links.</strong> They open a preview page, not the file, and they block other sites from loading the file directly.</li>
+      <li><strong>YouTube and Vimeo links.</strong> Those only play inside their own video player, which Dalang cannot put a grid on top of. An animated map has to be a direct link to a raw <code>.mp4</code> or <code>.webm</code> file.</li>
+      <li>Any page that shows the image with other content around it. You need the address of the image on its own: right-click the image and choose "Copy image address" or the equivalent.</li>
+    </ul>
+    <p>On <strong>Dalang Desktop</strong> you can skip all of this. <strong>Browse...</strong> copies the file into Dalang's own storage, so any image or video from your computer works whatever its format or host.</p>
+
+    <h3>Animated maps</h3>
+    <p>A battle map can be a looping video (<code>.mp4</code> or <code>.webm</code>), the kind with moving water, drifting fog, or flickering torches. Paste a direct link to the video file, or on Dalang Desktop use <strong>Browse...</strong>, then set the Image or Video toggle if it did not pick the right one. Calibrate the grid, place tokens, paint fog, and measure on it exactly as on a still map. The video is always muted and loops on its own. Keep the file small, since every player who opens the shared link downloads the whole thing. Printing a map and saving a player-view image both use a single still frame from the video.</p>
 
     <h2>Printing a map for the table</h2>
     <p>A fourth mode, <strong>Print</strong>, next to Pan &amp; View/Calibrate Grid/Fog of War, exports a calibrated map as a real, physical-scale PDF, 1 grid square always prints as exactly 1 inch, derived from the map's own calibration above, not separately adjustable. Drag the brass handle to reposition which area prints, drag teal to cover more pages. Pick a paper size (Letter, A4, Legal, Tabloid, A3) and orientation, and choose whether to include the map art, the grid lines, and a separate fog overlay sheet, meant to be printed on its own and physically laid over the map, lifted as the party explores.</p>
