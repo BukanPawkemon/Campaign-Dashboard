@@ -116,7 +116,21 @@
         <li><strong>250 event log entries</strong></li>
       </ul>
       <p>Every feature is available on the free plan. Nothing is locked behind a payment. If you reach a limit, Dalang tells you which one and you can remove an item to add another. Plans with higher limits are planned for after the beta.</p>
-      <p class="note">Images are added by pasting a link to a hosted image. Uploading image files from your computer is a desktop-only feature for now.</p>
+      <p class="note">Images are added by pasting a link to a hosted image. Uploading image files from your computer is a desktop-only feature for now. See <a href="#images">Which image links work</a> below.</p>
+    </section>
+
+    <section id="images">
+      <h2>Which image links work</h2>
+      <p>Every image in Dalang Web, portraits, photos, the campaign card image, and battle maps, is a link. Dalang loads the file straight from that address each time it is shown, so the link has to point directly at the image file itself, on a host that lets other sites load it. A good link opens just the picture in your browser and usually ends in <code>.jpg</code>, <code>.png</code>, <code>.webp</code>, or <code>.gif</code>.</p>
+      <p><strong>Links that work:</strong> a direct file link from an image or file host that allows hotlinking, from your own web space, or from a content host you control. For example a Discord image link, a GitHub raw link, or an itch.io asset. On Wikimedia Commons use the "Original file" link, not the article page. On Imgur use the <code>i.imgur.com/....jpg</code> link, not the gallery page.</p>
+      <p><strong>Links that do not work:</strong></p>
+      <ul>
+        <li><strong>Google Drive, Dropbox, and OneDrive share links.</strong> They open a preview page, not the image, they often ask the viewer to sign in, and they block other sites from loading the file directly. Google Drive's "direct link" workarounds are unreliable and Google keeps changing them, so do not count on them.</li>
+        <li><strong>A page URL from Pinterest, Flickr, Instagram, Facebook, or X.</strong> You need the address of the image on its own. Right-click the image and choose "Copy image address", though some of these hosts still block other sites from loading their images.</li>
+        <li><strong>A link from Google Images search results.</strong> It is usually a redirect or a small thumbnail, not the real file.</li>
+      </ul>
+      <p><strong>To get a direct link:</strong> open the image on its own in your browser (right-click, then "Open image in new tab"), and copy the address from the address bar. If that address ends in an image extension and shows only the picture, it works in Dalang.</p>
+      <p>If an image field shows the placeholder icon, the link did not load. If an image loads sometimes and not other times, the host is blocking other sites from using it, or the link has expired. Move the file to a proper image host and use that link. For maps and animated (video) maps, see <a href="maps.html#map-links">What kind of link works</a> on the map page.</p>
     </section>
 
     <section id="player-link">
@@ -172,7 +186,7 @@
       <ul>
         <li><strong>An account.</strong> Dalang Web needs one; Dalang Desktop does not.</li>
         <li><strong>Where campaigns live.</strong> Dalang Web keeps them on the server so you can reach them from any browser. Dalang Desktop keeps them in a file on one machine.</li>
-        <li><strong>Images.</strong> Dalang Web uses image links only. Dalang Desktop can also use image files from your computer.</li>
+        <li><strong>Images.</strong> Dalang Web uses image links only, see <a href="#images">Which image links work</a>. Dalang Desktop can also use image files from your computer.</li>
         <li><strong>The player screen.</strong> Dalang Desktop opens a second window on your own computer, for a screen at the table. Dalang Web gives you a link instead, which works the same way for a remote group.</li>
         <li><strong>Plan limits.</strong> Dalang Web has the per-account limits listed above. Dalang Desktop has none.</li>
       </ul>
