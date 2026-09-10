@@ -106,6 +106,134 @@ code, kbd {
   font-size: 13px !important;
 }
 
+/* Search trigger in the top bar (assets/search.js) */
+.site-topbar-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-hairline);
+  border-radius: 5px;
+  padding: 5px 9px;
+  color: var(--color-parchment-dim);
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.site-topbar-search:hover {
+  color: var(--color-parchment);
+  border-color: var(--color-brass-dim);
+}
+.site-topbar-search kbd {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  border: 1px solid var(--color-hairline);
+  border-radius: 3px;
+  padding: 1px 5px;
+  background: var(--color-bg);
+}
+
+/* Search palette overlay */
+body.gs-lock { overflow: hidden; }
+.gs-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  padding: 12vh 16px 16px;
+  background: rgba(10, 8, 6, 0.62);
+}
+.gs-overlay.is-open { display: block; }
+.gs-panel {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  background: var(--color-panel);
+  border: 1px solid var(--color-hairline);
+  border-radius: 10px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.gs-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--color-hairline);
+}
+.gs-input-icon { color: var(--color-parchment-dim); flex: 0 0 auto; }
+.gs-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--color-parchment);
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1rem;
+}
+.gs-input::placeholder { color: var(--color-parchment-dim); }
+.gs-esc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--color-parchment-dim);
+  border: 1px solid var(--color-hairline);
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+.gs-results {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+}
+.gs-result > a {
+  display: block;
+  padding: 9px 11px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--color-parchment-dim);
+}
+.gs-result.is-active > a { background: var(--color-panel-raised); }
+.gs-result-title {
+  display: block;
+  color: var(--color-parchment);
+  font-size: 0.95rem;
+}
+.gs-result.is-active .gs-result-title { color: var(--color-brass); }
+.gs-result-page {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-brass-dim);
+  margin-top: 2px;
+}
+.gs-result-snippet {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-parchment-dim);
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gs-results mark {
+  background: rgba(201, 162, 39, 0.28);
+  color: inherit;
+  border-radius: 2px;
+}
+.gs-status {
+  padding: 9px 15px;
+  border-top: 1px solid var(--color-hairline);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--color-parchment-dim);
+}
+
 .toc {
   display: block;
   flex: 0 0 250px;
@@ -536,14 +664,42 @@ footer a,
 /* FAQ list: a plain question/answer stack, no accordion, so the answers
    are in the page for a crawler and print cleanly. Each question is an
    h3 with an id so it can be linked directly. */
-.faq-list { margin: 8px 0 0; }
-.faq-item { margin: 0 0 26px; }
-.faq-item h3 {
-  color: var(--color-parchment);
-  font-size: 1.02rem;
-  margin: 0 0 6px;
+/* FAQ entries are <details> so each answer collapses. */
+.faq-list { margin: 12px 0 0; }
+.faq-item {
+  margin: 0;
+  border-bottom: 1px solid var(--color-hairline);
 }
-.faq-item p { margin: 0 0 8px; }
+.faq-list > .faq-item:first-child { border-top: 1px solid var(--color-hairline); }
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 2px;
+  color: var(--color-parchment);
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 1.02rem;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::before {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--color-brass);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.faq-item[open] > summary::before { content: "\2212"; }
+.faq-item > summary:hover,
+.faq-item[open] > summary { color: var(--color-brass); }
+.faq-item > summary:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
+}
+.faq-item > *:not(summary) { margin-left: 26px; }
+.faq-item > p { margin-top: 0; margin-bottom: 10px; }
+.faq-item > p:first-of-type { margin-top: 2px; }
+.faq-item[open] { padding-bottom: 8px; }
 
 /* Comparison table. Wrapped in .table-scroll so a wide table scrolls
    inside its own box on a narrow screen instead of stretching the page. */
@@ -687,5 +843,9 @@ body.lightbox-open {
   }
   main { padding: 32px 22px 80px; }
   .site-topbar { padding: 9px 16px; }
+  .site-topbar-nav { gap: 12px; }
+  .site-topbar-search-label,
+  .site-topbar-search kbd { display: none; }
   .footer-cta { flex-direction: column; align-items: flex-start; }
+  .gs-overlay { padding: 8vh 10px 10px; }
 }

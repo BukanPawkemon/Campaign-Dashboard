@@ -146,7 +146,7 @@
       "name": "Where is my campaign data stored, and can I get it out?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dalang Desktop keeps each campaign in a JSON file on your own machine. Dalang Web keeps campaigns on your account on a server (hosted in Singapore). Either way you can export a whole campaign to a single file at any time from Campaign Settings, and that file opens in either version. Your content is yours; Dalang provides the tool, not the content."
+        "text": "Dalang Desktop keeps everything in one folder on your own machine. On Windows it is C:\\Users\\<your name>\\AppData\\Roaming\\campaign-dashboard\\ (paste %AppData%\\campaign-dashboard into the File Explorer address bar). It holds campaign.json with all your campaigns, a backups subfolder, your homebrew library, and the offline rules cache. Dalang Web keeps campaigns on your account on a server hosted in Singapore. Either way you can export a whole campaign to a single file at any time from Campaign Settings, and that file opens in either version."
       }
     },
     {
@@ -221,27 +221,27 @@
       <h2>What Dalang is</h2>
 
       <div class="faq-list">
-        <div class="faq-item" id="what-is-dalang">
-          <h3>What is Dalang?</h3>
+        <details class="faq-item" id="what-is-dalang">
+          <summary>What is Dalang?</summary>
           <p>Dalang is a campaign management tool for Dungeon Masters running a Dungeons &amp; Dragons game. It holds the world and house rules, a location hierarchy with encounters and treasure, an NPC roster, and a job board, then helps you run the session with a live battle map and hand players a read-only link that shows the current scene. It keeps a permanent event log of what happened afterward.</p>
           <p>It comes two ways: a free Windows desktop app, and a browser app at <a href="https://dalang.page/">dalang.page</a>. A campaign moves between them freely.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="is-it-a-vtt">
-          <h3>Is Dalang a virtual tabletop (VTT)?</h3>
+        <details class="faq-item" id="is-it-a-vtt">
+          <summary>Is Dalang a virtual tabletop (VTT)?</summary>
           <p>Not in the full sense. Dalang is primarily a prep and session-running tool. It does include a live battle map with grid calibration, tokens, initiative order, fog of war, a ruler, pings, and freehand drawing, which is enough to run a fight.</p>
           <p>It does not have dynamic lighting, automated character sheets, a rules engine that resolves attacks for you, built-in voice or video, or an asset marketplace. If you want a heavy tactical VTT, Foundry VTT or Roll20 fit better. If you want organised prep plus a simple map and a zero-setup player view, that is what Dalang is for. <a href="compare.html">See the full comparison</a>.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="async">
-          <h3>Does Dalang work for play-by-post or asynchronous campaigns?</h3>
+        <details class="faq-item" id="async">
+          <summary>Does Dalang work for play-by-post or asynchronous campaigns?</summary>
           <p>Yes. The prep tools, the event log, and the Player Guide export do not assume everyone is online at once. The live battle map and the shared player link are built for a real-time session, in person or on a call, but they are optional. Plenty of DMs use Dalang purely as a prep organiser for a game they run over text.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="discord-telegram">
-          <h3>Can I use Dalang to run a game over Discord or Telegram?</h3>
+        <details class="faq-item" id="discord-telegram">
+          <summary>Can I use Dalang to run a game over Discord or Telegram?</summary>
           <p>Yes. Dalang does not host chat or voice itself. You run the conversation wherever your group already talks, and use Dalang for prep, the event log, and, when you want it, the shared player link. The link is a plain URL you paste into your group's channel; players open it in a browser with no sign-in.</p>
-        </div>
+        </details>
       </div>
     </section>
 
@@ -249,38 +249,38 @@
       <h2>Running it</h2>
 
       <div class="faq-list">
-        <div class="faq-item" id="offline">
-          <h3>Does Dalang need an internet connection?</h3>
+        <details class="faq-item" id="offline">
+          <summary>Does Dalang need an internet connection?</summary>
           <p>Dalang Desktop does not. It stores everything in a local file on your machine and makes no network calls, so it works fully offline. Dalang Web runs in the browser and needs a connection, since your campaigns are saved to your account on a server.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="mac-linux">
-          <h3>Is there a Mac or Linux version?</h3>
+        <details class="faq-item" id="mac-linux">
+          <summary>Is there a Mac or Linux version?</summary>
           <p>The desktop app is built for Windows. On macOS or Linux, use <a href="dalang-web.html">Dalang Web</a> in a browser instead: it has the same tabs and tools. A native Mac or Linux build is not available today.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="price">
-          <h3>Is Dalang really free?</h3>
+        <details class="faq-item" id="price">
+          <summary>Is Dalang really free?</summary>
           <p>Yes. Dalang Desktop is free and pay-what-you-want on itch.io, including nothing. Dalang Web is free while it is in public beta, with every feature included and generous per-account limits.</p>
           <p>Paid plans with higher limits are planned for after the beta, but the desktop app stays free and the core of the web product will not be put behind a paywall. See the <a href="dalang-web.html#free-plan">free plan details</a>.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="rules">
-          <h3>What edition of D&amp;D does Dalang support, and can I use it for other systems?</h3>
+        <details class="faq-item" id="rules">
+          <summary>What edition of D&amp;D does Dalang support, and can I use it for other systems?</summary>
           <p>The built-in <a href="compendium.html">compendium</a> covers the D&amp;D System Reference Document, both the 5.1 (2014) and 5.2 (2024) releases, and you can add homebrew monsters, magic items, and equipment.</p>
           <p>Everything else, the world, house rules, locations, NPCs, jobs, and the event log, is free text, so DMs do use Dalang for other d20 games and lighter systems. There is no rules automation tied to a specific system.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="use-ai">
-          <h3>Does Dalang use AI to write my campaign?</h3>
+        <details class="faq-item" id="use-ai">
+          <summary>Does Dalang use AI to write my campaign?</summary>
           <p>No. Dalang does not generate world lore, NPCs, plot, or narration for you. It is a tool for organising the campaign you write yourself, and the aim is for it to stay a straightforward, human-driven prep and session tool.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="image-links">
-          <h3>My image link does not show up. Can I use a Google Drive link?</h3>
+        <details class="faq-item" id="image-links">
+          <summary>My image link does not show up. Can I use a Google Drive link?</summary>
           <p>In Dalang Web every image is loaded from a link, so the link has to point straight at the image file, on a host that lets other sites load it. Google Drive, Dropbox, and OneDrive share links do not work: they open a preview page rather than the file and block other sites from loading it. Neither do page URLs from Pinterest, Instagram, Facebook, or a Google Images result.</p>
           <p>Use a direct file link instead, one that opens just the picture and ends in <code>.jpg</code>, <code>.png</code>, or <code>.webp</code>. Right-click an image and choose "Open image in new tab" to find its real address. Full detail is on <a href="dalang-web.html#images">Which image links work</a>. On Dalang Desktop you can skip all of this and use an image file from your computer.</p>
-        </div>
+        </details>
       </div>
     </section>
 
@@ -288,25 +288,25 @@
       <h2>Players and sharing</h2>
 
       <div class="faq-list">
-        <div class="faq-item" id="player-setup">
-          <h3>Do my players need to install anything or make an account?</h3>
+        <details class="faq-item" id="player-setup">
+          <summary>Do my players need to install anything or make an account?</summary>
           <p>No. Players open one read-only link in any browser, with no sign-in and nothing to install. Only the DM needs the app or a Dalang Web account.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="player-visibility">
-          <h3>What can players see through the shared link, and what stays hidden?</h3>
+        <details class="faq-item" id="player-visibility">
+          <summary>What can players see through the shared link, and what stays hidden?</summary>
           <p>The link shows the current location, the active jobs, which NPCs are present, and during a fight the battle map, dice rolls, and the pings and drawings you make. It never shows your DM notes, plot secrets, encounter details, treasure, unrevealed map areas, or hidden tokens. You control what is visible by what you set as the current scene. See <a href="player-window.html">The Player Window</a>.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="published-adventures">
-          <h3>Does Dalang come with published adventures like Dragon of Icespire Peak?</h3>
+        <details class="faq-item" id="published-adventures">
+          <summary>Does Dalang come with published adventures like Dragon of Icespire Peak?</summary>
           <p>No. Dalang does not bundle commercial adventures. You build your own campaign, save a finished one to your <a href="library.html">Library</a> to start future campaigns from, or import a campaign file another DM shares with you. The compendium ships with the free SRD rules content only.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="ddb">
-          <h3>Can I import characters from D&amp;D Beyond?</h3>
+        <details class="faq-item" id="ddb">
+          <summary>Can I import characters from D&amp;D Beyond?</summary>
           <p>Yes. Paste a public D&amp;D Beyond character URL into the <a href="players.html">Players</a> tab and Dalang fills in race, class, level, background, AC, HP, passives, ability modifiers, speed, portrait, and personality traits. It works in both Dalang Desktop and Dalang Web. The character has to be set to Public on D&amp;D Beyond first.</p>
-        </div>
+        </details>
       </div>
     </section>
 
@@ -314,21 +314,25 @@
       <h2>Your data</h2>
 
       <div class="faq-list">
-        <div class="faq-item" id="storage">
-          <h3>Where is my campaign data stored, and can I get it out?</h3>
-          <p>Dalang Desktop keeps each campaign in a JSON file on your own machine. Dalang Web keeps campaigns on your account on a server, hosted in Singapore. Either way you can export a whole campaign to a single file at any time from <a href="campaign-settings.html">Campaign Settings</a>, and that file opens in either version. Your content is yours: Dalang provides the tool, not the content.</p>
-        </div>
+        <details class="faq-item" id="storage">
+          <summary>Where is my campaign data stored, and can I get it out?</summary>
+          <p>Dalang Desktop keeps everything in one folder on your own machine, nothing is sent anywhere. On Windows that folder is:</p>
+          <p><code>C:\Users\&lt;your name&gt;\AppData\Roaming\campaign-dashboard\</code></p>
+          <p>The quickest way there is to paste <code>%AppData%\campaign-dashboard</code> into the File Explorer address bar. Inside you will find <code>campaign.json</code> (all your campaigns), a <code>backups</code> subfolder with recent automatic copies, your homebrew library, the offline rules cache, and any images you added from a file on this computer. The folder is named <code>campaign-dashboard</code> for historical reasons, that was the app's old name.</p>
+          <p>Dalang Web keeps campaigns on your account on a server, hosted in Singapore.</p>
+          <p>Either way you can export a whole campaign to a single file at any time from <a href="campaign-settings.html">Campaign Settings</a>, and that file opens in either version. Your content is yours: Dalang provides the tool, not the content.</p>
+        </details>
 
-        <div class="faq-item" id="move-campaign">
-          <h3>Can I move a campaign between Dalang Desktop and Dalang Web?</h3>
+        <details class="faq-item" id="move-campaign">
+          <summary>Can I move a campaign between Dalang Desktop and Dalang Web?</summary>
           <p>Yes, in both directions. Export a full campaign from Campaign Settings and open the file in the other version. Locations, NPCs, jobs, players, the event log, and any homebrew used all carry across.</p>
           <p>Update Dalang Desktop to version 1.3.0 or later before moving a campaign to the web; that is the tested path. Images added from a file on your own computer do not transfer, because Dalang Web uses hosted image links only. See <a href="dalang-web.html#from-desktop">Bringing a campaign from Dalang Desktop</a>.</p>
-        </div>
+        </details>
 
-        <div class="faq-item" id="maker">
-          <h3>Who makes Dalang?</h3>
+        <details class="faq-item" id="maker">
+          <summary>Who makes Dalang?</summary>
           <p>Dalang is made by one independent developer and started as a personal tool for running an async D&amp;D game with friends. It is not affiliated with or endorsed by Wizards of the Coast. See <a href="philosophy.html">Philosophy</a> and <a href="background.html">Background</a> for the longer story, and <a href="legal.html">Legal &amp; Sources</a> for licensing and attribution.</p>
-        </div>
+        </details>
       </div>
     </section>
 

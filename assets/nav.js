@@ -57,16 +57,36 @@
   // to include it.
   function injectTopbar() {
     if (document.querySelector(".site-topbar")) return;
+    var shortcut = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)
+      ? "⌘K"
+      : "Ctrl K";
     var bar = document.createElement("div");
     bar.className = "site-topbar";
     bar.innerHTML =
       '<a class="site-topbar-brand" href="https://dalang.page/" aria-label="Dalang home">'
       + '<img src="images/dalang-wordmark.svg" alt="Dalang" /></a>'
       + '<nav class="site-topbar-nav">'
+      + '<button type="button" class="site-topbar-search" data-guide-search aria-label="Search the guide">'
+      + '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
+      + '<span class="site-topbar-search-label">Search</span>'
+      + '<kbd>' + escapeHtml(shortcut) + '</kbd>'
+      + '</button>'
       + '<a href="https://app.dalang.page/">Dalang Web</a>'
       + '<a class="site-topbar-cta" href="https://app.dalang.page/">Sign in</a>'
       + '</nav>';
     document.body.prepend(bar);
+    loadSearch();
+  }
+
+  // The search palette lives in its own file, pulled in once here so every
+  // guide page gets Cmd/Ctrl+K without hand-adding a script tag.
+  function loadSearch() {
+    if (document.querySelector('script[data-guide-search-js]')) return;
+    var s = document.createElement("script");
+    s.src = "assets/search.js";
+    s.defer = true;
+    s.setAttribute("data-guide-search-js", "");
+    document.head.appendChild(s);
   }
 
   class SiteNav extends HTMLElement {
