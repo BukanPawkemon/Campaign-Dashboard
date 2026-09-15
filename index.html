@@ -147,10 +147,26 @@
       <h2>What's new</h2>
 
       <h3>v1.4.0</h3>
-      <p>The battle-map changes below apply to both Dalang Desktop and Dalang Web.</p>
+      <p>The headline is a full revamp of the DM's encounter map, the screen you spend most of a session looking at. Everything below applies to both Dalang Desktop and Dalang Web.</p>
 
       <h4>New features</h4>
       <ul>
+        <li><strong>The encounter map is rebuilt around a fullscreen Live Run.</strong> Starting an encounter or exploration now opens the battle map straight to full screen, no scaffolded layout to click through first. A command bar across the bottom holds five tools, <strong>Move, Fog, Point, Draw, and Intel</strong>, each with its own options in a strip above it. The turn order expands into a full <strong>Initiative tray</strong> for editing HP, conditions, and hide-from-players per combatant. <strong>Ctrl+K</strong> opens a palette that jumps the camera to any combatant or runs a session command. A DM-controlled <strong>turn timer</strong> and a draggable <strong>Combat Log</strong> tray round it out. See <a href="running-a-session.html">Running a Live Session</a>.
+          <figure>
+            <img src="screenshots/47-live-run-fullscreen.png" width="1887" height="977" alt="The fullscreen Live Run: status readout top left, session rail top right, command bar bottom" />
+            <figcaption>The fullscreen Live Run, the new home screen for a session.</figcaption>
+          </figure>
+          <figure>
+            <img src="screenshots/44-command-bar.png" width="599" height="115" alt="Command bar with all five tools visible" />
+            <figcaption>The command bar: Move, Fog, Point, Draw, Intel.</figcaption>
+          </figure>
+        </li>
+        <li><strong>The Intel tool</strong> replaces the old HP-visibility menu: per category (Player, NPC, Monster), an HP toggle and a Stat toggle (read-only stat-block inspection for players, see below), plus a DM-wide choice for whether shown HP renders as a bar or a bar with the exact number. See <a href="running-a-session.html#map-tools">Map tools during a run</a>.
+          <figure>
+            <img src="screenshots/45-intel-tool.png" width="840" height="127" alt="Intel tool open, Player, NPC, Monster rows and the Show HP as choice" />
+            <figcaption>The Intel tool, open.</figcaption>
+          </figure>
+        </li>
         <li>Battle maps can now be a looping video instead of a still image, a river that actually flows, a torch that flickers. Grid, tokens, fog, ruler, and drawing all work exactly the same on top of it. See <a href="maps.html#animated-maps">Animated (video) maps</a>.
           <figure>
             <video controls preload="metadata">
@@ -161,8 +177,14 @@
         </li>
         <li><strong>One Player Link button</strong> in the Dalang Web header, opening a panel: copy the link, a QR code to scan or copy as an image, open it in a new tab, and <strong>Reset link</strong>. Resetting creates a fresh link and switches the old one off, after a confirmation, for a link that has leaked or a player who has left the group. See <a href="dalang-web.html#player-link">Using Dalang Web</a>.</li>
         <li><strong>Players can pan and zoom the battle map</strong> on their own screen during a fight, by mouse or by pinch on a phone, without moving your camera. A "Follow DM" button snaps back to your framing. Works on the web player link and the desktop Player Window. See <a href="player-window.html#viewer-controls">The Player Window</a>.</li>
-        <li><strong>Let players inspect a token</strong>, the Intel tool's Stat toggle on the battle map's command bar. Off by default, and set per category. When it is on, a player can click a token during an encounter to see a read-only stat block and active conditions, plus a character card for a player character. See <a href="running-a-session.html#map-tools">Running a Live Session</a>.</li>
+        <li><strong>Let players inspect a token</strong>, the Intel tool's Stat toggle. Off by default, and set per category. When it is on, a player can click a token during an encounter to see a read-only stat block and active conditions, plus a character card for a player character. See <a href="running-a-session.html#map-tools">Running a Live Session</a>.</li>
         <li><strong>Import from D&amp;D Beyond now works in Dalang Web</strong>, not just Dalang Desktop. Paste a public character URL on the Players tab. See <a href="players.html#dndbeyond">Players</a>.</li>
+        <li>The Player Tab has a new <strong>Ability Scores &amp; Saving Throws</strong> section: type in the raw score, the modifier and (if proficient) the save bonus are calculated, not typed by hand, with proficiency bonus derived from Level. Existing characters keep showing their old stored modifier until a score is entered, nothing resets to blank. D&amp;D Beyond import fills these in too. See <a href="players.html">Players</a>.
+          <figure>
+            <img src="screenshots/53-ability-scores.png" width="1189" height="952" alt="Player detail, Ability Scores and Saving Throws section" />
+            <figcaption>Ability Scores &amp; Saving Throws, with the calculated Proficiency Bonus.</figcaption>
+          </figure>
+        </li>
       </ul>
 
       <h4>Content and safety</h4>
