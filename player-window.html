@@ -91,8 +91,7 @@
     <p>What it shows:</p>
     <ul>
       <li><strong>When idle</strong>: the currently-selected location's background image with the location name overlaid, or the campaign's own background image if that location has none set. If neither is available, it shows the campaign's own name as a simple title card instead of a blank screen.</li>
-      <li><strong>When a run is live</strong>: it mirrors your map, fog-gated so hidden areas stay hidden, along with tokens, the ruler, pings, and drawings. A token fades in or out when it's revealed or hidden instead of popping instantly, and shown HP appears as a small color-coded bar above the token (a DM-wide choice can add the exact number on top of it too). Whatever you set the grid to on your own map shows or hides the same way here.</li>
-      <li>Players aren't locked to your camera. They can pan and zoom the map themselves, by drag and scroll wheel, or drag and pinch on a phone or tablet, the same way you move around it. A <strong>Follow DM</strong> button appears once they've moved away from your framing and snaps them back to it, and the view also resets on its own whenever you switch to a new map or location. The <strong>lock</strong> toggle below still overrides this and pins their camera to yours.</li>
+      <li><strong>When a run is live</strong>: it mirrors your map, fog-gated so hidden areas stay hidden, along with tokens, the ruler, pings, and drawings. A token fades in or out when it's revealed or hidden instead of popping instantly, and shown HP appears as a small color-coded bar above the token (a DM-wide choice can add the exact number on top of it too). Whatever you set the grid to on your own map shows or hides the same way here. See <a href="#viewer-controls">What players can do on their side</a> below.</li>
     </ul>
 
     <section id="turn-order">
@@ -112,6 +111,16 @@
       <h2>Position lock and fullscreen</h2>
       <p>The Player Window normally follows your camera. If it is showing on a monitor lying flat on the table with real minis or tokens on it, that is a problem, every time you zoom or pan on your own screen the map underneath the physical pieces shifts. The <strong>lock</strong> toggle on the map's bottom-right camera controls fixes that: it snapshots the current view onto the Player Window, which then stops following you. Zoom and pan your own screen however you like, the table view does not move until you unlock. This is separate from Pause, which also freezes tokens, HP, and fog, lock only pins the camera. It clears on its own when the run ends.</p>
       <p>The <strong>fullscreen</strong> toggle lives on the Player Window itself, a labelled button at the top center that fades away during play and comes back when you move the mouse. <strong>F11</strong> toggles it, <strong>Esc</strong> exits. Fullscreen hides the window's title bar and the taskbar so the map fills the screen edge to edge, which is what you want on a dedicated table or TV monitor.</p>
+    </section>
+
+    <section id="viewer-controls">
+      <h2>What players can do on their side</h2>
+      <p>During a live fight the Player Window is not completely fixed to your camera:</p>
+      <ul>
+        <li><strong>Pan and zoom.</strong> Whoever is at the Player Window can move around the revealed map on that screen, by mouse drag and scroll wheel, or by dragging and pinching on a touch screen. It does not move your map or anyone else's. A <strong>Follow DM</strong> button appears once the view has moved away from your framing and snaps it back, and the view also resets on its own when you switch to a new map or location. This is independent of Pause and of the position lock, both of which only affect the base camera you are sending.</li>
+        <li><strong>Inspect a token.</strong> Off by default. The Intel tool's Stat toggle, per category (Player, NPC, Monster), lets a token be clicked during an encounter to open a read-only panel with its full stat block and active conditions. A player character shows a character card (race, class, level, speed, initiative, passives, ability scores and saves). Turning it on for NPCs reveals a linked stat block to everyone, so consider plot-twist NPCs before enabling it.</li>
+      </ul>
+      <p>The read-only web player link behaves the same way.</p>
     </section>
 
     <p>If you'd rather just post a snapshot somewhere (Telegram, for instance) instead of a live feed, use <strong>Export Player View</strong> from the session rail, it captures exactly what's currently revealed and lets you save or copy it as an image.</p>

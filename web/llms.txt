@@ -1,7 +1,7 @@
 # Dalang Web
 
-> Dalang Web is the browser version of Dalang, a tool for Dungeon Masters
-> running a Dungeons & Dragons campaign. Prep the world, house rules,
+> Dalang Web is the browser version of Dalang, a Dungeons & Dragons campaign
+> manager and session tool for Dungeon Masters. Prep the world, house rules,
 > locations, NPCs, and a job board; run the session with a live battle map,
 > tokens, initiative, and fog of war; and hand players one read-only link
 > that shows the current scene, live, with no sign-in for players. Campaigns
@@ -30,6 +30,8 @@
 
 ## More
 
+- [Frequently asked questions](https://guide.dalang.page/faq.html)
+- [How Dalang compares to Roll20, Foundry VTT, World Anvil, Kanka, and Owlbear Rodeo](https://guide.dalang.page/compare.html)
 - [How Dalang Web works](https://guide.dalang.page/dalang-web.html)
 - [Running a live session](https://guide.dalang.page/running-a-session.html)
 - [Setting up a battle map](https://guide.dalang.page/maps.html)

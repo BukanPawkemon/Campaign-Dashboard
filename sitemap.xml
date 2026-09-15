@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://guide.dalang.page/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,8 +13,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://guide.dalang.page/faq.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guide.dalang.page/compare.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://guide.dalang.page/dalang-web.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,19 +68,19 @@
   </url>
   <url>
     <loc>https://guide.dalang.page/players.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://guide.dalang.page/running-a-session.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://guide.dalang.page/player-window.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -122,7 +134,7 @@
   </url>
   <url>
     <loc>https://guide.dalang.page/legal.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

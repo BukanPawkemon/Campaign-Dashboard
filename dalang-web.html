@@ -94,6 +94,7 @@
         <li>an <strong>email address</strong>, used only to sign in and to recover your account,</li>
         <li>a <strong>password</strong>, at least 8 characters with a lowercase letter, an uppercase letter, and a number.</li>
       </ul>
+      <p>Creating an account also asks you to confirm that you are at least 13 years old and to agree to the Terms of Use and Privacy Policy. That agreement, and the version of the terms you agreed to, is recorded on your account.</p>
       <p>You may be asked to confirm your email by clicking a link before you can sign in. If it does not arrive in a minute, check your spam folder.</p>
       <p>To sign in afterwards you can type either your username or your email in the first field, along with your password. Password resets are not automated yet during the beta: if you are locked out, email <a href="mailto:support@dalang.page">support@dalang.page</a> and it is handled by hand.</p>
     </section>
@@ -115,24 +116,49 @@
         <li><strong>250 event log entries</strong></li>
       </ul>
       <p>Every feature is available on the free plan. Nothing is locked behind a payment. If you reach a limit, Dalang tells you which one and you can remove an item to add another. Plans with higher limits are planned for after the beta.</p>
-      <p class="note">Images are added by pasting a link to a hosted image. Uploading image files from your computer is a desktop-only feature for now.</p>
+      <p class="note">Images are added by pasting a link to a hosted image. Uploading image files from your computer is a desktop-only feature for now. See <a href="#images">Which image links work</a> below.</p>
+    </section>
+
+    <section id="images">
+      <h2>Which image links work</h2>
+      <p>Every image in Dalang Web, portraits, photos, the campaign card image, and battle maps, is a link. Dalang loads the file straight from that address each time it is shown, so the link has to point directly at the image file itself, on a host that lets other sites load it. A good link opens just the picture in your browser and usually ends in <code>.jpg</code>, <code>.png</code>, <code>.webp</code>, or <code>.gif</code>.</p>
+      <p><strong>Links that work:</strong> a direct file link from an image or file host that allows hotlinking, from your own web space, or from a content host you control. For example a Discord image link, a GitHub raw link, or an itch.io asset. On Wikimedia Commons use the "Original file" link, not the article page. On Imgur use the <code>i.imgur.com/....jpg</code> link, not the gallery page.</p>
+      <p><strong>Links that do not work:</strong></p>
+      <ul>
+        <li><strong>Google Drive, Dropbox, and OneDrive share links.</strong> They open a preview page, not the image, they often ask the viewer to sign in, and they block other sites from loading the file directly. Google Drive's "direct link" workarounds are unreliable and Google keeps changing them, so do not count on them.</li>
+        <li><strong>A page URL from Pinterest, Flickr, Instagram, Facebook, or X.</strong> You need the address of the image on its own. Right-click the image and choose "Copy image address", though some of these hosts still block other sites from loading their images.</li>
+        <li><strong>A link from Google Images search results.</strong> It is usually a redirect or a small thumbnail, not the real file.</li>
+      </ul>
+      <p><strong>To get a direct link:</strong> open the image on its own in your browser (right-click, then "Open image in new tab"), and copy the address from the address bar. If that address ends in an image extension and shows only the picture, it works in Dalang.</p>
+      <p>If an image field shows the placeholder icon, the link did not load. If an image loads sometimes and not other times, the host is blocking other sites from using it, or the link has expired. Move the file to a proper image host and use that link. For maps and animated (video) maps, see <a href="maps.html#map-links">What kind of link works</a> on the map page.</p>
     </section>
 
     <section id="player-link">
       <h2>The player link</h2>
-      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has one <strong>Player Link</strong> button that opens a small panel:</p>
+      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has a <strong>Player Link</strong> button that opens a small panel with everything for sharing it:</p>
       <ul>
-        <li>The link itself, with a one-tap <strong>copy</strong>.</li>
-        <li>A <strong>QR code</strong> you can scan at the table, or copy as an image to paste into your group chat.</li>
-        <li><strong>Open in new tab</strong>, so you can see exactly what your players see.</li>
-        <li><strong>Reset link</strong>, which makes a fresh link and switches off the current one. Anyone still on the old link is dropped and sees a "link no longer works, ask the DM for a new one" message, useful for cutting off a link that has leaked or a player who has left the group.</li>
+        <li><strong>The link itself</strong>, with a one-tap <strong>Copy</strong> button, ready to paste into Discord, Telegram, or wherever your group talks.</li>
+        <li><strong>A QR code</strong> your players can scan to open the view on a phone. <strong>Copy image</strong> puts the QR code on your clipboard so you can paste it straight into a chat.</li>
+        <li><strong>Open in new tab</strong> opens the read-only page yourself, so you can see exactly what your players see.</li>
+        <li><strong>Reset link</strong> creates a fresh link and switches the old one off. Use it if a link has leaked or a player has left the group. Dalang asks you to confirm first, because the current link and its QR code stop working right away and everyone still playing will need the new one. Anyone open on the old link is dropped and sees a short message telling them to ask you for the new link.</li>
       </ul>
       <figure>
         <img src="screenshots/55-player-link-panel.png" width="322" height="395" alt="The Player Link panel: QR code, copy link, and reset link" />
         <figcaption>The Player Link panel.</figcaption>
       </figure>
-      <p>Anyone with the link can open it, no sign-in needed. It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, tokens with fading and a color-coded HP bar, and the pings and drawings you make. Players can pan and zoom the map themselves, with a Follow DM button to snap back to your framing. It updates on its own while it is open, and a small "Report content" link in the corner lets a player flag something to Dalang directly.</p>
+      <p>Anyone with the link can open it, no sign-in needed. Apart from a reset, the link stays the same for the life of the campaign, so you can share it once and reuse it every session.</p>
+      <p>It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, tokens with fading and a color-coded HP bar, and the pings and drawings you make. It updates on its own while it is open, and a small "Report content" link in the corner lets a player flag something to Dalang directly.</p>
       <p>What the link shows is the same curated set the desktop Player Window shows. It never exposes your DM notes, secrets, encounter details, or treasure. You control what is visible by what you set as the current location and which quests are active.</p>
+    </section>
+
+    <section id="player-view-controls">
+      <h2>What your players can do on the battle map</h2>
+      <p>During a live fight, the read-only view is not completely fixed to your camera:</p>
+      <ul>
+        <li><strong>Pan and zoom.</strong> Each player can move around the revealed map on their own screen, by mouse drag and scroll wheel, or by dragging and pinching on a phone or tablet. It only affects their screen, never yours or anyone else's. A <strong>Follow DM</strong> button appears once they have moved away from your framing and snaps them back to it, and the view also resets on its own whenever you switch to a new map or location.</li>
+        <li><strong>Inspect a token.</strong> Off by default. The Intel tool's Stat toggle, per category (Player, NPC, Monster), lets players click a token during an encounter to open a read-only info panel with its full stat block and active conditions. For a player character it shows a character card (race, class, level, speed, initiative, passives, ability scores and saves). Turning it on for NPCs reveals a linked stat block to everyone, so think about plot-twist NPCs before you enable that one.</li>
+      </ul>
+      <p>Both of these work the same on the desktop Player Window.</p>
     </section>
 
     <section id="from-desktop">
@@ -164,7 +190,7 @@
       <ul>
         <li><strong>An account.</strong> Dalang Web needs one; Dalang Desktop does not.</li>
         <li><strong>Where campaigns live.</strong> Dalang Web keeps them on the server so you can reach them from any browser. Dalang Desktop keeps them in a file on one machine.</li>
-        <li><strong>Images.</strong> Dalang Web uses image links only. Dalang Desktop can also use image files from your computer.</li>
+        <li><strong>Images.</strong> Dalang Web uses image links only, see <a href="#images">Which image links work</a>. Dalang Desktop can also use image files from your computer.</li>
         <li><strong>The player screen.</strong> Dalang Desktop opens a second window on your own computer, for a screen at the table. Dalang Web gives you a link instead, which works the same way for a remote group.</li>
         <li><strong>Plan limits.</strong> Dalang Web has the per-account limits listed above. Dalang Desktop has none.</li>
       </ul>
