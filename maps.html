@@ -41,7 +41,7 @@
   "image": "https://guide.dalang.page/screenshots/01-my-campaigns.png",
   "url": "https://guide.dalang.page/maps.html",
   "inLanguage": "en",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-15",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -95,6 +95,19 @@
       <figcaption>Calibrating a map's grid: drag the brass and teal handles onto adjacent intersections.</figcaption>
     </figure>
     <p>If you want to place tokens ahead of time (an ambush, a set encounter), open the encounter from Campaign Prep and use its <strong>Map Setup</strong> section. It uses the same placement grid as the live battle map, so tokens you place here are exactly where they'll be when you hit Start, see <a href="running-a-session.html">Running a Live Session</a>.</p>
+
+    <h2 id="animated-maps">Animated (video) maps</h2>
+    <p>A map's URL can point to a looping video file instead of a still image, a river that actually flows, a torch that flickers, a storm rolling over a battlefield. Paste a direct link to a video file (<strong>mp4</strong>, <strong>webm</strong>, <strong>mov</strong>, <strong>m4v</strong>, or <strong>ogv</strong>), or on Dalang Desktop use <strong>Browse...</strong> to pick one off your computer. Calibrate the grid, place tokens, paint fog, measure, and draw on it exactly as on a still map, none of that changes. The video is muted and loops on its own.</p>
+    <figure>
+      <video controls preload="metadata">
+        <source src="videos/animated-map.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A looping video map in play: grid, tokens, and fog all work exactly as on a still image.</figcaption>
+    </figure>
+    <h3 id="map-links">Which links actually work</h3>
+    <p>The link has to point straight at the actual video file, on a host that allows it to be loaded directly. <strong>Google Drive, Dropbox, and YouTube links do not work</strong> as map URLs, none of them serve the raw file at the link you'd copy, they serve a viewer page instead. A direct link from your own file host, a CDN, or a site built for hotlinking works fine.</p>
+    <p>If the app can't tell a link is a video from its file extension (a signed URL with no clear <code>.mp4</code> at the end, for instance), a manual <strong>Image / Video</strong> toggle on the map lets you set it explicitly.</p>
+    <p class="note">Printing a map and saving a Player Guide or Export Player View image all use one still frame from the video, the first frame, not the whole clip. Only the live battle map, the Player Window, and the web player link actually play it.</p>
 
     <h2>Printing a map for the table</h2>
     <p>A fourth mode, <strong>Print</strong>, next to Pan &amp; View/Calibrate Grid/Fog of War, exports a calibrated map as a real, physical-scale PDF, 1 grid square always prints as exactly 1 inch, derived from the map's own calibration above, not separately adjustable. Drag the brass handle to reposition which area prints, drag teal to cover more pages. Pick a paper size (Letter, A4, Legal, Tabloid, A3) and orientation, and choose whether to include the map art, the grid lines, and a separate fog overlay sheet, meant to be printed on its own and physically laid over the map, lifted as the party explores.</p>

@@ -41,7 +41,7 @@
   "image": "https://guide.dalang.page/screenshots/01-my-campaigns.png",
   "url": "https://guide.dalang.page/players.html",
   "inLanguage": "en",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-15",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -89,12 +89,17 @@
 
     <section id="roster">
       <h2>The roster</h2>
-      <p>A roster of character cards, toggle each Active or Inactive. Only Active characters show up on the Active Campaign tab. Click into a card for the full character sheet: race, class, subclass, level, quick stats (AC, HP, passive perception, etc.), ability modifiers, description, and a couple of DM-only fields like player nickname and personal notes. Portrait URL and Character Sheet Link sit at the top of the sheet, above Race/Class/Subclass/Level.</p>
+      <p>A roster of character cards, toggle each Active or Inactive. Only Active characters show up on the Active Campaign tab. Click into a card for the full character sheet: race, class, subclass, level, quick stats (AC, HP, passive perception, etc.), ability scores and saving throws, description, and a couple of DM-only fields like player nickname and personal notes. Portrait URL and Character Sheet Link sit at the top of the sheet, above Race/Class/Subclass/Level.</p>
       <figure>
         <img src="screenshots/15-players.png" width="1920" height="1009" alt="Players roster, tarot-card style" />
         <figcaption>The party roster, tarot-card style.</figcaption>
       </figure>
-      <p>AC now shows up wherever it matters mid-session too: the token popup you get from clicking a combatant during a fight, and the Party Present popup on Active Campaign, which also shows Subclass and passive Investigation/Insight alongside passive Perception. Picking a player to add to a fight shows their class and level in the picker, the same as monster and NPC rows already did.</p>
+      <p>Ability scores work the same way official character sheets do: type in the raw score and the modifier, and if you check the saving throw box, the save bonus, are both calculated for you. Proficiency bonus comes from Level automatically and shows next to the section, it's never entered by hand. If a character already has an old stored modifier from before this existed, that keeps showing exactly as it did until you type in a real score for that ability, nothing resets to blank. Senses and Resistances/Immunities are free-form tag fields on the same screen.</p>
+      <figure>
+        <img src="screenshots/53-ability-scores.png" width="1189" height="952" alt="Player detail, Ability Scores and Saving Throws section" />
+        <figcaption>Ability Scores &amp; Saving Throws, with the calculated Proficiency Bonus.</figcaption>
+      </figure>
+      <p>AC now shows up wherever it matters mid-session too: the token popup you get from clicking a combatant during a fight, and the Party Present popup on Active Campaign, which also shows Subclass, passive Investigation/Insight alongside passive Perception, and the same Ability Scores &amp; Saves section. Picking a player to add to a fight shows their class and level in the picker, the same as monster and NPC rows already did.</p>
     </section>
 
     <section id="dndbeyond">
@@ -114,7 +119,7 @@
         <li>Race, Class, Subclass, Level, Background</li>
         <li>AC and HP (current and max, including the Constitution contribution)</li>
         <li>Passive Perception, Investigation, and Insight</li>
-        <li>Ability modifiers and initiative</li>
+        <li>Ability scores, saving throw proficiencies, and initiative</li>
         <li>Walking speed</li>
         <li>Portrait</li>
         <li>Personality traits, ideals, bonds, and flaws, appended to Narrative Hooks rather than replacing it, so anything you already wrote by hand survives a re-import</li>

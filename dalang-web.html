@@ -41,7 +41,7 @@
   "image": "https://guide.dalang.page/images/og-image.png",
   "url": "https://guide.dalang.page/dalang-web.html",
   "inLanguage": "en",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-15",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -120,12 +120,18 @@
 
     <section id="player-link">
       <h2>The player link</h2>
-      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has two buttons:</p>
+      <p>Dalang Web can give your players a live, read-only view of the current scene. From any tab, the header has one <strong>Player Link</strong> button that opens a small panel:</p>
       <ul>
-        <li><strong>Player View</strong> opens that read-only page in a new tab so you can see exactly what your players see.</li>
-        <li><strong>Share Link</strong> copies the link to your clipboard so you can paste it into Discord, Telegram, or wherever your group talks.</li>
+        <li>The link itself, with a one-tap <strong>copy</strong>.</li>
+        <li>A <strong>QR code</strong> you can scan at the table, or copy as an image to paste into your group chat.</li>
+        <li><strong>Open in new tab</strong>, so you can see exactly what your players see.</li>
+        <li><strong>Reset link</strong>, which makes a fresh link and switches off the current one. Anyone still on the old link is dropped and sees a "link no longer works, ask the DM for a new one" message, useful for cutting off a link that has leaked or a player who has left the group.</li>
       </ul>
-      <p>Anyone with the link can open it, no sign-in needed. It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, and the pings and drawings you make. It updates on its own while it is open.</p>
+      <figure>
+        <img src="screenshots/55-player-link-panel.png" width="322" height="395" alt="The Player Link panel: QR code, copy link, and reset link" />
+        <figcaption>The Player Link panel.</figcaption>
+      </figure>
+      <p>Anyone with the link can open it, no sign-in needed. It shows the current location, the active quests, and which NPCs are present, and during a live fight it shows the battle map, dice rolls, tokens with fading and a color-coded HP bar, and the pings and drawings you make. Players can pan and zoom the map themselves, with a Follow DM button to snap back to your framing. It updates on its own while it is open, and a small "Report content" link in the corner lets a player flag something to Dalang directly.</p>
       <p>What the link shows is the same curated set the desktop Player Window shows. It never exposes your DM notes, secrets, encounter details, or treasure. You control what is visible by what you set as the current location and which quests are active.</p>
     </section>
 
@@ -159,7 +165,6 @@
         <li><strong>An account.</strong> Dalang Web needs one; Dalang Desktop does not.</li>
         <li><strong>Where campaigns live.</strong> Dalang Web keeps them on the server so you can reach them from any browser. Dalang Desktop keeps them in a file on one machine.</li>
         <li><strong>Images.</strong> Dalang Web uses image links only. Dalang Desktop can also use image files from your computer.</li>
-        <li><strong>Importing a character from D&D Beyond.</strong> Desktop only for now.</li>
         <li><strong>The player screen.</strong> Dalang Desktop opens a second window on your own computer, for a screen at the table. Dalang Web gives you a link instead, which works the same way for a remote group.</li>
         <li><strong>Plan limits.</strong> Dalang Web has the per-account limits listed above. Dalang Desktop has none.</li>
       </ul>

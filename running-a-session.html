@@ -11,14 +11,14 @@
   gtag('config', 'G-TVGS5WWJT5');
 </script>
 <title>Running a Live Session - Dalang, Campaign Dashboard User Guide</title>
-<meta name="description" content="Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard." />
+<meta name="description" content="Starting a run, the fullscreen command bar, the Intel tool, and ending a run, in Dalang - Campaign Dashboard." />
 <link rel="canonical" href="https://guide.dalang.page/running-a-session.html" />
 <link rel="icon" type="image/png" href="favicon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dalang - Campaign Dashboard" />
 <meta property="og:title" content="Running a Live Session - Dalang, Campaign Dashboard" />
-<meta property="og:description" content="Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard." />
+<meta property="og:description" content="Starting a run, the fullscreen command bar, the Intel tool, and ending a run, in Dalang - Campaign Dashboard." />
 <meta property="og:url" content="https://guide.dalang.page/running-a-session.html" />
 <meta property="og:image" content="https://guide.dalang.page/screenshots/01-my-campaigns.png" />
 <meta property="og:image:width" content="1920" />
@@ -26,7 +26,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Running a Live Session - Dalang, Campaign Dashboard" />
-<meta name="twitter:description" content="Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard." />
+<meta name="twitter:description" content="Starting a run, the fullscreen command bar, the Intel tool, and ending a run, in Dalang - Campaign Dashboard." />
 <meta name="twitter:image" content="https://guide.dalang.page/screenshots/01-my-campaigns.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,11 +37,11 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Running a Live Session",
-  "description": "Starting a run, combat, map tools, Focus Mode, and ending a run, in Dalang - Campaign Dashboard.",
+  "description": "Starting a run, the fullscreen command bar, the Intel tool, and ending a run, in Dalang - Campaign Dashboard.",
   "image": "https://guide.dalang.page/screenshots/01-my-campaigns.png",
   "url": "https://guide.dalang.page/running-a-session.html",
   "inLanguage": "en",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-15",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -84,9 +84,8 @@
 
     <p class="page-jump"><span class="label">On this page</span>
       <a href="#starting-a-run">Starting a run</a>
-      <a href="#during-combat">During combat</a>
+      <a href="#during-combat">During combat or exploration</a>
       <a href="#map-tools">Map tools</a>
-      <a href="#focus-mode">Focus Mode</a>
       <a href="#ending-a-run">Ending a run</a>
     </p>
 
@@ -107,64 +106,83 @@
     </section>
 
     <section id="during-combat">
-      <h2>During combat</h2>
-      <p>The live run screen adds:</p>
+      <h2>During combat or exploration</h2>
+      <p>Starting a run takes you straight to a fullscreen battle map, there's no separate scaffolded layout to click through first. Everything lives in the chrome around the map itself:</p>
       <ul>
-        <li><strong>Add Combatant</strong>: pull in players, monsters, NPCs (including any NPC linked to a Compendium monster, see <a href="npc.html">NPC</a>), or homebrew stat blocks mid-fight.</li>
-        <li><strong>Combatants / Initiative Tracker</strong>: roll initiative with one click (auto-rolled for monsters and NPCs, left blank for players so you can enter what they report), then use <strong>Next Turn</strong> to step through the round.</li>
-        <li><strong>Battle Map</strong>: the shared placement grid, now with live tools bolted onto it. Drag tokens to move them, they snap to the grid.</li>
-        <li><strong>Combat Log</strong>: a private scratchpad, separate from the permanent Event Log, that auto-notes HP and condition changes plus anything you type in manually. This resets when the fight ends and doesn't pollute the permanent record.</li>
+        <li><strong>Top left</strong>: a read-only status line (LIVE, PAUSED, or EXPLORING, plus the run's name).</li>
+        <li><strong>Top right</strong>: the session rail, pause the Player Window, roll dice, the turn timer, a Combat Log tray (an Exploration Log tray while exploring, it writes straight to the Event Log), Export Player View, Open Player Window, a "..." menu (Back to Active Campaign, which leaves the run going so you can check a quest or NPC, Reset to prep, Abandon), and a Finish button.</li>
+        <li><strong>Left</strong>: the turn order. Expand it into a full Initiative tray, editing initiative, HP, conditions, and hide-from-players per combatant, with a Remove button, right there instead of opening each token's popup.</li>
+        <li><strong>Bottom left</strong>: the token tray, showing how many combatants (players, monsters, NPCs, or homebrew stat blocks) are still waiting to be placed.</li>
+        <li><strong>Bottom right</strong>: zoom, fit, grid on or off, and the player-view lock. Toggling the grid here also shows or hides it on the Player Window and the web player link, not just your own screen.</li>
+        <li><strong>Ctrl+K</strong> opens a combined palette: type a combatant's name to jump the camera to them, or a command (roll initiative, next turn, pause, add a combatant, timer, open the player window, finish). It still searches the Compendium too, see <a href="dice-roller.html">Dice Roller</a> for the dice tray it's often paired with.</li>
       </ul>
-      <p>Each row in the Combatants list also has its own quick controls now: a small "+" opens a condition search right there, applied conditions get a small &times; to remove, and a hide-from-players eye icon sits right on the row too, no need to open the full token popup just to toggle those.</p>
-      <p>Click any token to get a small popup with quick actions (nudge HP, hide from players, lock its position) and a button into the full Quick-Info view (HP, conditions, concentration toggle, stat block for SRD and homebrew monsters, and for any NPC linked to one).</p>
+      <p>A reinforcement added mid-fight rolls its own initiative right away and slots into the order (a player character stays blank for you to type in their reported roll).</p>
       <figure>
-        <img src="screenshots/08-combat-token-popup.png" width="1150" height="685" alt="Live battle map mid-combat with a token's quick-action popup open" />
-        <figcaption>Mid-fight on the battle map, a token's quick-action popup open.</figcaption>
+        <img src="screenshots/47-live-run-fullscreen.png" width="1887" height="977" alt="Live Run, fullscreen: status readout top left, session rail top right, command bar bottom" />
+        <figcaption>The fullscreen Live Run: status top left, session rail top right, command bar bottom.</figcaption>
       </figure>
       <figure>
-        <img src="screenshots/32-combatant-row-quick-actions.png" width="1150" height="770" alt="Combatants list with inline condition and hide-from-players controls on each row" />
-        <figcaption>The Combatants list, quick controls right on each row.</figcaption>
+        <img src="screenshots/49-initiative-tray.png" width="357" height="657" alt="Initiative tray expanded, per-combatant HP, conditions, hide, and remove" />
+        <figcaption>The Initiative tray, expanded for per-combatant editing.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/48-command-palette.png" width="1901" height="999" alt="Ctrl+K command palette open mid-run, listing combatants and session commands" />
+        <figcaption>Ctrl+K mid-run: jump to a combatant, or run a session command.</figcaption>
+      </figure>
+      <p>Click any token to get a small popup with quick actions (nudge HP, hide from players, lock its position, remove from the fight) and a button into the full Quick-Info view (HP, conditions, concentration toggle, stat block for SRD and homebrew monsters, and for any NPC linked to one, or a character card for a player character).</p>
+      <figure>
+        <img src="screenshots/08-combat-token-popup.png" width="1208" height="956" alt="Live battle map mid-combat with a token's quick-action popup open" />
+        <figcaption>Mid-fight on the battle map, a token's quick-action popup open.</figcaption>
       </figure>
       <p>If a monster shows up without a portrait, an unplanned random encounter, something pulled off a table mid-session, you don't have to leave the Battle Map to fix it. Open its Quick-Info popup and click <strong>Edit Portrait</strong> right above the stat block, paste a URL or Browse to a local file, same as everywhere else. It updates that monster everywhere it's placed, not just the one token you clicked.</p>
       <figure>
         <img src="screenshots/34-battle-map-edit-portrait.png" width="1920" height="1009" alt="A monster's Quick-Info popup with Edit Portrait open above its stat block" />
         <figcaption>Fixing a monster's portrait without leaving the Battle Map.</figcaption>
       </figure>
+      <p>There's also a DM-controlled turn timer: set it, start, pause, adjust, label it, and choose whether players see it on the Player Window and web player link. It runs on its own clock, independent of the turn order.</p>
+      <figure>
+        <img src="screenshots/51-turn-timer.png" width="406" height="325" alt="Turn timer set and running" />
+        <figcaption>The turn timer, running on its own clock.</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/50-combat-log-tray.png" width="394" height="290" alt="Combat Log tray open mid-fight" />
+        <figcaption>The Combat Log tray, a private scratchpad separate from the permanent Event Log.</figcaption>
+      </figure>
     </section>
 
     <section id="map-tools">
       <h2>Map tools during a run</h2>
-      <p>A small toolbar sits directly on the map:</p>
+      <p>A command bar sits across the bottom centre of the map, with the current tool's own options in a strip directly above it. Hover a tool for its keyboard shortcut, hover that strip's own label for the fuller how-to. Clicking the active tool again closes its strip and drops you back to Move.</p>
       <ul>
-        <li><strong>Edit Fog</strong>: reveal or hide cells live as the party explores.</li>
-        <li><strong>Ruler</strong>: click and drag to measure real distance in feet, fades a few seconds after you let go.</li>
-        <li><strong>Ping</strong>: click to pulse a spot for everyone watching, including the Player Window.</li>
-        <li><strong>Draw</strong>: pen, line, rectangle, circle, or cone, useful for marking spell areas or sketching a rough plan. Unlike ruler and ping, drawings stick around until you clear them.</li>
-        <li><strong>Roll dice</strong>: opens the same global dice tray reachable everywhere else, see <a href="dice-roller.html">Dice Roller</a>. It has its own icon here because Focus Mode covers the header's Roll button.</li>
-        <li><strong>Focus Mode</strong>: see below.</li>
-        <li><strong>HP Visibility</strong>: choose whether player, NPC, or monster HP numbers are visible on the Player Window. Off by default.</li>
+        <li><strong>Move</strong>: the default, drag tokens around, they snap to the grid. You can also drag a combatant straight from the token tray onto the map no matter which tool is selected.</li>
+        <li><strong>Fog</strong>: Reveal or Hide cells live as the party explores, plus Reveal All and Cover All, both ask for confirmation first.</li>
+        <li><strong>Point</strong>: pick Ping (pulses a spot for everyone watching, including the Player Window, fades a few seconds after) or Ruler (measures real distance in feet, same fade). Both share a color swatch, pick a color and it applies to your next ping or ruler measurement everywhere it shows.</li>
+        <li><strong>Draw</strong>: pen, line, rectangle, circle, or cone, useful for marking spell areas or sketching a rough plan. Unlike Point, drawings stick around until you clear them.</li>
+        <li><strong>Intel</strong>: what players get to see and know. Per category, Player, NPC, Monster, an HP toggle (visible to players or not) and a Stat toggle (lets a player click that kind of token to see its full read-only stat block, off by default for NPCs since it shows the linked stat block to everyone). A Show HP as choice switches every shown HP display between a plain bar and the bar plus an exact number.</li>
       </ul>
       <figure>
-        <img src="screenshots/09-map-toolbar.png" width="1150" height="415" alt="Map toolbar with the Draw tool active, showing shape and color options" />
-        <figcaption>The map toolbar with the Draw tool active.</figcaption>
+        <img src="screenshots/44-command-bar.png" width="599" height="115" alt="Command bar with all five tools visible" />
+        <figcaption>The command bar: Move, Fog, Point, Draw, Intel.</figcaption>
       </figure>
-    </section>
-
-    <section id="focus-mode">
-      <h2>Focus Mode</h2>
-      <p>Expands the map to fill nearly the whole window, fading out the sidebar and other cards. Good for when you just want the map big during a tense moment. Click again to exit, it restores your exact scroll position and zoom.</p>
-      <p>Focus Mode has its own turn controls now, so you don't have to leave it just to run the fight. A fixed-width order list sits in the bottom-left corner: portraits, long names truncated instead of overflowing, the current turn highlighted, and anyone who's already acted this round dimmed and set off by a divider line. You can toggle hide-from-players right on each row there too. <strong>Round</strong>, <strong>Roll Initiative</strong>, and <strong>Next Turn</strong> sit alongside it, labeled with text rather than just an icon.</p>
-      <p><strong>Finish</strong> and <strong>Abandon</strong> live in the top-right toolbar while in Focus Mode, Abandon on the left, Finish on the right in solid teal, matching the same layout the normal header already uses. HP Visibility moved into the top-left tool pill alongside Edit Fog, Ruler, Ping, and Draw, so the top-right toolbar is just session controls.</p>
       <figure>
-        <img src="screenshots/31-focus-mode-turn-order.png" width="1450" height="960" alt="Focus Mode with the compact turn-order list in the bottom-left corner" />
-        <figcaption>Focus Mode, turn order controls in the corner instead of the full Combatants list.</figcaption>
+        <img src="screenshots/45-intel-tool.png" width="840" height="127" alt="Intel tool open, Player, NPC, Monster rows and the Show HP as choice" />
+        <figcaption>The Intel tool, open.</figcaption>
       </figure>
-      <p class="see-also">See also: <a href="player-window.html">The Player Window</a>, which shows its own turn order panel to players at the same time.</p>
+      <figure>
+        <img src="screenshots/46-point-colors.png" width="519" height="127" alt="Point tool's color swatch row" />
+        <figcaption>Point's color swatch, shared with Draw.</figcaption>
+      </figure>
+      <p>Other keyboard shortcuts: <strong>A</strong> to add a combatant, <strong>N</strong> for next turn, <strong>R</strong> to roll initiative, <strong>L</strong> to lock the player view, <strong>Space</strong> to pause, <strong>?</strong> to open the Shortcuts tray. During a run: <strong>T</strong> for the turn timer, <strong>C</strong> for the combat log, <strong>E</strong> to export the player view, <strong>W</strong> to open the player window, <strong>I</strong> to expand the initiative editor. <strong>Escape</strong> steps back one level at a time, close an open menu or tray first, then back to Move, then back to the campaign board, never while a confirmation dialog is open.</p>
+      <figure>
+        <img src="screenshots/52-shortcuts-tray.png" width="754" height="506" alt="Keyboard shortcuts tray" />
+        <figcaption>The Shortcuts tray, opened with the "?" key.</figcaption>
+      </figure>
+      <p class="see-also">See also: <a href="player-window.html">The Player Window</a>, which mirrors all of this live to players.</p>
     </section>
 
     <section id="ending-a-run">
       <h2>Ending a run</h2>
-      <p><strong>Finish Encounter</strong> (or <strong>End Exploration</strong>) writes one entry to the permanent Event Log. You can add a summary, or leave it blank for an auto-generated note. If you just want to bail without any record at all, there's a separate, quieter <strong>Abandon Run</strong> link.</p>
+      <p><strong>Finish</strong> (or <strong>End Exploration</strong>) writes one entry to the permanent Event Log. You can add a summary, or leave it blank for an auto-generated note. If you just want to bail without any record at all, there's a separate, quieter <strong>Abandon run</strong> (or <strong>Abandon exploration</strong>) link in the "..." menu.</p>
     </section>
 
     <site-footer>
