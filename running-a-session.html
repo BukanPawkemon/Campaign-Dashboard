@@ -21,8 +21,8 @@
 <meta property="og:description" content="Starting a run, the fullscreen command bar, the Intel tool, and ending a run, in Dalang - Campaign Dashboard." />
 <meta property="og:url" content="https://guide.dalang.page/running-a-session.html" />
 <meta property="og:image" content="https://guide.dalang.page/screenshots/01-my-campaigns.png" />
-<meta property="og:image:width" content="1920" />
-<meta property="og:image:height" content="1009" />
+<meta property="og:image:width" content="1071" />
+<meta property="og:image:height" content="604" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Running a Live Session - Dalang, Campaign Dashboard" />
@@ -41,7 +41,7 @@
   "image": "https://guide.dalang.page/screenshots/01-my-campaigns.png",
   "url": "https://guide.dalang.page/running-a-session.html",
   "inLanguage": "en",
-  "dateModified": "2026-09-15",
+  "dateModified": "2026-09-16",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Dalang Campaign Dashboard User Guide",
@@ -110,7 +110,7 @@
       <p>Starting a run takes you straight to a fullscreen battle map, there's no separate scaffolded layout to click through first. Everything lives in the chrome around the map itself:</p>
       <ul>
         <li><strong>Top left</strong>: a read-only status line (LIVE, PAUSED, or EXPLORING, plus the run's name).</li>
-        <li><strong>Top right</strong>: the session rail, pause the Player Window, roll dice, the turn timer, a Combat Log tray (an Exploration Log tray while exploring, it writes straight to the Event Log), Export Player View, Open Player Window, a "..." menu (Back to Active Campaign, which leaves the run going so you can check a quest or NPC, Reset to prep, Abandon), and a Finish button.</li>
+        <li><strong>Top right</strong>: the session rail, pause the Player Window, roll dice, the turn timer, a Combat Log tray (an Exploration Log tray while exploring, it writes straight to the Event Log), Export Player View, Open Player Window, a "..." menu, and a Finish button, see <a href="#ending-a-run">Ending a run</a> below.</li>
         <li><strong>Left</strong>: the turn order. Expand it into a full Initiative tray, editing initiative, HP, conditions, and hide-from-players per combatant, with a Remove button, right there instead of opening each token's popup.</li>
         <li><strong>Bottom left</strong>: the token tray, showing how many combatants (players, monsters, NPCs, or homebrew stat blocks) are still waiting to be placed.</li>
         <li><strong>Bottom right</strong>: zoom, fit, grid on or off, and the player-view lock. Toggling the grid here also shows or hides it on the Player Window and the web player link, not just your own screen.</li>
@@ -183,7 +183,13 @@
 
     <section id="ending-a-run">
       <h2>Ending a run</h2>
-      <p><strong>Finish</strong> (or <strong>End Exploration</strong>) writes one entry to the permanent Event Log. You can add a summary, or leave it blank for an auto-generated note. If you just want to bail without any record at all, there's a separate, quieter <strong>Abandon run</strong> (or <strong>Abandon exploration</strong>) link in the "..." menu.</p>
+      <p><strong>Finish</strong> (or <strong>End Exploration</strong>), in the session rail, is the normal way to end: it writes one entry to the permanent Event Log. Add a summary, or leave it blank for an auto-generated note.</p>
+      <p>The <strong>"..."</strong> menu next to it covers everything short of that:</p>
+      <ul>
+        <li><strong>Back to Active Campaign</strong>: leaves the run going so you can check a quest or NPC. A "Fight in progress" banner brings you back.</li>
+        <li><strong>Reset to prep</strong>: puts every token back where it was placed at Start, and resets the map's fog back to its prepared baseline, discarding whatever's been revealed since. Asks for confirmation first.</li>
+        <li><strong>Abandon run</strong> (or <strong>Abandon exploration</strong>): ends the run with no record at all, the quiet option if you don't want anything logged.</li>
+      </ul>
     </section>
 
     <site-footer>
